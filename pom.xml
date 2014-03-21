@@ -124,13 +124,13 @@
 							<goal>start-server</goal>
 						</goals>
 					</execution>
-<!-- 					<execution> -->
-<!-- 						<id>stop-selenium-server</id> -->
-<!-- 						<phase>post-integration-test</phase> -->
-<!-- 						<goals> -->
-<!-- 							<goal>stop-server</goal> -->
-<!-- 						</goals> -->
-<!-- 					</execution> -->
+					<execution>
+						<id>stop-selenium-server</id>
+						<phase>post-integration-test</phase>
+						<goals>
+							<goal>stop-server</goal>
+						</goals>
+					</execution>
 
 				</executions>
 
