@@ -13,7 +13,7 @@ import com.thoughtworks.selenium.Selenium;
 
 		@Before
 		public void setUp() throws Exception {
-			selenium = new DefaultSelenium("localhost", 4444, "*chrome", "http://10.0.0.107:8080/selectsystem-view-tomcat-oracle/login.xhtml");
+			selenium = new DefaultSelenium("localhost", 4444, "*firefox", "http://10.0.0.107:8080/selectsystem-view-tomcat-oracle/login.xhtml");
 			selenium.start();
 		}
 
