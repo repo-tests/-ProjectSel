@@ -8,7 +8,7 @@ import com.thoughtworks.selenium.DefaultSelenium;
 import com.thoughtworks.selenium.Selenium;
 
 
-	public class SecondTest {
+	public class SecondIntegrationTests {
 		private Selenium selenium;
 
 		@Before
