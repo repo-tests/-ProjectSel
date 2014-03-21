@@ -1,5 +1,12 @@
 package com.s2m.test;
 
+import org.junit.After;
+import org.junit.Before;
+import org.junit.Test;
+
+import com.thoughtworks.selenium.DefaultSelenium;
+import com.thoughtworks.selenium.Selenium;
+
 
 	public class SecondTest {
 		private Selenium selenium;
