@@ -27,28 +27,28 @@ public class SecondIntegrationTests {
     driver.get(baseUrl + "/selectsystem-view-tomcat-oracle/login.xhtml");
     driver.findElement(By.id("j_username")).clear();
     driver.findElement(By.id("j_username")).sendKeys("usercenter");
-    driver.findElement(By.id("j_password")).clear();
-    driver.findElement(By.id("j_password")).sendKeys("pwd8888");
     driver.findElement(By.cssSelector("#login > img[alt=\"Frensh\"]")).click();
     driver.findElement(By.id("form:fdfdfiiphhhppiiegggeooo")).click();
     driver.findElement(By.id("form:table:0:sdksds")).click();
     driver.findElement(By.xpath("(//img[@alt='English'])[6]")).click();
     driver.findElement(By.linkText("New fee")).click();
     driver.findElement(By.id("globalcardHolderCommissionForm:iden")).clear();
-    driver.findElement(By.id("globalcardHolderCommissionForm:iden")).sendKeys("102");
+    driver.findElement(By.id("globalcardHolderCommissionForm:iden")).sendKeys("11");
     driver.findElement(By.id("globalcardHolderCommissionForm:label")).clear();
-    driver.findElement(By.id("globalcardHolderCommissionForm:label")).sendKeys("nom101");
+    driver.findElement(By.id("globalcardHolderCommissionForm:label")).sendKeys("nom11");
     driver.findElement(By.id("globalcardHolderCommissionForm:rate")).clear();
     driver.findElement(By.id("globalcardHolderCommissionForm:rate")).sendKeys("25");
-    driver.findElement(By.id("globalcardHolderCommissionForm:fixe")).click();
     driver.findElement(By.id("globalcardHolderCommissionForm:fixe")).clear();
     driver.findElement(By.id("globalcardHolderCommissionForm:fixe")).sendKeys("100");
     driver.findElement(By.id("globalcardHolderCommissionForm:min")).clear();
     driver.findElement(By.id("globalcardHolderCommissionForm:min")).sendKeys("50");
     driver.findElement(By.id("globalcardHolderCommissionForm:max")).clear();
-    driver.findElement(By.id("globalcardHolderCommissionForm:max")).sendKeys("70");
+    driver.findElement(By.id("globalcardHolderCommissionForm:max")).sendKeys("80");
     driver.findElement(By.xpath("//a[@id='globalcardHolderCommissionForm:userModifButton']/img")).click();
     driver.findElement(By.xpath("//a[@onclick=\"if(typeof jsfcljs == 'function'){jsfcljs(document.getElementById('globalcardHolderCommissionForm'),{'globalcardHolderCommissionForm:j_id420':'globalcardHolderCommissionForm:j_id420'},'');}return false\"]")).click();
+    driver.findElement(By.linkText("Manage fees")).click();
+    driver.findElement(By.xpath("(//img[@alt='Supprimer'])[4]")).click();
+    driver.findElement(By.xpath("//a[@onclick=\"if(typeof jsfcljs == 'function'){jsfcljs(document.getElementById('globalcardHolderCommissionForm'),{'globalcardHolderCommissionForm:j_id304':'globalcardHolderCommissionForm:j_id304'},'');}return false\"]")).click();
   }
 
   @After
