@@ -132,9 +132,9 @@
 					<execution>
 						<id>stop-selenium-server</id>
 						<phase>post-integration-test</phase>
-						<goals>
-							<goal>stop-server</goal>
-						</goals>
+<!-- 						<goals> -->
+<!-- 							<goal>stop-server</goal> -->
+<!-- 						</goals> -->
 					</execution>
 
 				</executions>
