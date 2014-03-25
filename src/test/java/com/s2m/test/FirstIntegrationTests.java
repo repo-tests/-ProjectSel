@@ -36,7 +36,7 @@ public class FirstIntegrationTests {
     driver.findElement(By.linkText("New fee")).click();
     new Select(driver.findElement(By.id("globalcardHolderCommissionForm:title"))).selectByVisibleText("OBZA Bank");
     driver.findElement(By.id("globalcardHolderCommissionForm:iden")).clear();
-    driver.findElement(By.id("globalcardHolderCommissionForm:iden")).sendKeys("122");
+    driver.findElement(By.id("globalcardHolderCommissionForm:iden")).sendKeys("240");
     driver.findElement(By.id("globalcardHolderCommissionForm:label")).clear();
     driver.findElement(By.id("globalcardHolderCommissionForm:label")).sendKeys("nom122");
     driver.findElement(By.id("globalcardHolderCommissionForm:rate")).clear();
