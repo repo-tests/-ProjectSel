@@ -18,7 +18,7 @@ public class FirstIntegrationTests {
   @Before
   public void setUp() throws Exception {
     driver = new FirefoxDriver();
-    baseUrl = "http://10.0.0.107:8080";
+    baseUrl = "http://10.0.0.107:8080/";
     driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
   }
 
@@ -34,11 +34,11 @@ public class FirstIntegrationTests {
     driver.findElement(By.id("form:table:0:sdksds")).click();
     driver.findElement(By.xpath("(//img[@alt='English'])[10]")).click();
     driver.findElement(By.linkText("New fee")).click();
-    new Select(driver.findElement(By.id("globalcardHolderCommissionForm:title"))).selectByVisibleText("FT");
+    new Select(driver.findElement(By.id("globalcardHolderCommissionForm:title"))).selectByVisibleText("OBZA Bank");
     driver.findElement(By.id("globalcardHolderCommissionForm:iden")).clear();
-    driver.findElement(By.id("globalcardHolderCommissionForm:iden")).sendKeys("48");
+    driver.findElement(By.id("globalcardHolderCommissionForm:iden")).sendKeys("122");
     driver.findElement(By.id("globalcardHolderCommissionForm:label")).clear();
-    driver.findElement(By.id("globalcardHolderCommissionForm:label")).sendKeys("nom21");
+    driver.findElement(By.id("globalcardHolderCommissionForm:label")).sendKeys("nom122");
     driver.findElement(By.id("globalcardHolderCommissionForm:rate")).clear();
     driver.findElement(By.id("globalcardHolderCommissionForm:rate")).sendKeys("25");
     driver.findElement(By.id("globalcardHolderCommissionForm:fixe")).clear();
@@ -52,9 +52,6 @@ public class FirstIntegrationTests {
     driver.findElement(By.cssSelector("option[value=\"CARDHOLDER\"]")).click();
     driver.findElement(By.xpath("//a[@id='globalcardHolderCommissionForm:userModifButton']/img")).click();
     driver.findElement(By.xpath("//a[@onclick=\"if(typeof jsfcljs == 'function'){jsfcljs(document.getElementById('globalcardHolderCommissionForm'),{'globalcardHolderCommissionForm:j_id420':'globalcardHolderCommissionForm:j_id420'},'');}return false\"]")).click();
-driver.findElement(By.id("globalcardHolderCommissionForm:iden")).clear();
-    driver.findElement(By.id("globalcardHolderCommissionForm:iden")).sendKeys("48");
-
     driver.findElement(By.xpath("(//img[@alt='English'])[2]")).click();
   }
 
