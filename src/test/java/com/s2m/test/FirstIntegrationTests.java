@@ -48,10 +48,11 @@ public class FirstIntegrationTests {
     driver.findElement(By.id("globalcardHolderCommissionForm:max")).clear();
     driver.findElement(By.id("globalcardHolderCommissionForm:max")).sendKeys("100");
     driver.findElement(By.xpath("//a[@id='globalcardHolderCommissionForm:userModifButton']/img")).click();
-    new Select(driver.findElement(By.id("globalcardHolderCommissionForm:types"))).selectByVisibleText("CARDHOLDER");
-    driver.findElement(By.cssSelector("option[value=\"CARDHOLDER\"]")).click();
 driver.findElement(By.id("globalcardHolderCommissionForm:iden")).clear();
     driver.findElement(By.id("globalcardHolderCommissionForm:iden")).sendKeys("240");
+
+    new Select(driver.findElement(By.id("globalcardHolderCommissionForm:types"))).selectByVisibleText("CARDHOLDER");
+    driver.findElement(By.cssSelector("option[value=\"CARDHOLDER\"]")).click();
 
     driver.findElement(By.xpath("//a[@id='globalcardHolderCommissionForm:userModifButton']/img")).click();
     driver.findElement(By.xpath("//a[@onclick=\"if(typeof jsfcljs == 'function'){jsfcljs(document.getElementById('globalcardHolderCommissionForm'),{'globalcardHolderCommissionForm:j_id420':'globalcardHolderCommissionForm:j_id420'},'');}return false\"]")).click();
