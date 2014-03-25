@@ -36,7 +36,7 @@ public class FirstIntegrationTests {
     driver.findElement(By.linkText("New fee")).click();
     new Select(driver.findElement(By.id("globalcardHolderCommissionForm:title"))).selectByVisibleText("FT");
     driver.findElement(By.id("globalcardHolderCommissionForm:iden")).clear();
-    driver.findElement(By.id("globalcardHolderCommissionForm:iden")).sendKeys("44");
+    driver.findElement(By.id("globalcardHolderCommissionForm:iden")).sendKeys("48");
     driver.findElement(By.id("globalcardHolderCommissionForm:label")).clear();
     driver.findElement(By.id("globalcardHolderCommissionForm:label")).sendKeys("nom21");
     driver.findElement(By.id("globalcardHolderCommissionForm:rate")).clear();

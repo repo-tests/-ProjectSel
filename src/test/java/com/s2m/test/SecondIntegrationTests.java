@@ -35,7 +35,7 @@ public class SecondIntegrationTests {
     driver.findElement(By.xpath("(//img[@alt='English'])[6]")).click();
     driver.findElement(By.linkText("New fee")).click();
     driver.findElement(By.id("globalcardHolderCommissionForm:iden")).clear();
-    driver.findElement(By.id("globalcardHolderCommissionForm:iden")).sendKeys("11");
+    driver.findElement(By.id("globalcardHolderCommissionForm:iden")).sendKeys("14");
     driver.findElement(By.id("globalcardHolderCommissionForm:label")).clear();
     driver.findElement(By.id("globalcardHolderCommissionForm:label")).sendKeys("nom11");
     driver.findElement(By.id("globalcardHolderCommissionForm:rate")).clear();
