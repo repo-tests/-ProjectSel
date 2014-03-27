@@ -22,7 +22,7 @@ public class RiskBankManagRiskCloneValid {
     driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
   }
 
-  @Test
+ @Test
   public void testRiskBankManagRiskCloneValid() throws Exception {
     driver.get(baseUrl + "/selectsystem-view-tomcat-oracle/login.xhtml");
     driver.findElement(By.id("j_username")).clear();

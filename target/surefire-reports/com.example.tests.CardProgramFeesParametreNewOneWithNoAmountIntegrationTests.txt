@@ -1,0 +1,4 @@
+-------------------------------------------------------------------------------
+Test set: com.example.tests.CardProgramFeesParametreNewOneWithNoAmountIntegrationTests
+-------------------------------------------------------------------------------
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 18.797 sec - in com.example.tests.CardProgramFeesParametreNewOneWithNoAmountIntegrationTests
