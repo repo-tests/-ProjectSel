@@ -39,13 +39,14 @@ public class CardProgramCloneSimpleDuplicationIntegrationTests {
     driver.findElement(By.id("ListeCardForm:idIdenValid")).sendKeys("idc");
     driver.findElement(By.id("ListeCardForm:laaaaaaaabe")).clear();
     driver.findElement(By.id("ListeCardForm:laaaaaaaabe")).sendKeys("nomec");
+    
     new Select(driver.findElement(By.id("ListeCardForm:Laffffngzzz"))).selectByVisibleText("<100001>........<100002>");
     driver.findElement(By.id("ListeCardForm:idIdenValid")).clear();
     driver.findElement(By.id("ListeCardForm:idIdenValid")).sendKeys("idc");
     driver.findElement(By.id("ListeCardForm:laaaaaaaabe")).clear();
     driver.findElement(By.id("ListeCardForm:laaaaaaaabe")).sendKeys("nomec");
     new Select(driver.findElement(By.id("ListeCardForm:piste102E"))).selectByVisibleText("Programme Risk FUS");
-    new Select(driver.findElement(By.id("ListeCardForm:cardProgramControlItemsId"))).selectByVisibleText("Controles Produit Fusion");
+  // new Select(driver.findElement(By.id("ListeCardForm:cardProgramControlItemsId"))).selectByVisibleText("Controles Produit Fusion");
     driver.findElement(By.cssSelector("img[alt=\"save2\"]")).click();
     driver.findElement(By.xpath("//a[@onclick=\"if(typeof jsfcljs == 'function'){jsfcljs(document.getElementById('ListeCardForm'),{'ListeCardForm:j_id695':'ListeCardForm:j_id695'},'');}return false\"]")).click();
     driver.findElement(By.linkText("Card program management")).click();

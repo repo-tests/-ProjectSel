@@ -41,7 +41,7 @@ public class CardProgramNewWithNoBINPrimaryIntegrationTests {
     driver.findElement(By.id("ListeCardForm:laaaaaaaabe")).sendKeys("nom111");
     driver.findElement(By.id("ListeCardForm:AZD11heu")).click();
     new Select(driver.findElement(By.id("ListeCardForm:piste102E"))).selectByVisibleText("Programme Risk FUS");
-    new Select(driver.findElement(By.id("ListeCardForm:cardProgramControlItemsId"))).selectByVisibleText("Controles Produit Fusion");
+   // new Select(driver.findElement(By.id("ListeCardForm:cardProgramControlItemsId"))).selectByVisibleText("Controles Produit Fusion");
     new Select(driver.findElement(By.id("ListeCardForm:ProgrammesEMV"))).selectByVisibleText("OBZI VSDC");
     driver.findElement(By.cssSelector("img[alt=\"save2\"]")).click();
     driver.findElement(By.xpath("(//img[@alt='English'])[2]")).click();

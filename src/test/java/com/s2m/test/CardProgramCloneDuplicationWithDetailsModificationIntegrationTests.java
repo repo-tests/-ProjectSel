@@ -8,6 +8,7 @@ import static org.hamcrest.CoreMatchers.*;
 import org.openqa.selenium.*;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.support.ui.Select;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class CardProgramCloneDuplicationWithDetailsModificationIntegrationTests {
   private WebDriver driver;
@@ -37,9 +38,12 @@ public class CardProgramCloneDuplicationWithDetailsModificationIntegrationTests 
     new Select(driver.findElement(By.id("ListeCardForm:title"))).selectByVisibleText("OBZI Bank");
     driver.findElement(By.id("ListeCardForm:idIdenValid")).clear();
     driver.findElement(By.id("ListeCardForm:idIdenValid")).sendKeys("id11");
-    driver.findElement(By.id("ListeCardForm:laaaaaaaabe")).clear();
+    driver.manage().timeouts().implicitlyWait(3, TimeUnit.SECONDS);
+    driver.findElement(By.id("ListeCardForm:laaaaaaaabe")).clear();  
     driver.findElement(By.id("ListeCardForm:laaaaaaaabe")).sendKeys("nom11");
+    driver.manage().timeouts().implicitlyWait(3, TimeUnit.SECONDS);
     new Select(driver.findElement(By.id("ListeCardForm:Laffffngzzz"))).selectByVisibleText("<100001>........<100002>");
+    driver.manage().timeouts().implicitlyWait(3, TimeUnit.SECONDS);
     driver.findElement(By.id("ListeCardForm:idIdenValid")).clear();
     driver.findElement(By.id("ListeCardForm:idIdenValid")).sendKeys("id11");
     driver.findElement(By.id("ListeCardForm:laaaaaaaabe")).clear();
@@ -47,7 +51,8 @@ public class CardProgramCloneDuplicationWithDetailsModificationIntegrationTests 
     driver.findElement(By.id("ListeCardForm:AZD11heu")).click();
     new Select(driver.findElement(By.id("ListeCardForm:ProgrammesEMV"))).selectByVisibleText("OBZI VSDC ELECTRON");
     new Select(driver.findElement(By.id("ListeCardForm:piste102E"))).selectByVisibleText("Programme Risk FUS");
-    new Select(driver.findElement(By.id("ListeCardForm:cardProgramControlItemsId"))).selectByVisibleText("Controles Produit Fusion");
+//    driver.manage().timeouts().implicitlyWait(3, TimeUnit.SECONDS);
+//    new Select(driver.findElement(By.id("ListeCardForm:cardProgramControlItemsId"))).selectByVisibleText("Controles Produit Fusion");
     driver.findElement(By.id("ListeCardForm:cprLifeCyclId")).clear();
     driver.findElement(By.id("ListeCardForm:cprLifeCyclId")).sendKeys("2");
     driver.findElement(By.id("ListeCardForm:idCprPrepDate")).clear();
@@ -101,9 +106,9 @@ public class CardProgramCloneDuplicationWithDetailsModificationIntegrationTests 
   }
 
   private boolean isElementPresent(By by) {
-    try {
-      driver.findElement(by);
-      return true;
+	  try {
+	      driver.findElement(by);
+	      return true;
     } catch (NoSuchElementException e) {
       return false;
     }

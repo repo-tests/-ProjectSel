@@ -47,7 +47,7 @@ public class CardProgramNewWithFeesDetailsIntegrationTests {
     driver.findElement(By.id("ListeCardForm:AZD11heu")).click();
     new Select(driver.findElement(By.id("ListeCardForm:ProgrammesEMV"))).selectByVisibleText("OBZI VSDC");
     new Select(driver.findElement(By.id("ListeCardForm:piste102E"))).selectByVisibleText("Programme Risk FUS");
-    new Select(driver.findElement(By.id("ListeCardForm:cardProgramControlItemsId"))).selectByVisibleText("Controles Produit Fusion");
+   // new Select(driver.findElement(By.id("ListeCardForm:cardProgramControlItemsId"))).selectByVisibleText("Controles Produit Fusion");
     driver.findElement(By.id("ListeCardForm:j_id521_lbl")).click();
     new Select(driver.findElement(By.id("ListeCardForm:withdraesItems"))).selectByVisibleText("Frais Main Levée FUSION");
     new Select(driver.findElement(By.id("ListeCardForm:opposedCardFeesItems"))).selectByVisibleText("Frais de Mise en Opposition FUSION");

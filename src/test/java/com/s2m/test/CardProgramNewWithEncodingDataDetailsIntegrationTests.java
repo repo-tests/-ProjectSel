@@ -47,7 +47,7 @@ public class CardProgramNewWithEncodingDataDetailsIntegrationTests {
     driver.findElement(By.id("ListeCardForm:laaaaaaaabe")).sendKeys("nom7");
     new Select(driver.findElement(By.id("ListeCardForm:ProgrammesEMV"))).selectByVisibleText("OBZI VSDC ELECTRON");
     new Select(driver.findElement(By.id("ListeCardForm:piste102E"))).selectByVisibleText("Programme Risk FUS");
-    new Select(driver.findElement(By.id("ListeCardForm:cardProgramControlItemsId"))).selectByVisibleText("Controles Produit Fusion");
+   // new Select(driver.findElement(By.id("ListeCardForm:cardProgramControlItemsId"))).selectByVisibleText("Controles Produit Fusion");
     driver.findElement(By.id("ListeCardForm:j_id381_lbl")).click();
     driver.findElement(By.name("ListeCardForm:j_id392")).click();
     driver.findElement(By.name("ListeCardForm:j_id401")).click();

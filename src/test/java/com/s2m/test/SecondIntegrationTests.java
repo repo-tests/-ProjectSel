@@ -64,9 +64,9 @@ public class SecondIntegrationTests {
   }
 
   private boolean isElementPresent(By by) {
-    try {
-      driver.findElement(by);
-      return true;
+	  try {
+	      driver.findElement(by);
+	      return true;
     } catch (NoSuchElementException e) {
       return false;
     }

@@ -47,7 +47,7 @@ public class CardProgramNewWithCardProgramDetailsIntegrationTests {
     driver.findElement(By.id("ListeCardForm:AZD11heu")).click();
     new Select(driver.findElement(By.id("ListeCardForm:ProgrammesEMV"))).selectByVisibleText("OBZI VSDC ELECTRON");
     new Select(driver.findElement(By.id("ListeCardForm:piste102E"))).selectByVisibleText("Programme Risk FUS");
-    new Select(driver.findElement(By.id("ListeCardForm:cardProgramControlItemsId"))).selectByVisibleText("Controles Produit Fusion");
+  //  new Select(driver.findElement(By.id("ListeCardForm:cardProgramControlItemsId"))).selectByVisibleText("Controles Produit Fusion");
     driver.findElement(By.id("ListeCardForm:cprLifeCyclId")).clear();
     driver.findElement(By.id("ListeCardForm:cprLifeCyclId")).sendKeys("2");
     driver.findElement(By.id("ListeCardForm:idCprPrepDate")).clear();

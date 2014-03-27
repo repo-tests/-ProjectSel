@@ -22,7 +22,7 @@ public class CardProgramNewWithServiceCodeDetailsIntegrationTests {
     driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
   }
 
- @Test
+@Test
   public void testCardProgramNewWithServiceCodeDetailsIntegrationTests() throws Exception {
     driver.get(baseUrl + "/selectsystem-view-tomcat-oracle/login.xhtml");
     driver.findElement(By.id("j_username")).clear();
@@ -47,7 +47,7 @@ public class CardProgramNewWithServiceCodeDetailsIntegrationTests {
     driver.findElement(By.id("ListeCardForm:AZD11heu")).click();
     new Select(driver.findElement(By.id("ListeCardForm:ProgrammesEMV"))).selectByVisibleText("OBZI VSDC ELECTRON");
     new Select(driver.findElement(By.id("ListeCardForm:piste102E"))).selectByVisibleText("Programme Risk FUS");
-    new Select(driver.findElement(By.id("ListeCardForm:cardProgramControlItemsId"))).selectByVisibleText("Controles Produit Fusion");
+    //new Select(driver.findElement(By.id("ListeCardForm:cardProgramControlItemsId"))).selectByVisibleText("Controles Produit Fusion");
     driver.findElement(By.id("ListeCardForm:j_id381_lbl")).click();
     new Select(driver.findElement(By.id("ListeCardForm:serviceCode1"))).selectByVisibleText("3 - Invalid for VISA card products");
     new Select(driver.findElement(By.id("ListeCardForm:serviceCode2"))).selectByVisibleText("0 - Normal Authorization");

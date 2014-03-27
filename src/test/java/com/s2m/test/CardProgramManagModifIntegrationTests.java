@@ -45,7 +45,7 @@ public class CardProgramManagModifIntegrationTests {
     driver.findElement(By.id("ListeCardForm:laaaaaaaabe")).clear();
     driver.findElement(By.id("ListeCardForm:laaaaaaaabe")).sendKeys("nom12");
     new Select(driver.findElement(By.id("ListeCardForm:piste102E"))).selectByVisibleText("Programme Risk FUS");
-    new Select(driver.findElement(By.id("ListeCardForm:cardProgramControlItemsId"))).selectByVisibleText("Controles Produit Fusion");
+  //  new Select(driver.findElement(By.id("ListeCardForm:cardProgramControlItemsId"))).selectByVisibleText("Controles Produit Fusion");
     driver.findElement(By.cssSelector("img[alt=\"save2\"]")).click();
     driver.findElement(By.xpath("//a[@onclick=\"if(typeof jsfcljs == 'function'){jsfcljs(document.getElementById('ListeCardForm'),{'ListeCardForm:j_id695':'ListeCardForm:j_id695'},'');}return false\"]")).click();
     driver.findElement(By.linkText("Card program management")).click();
