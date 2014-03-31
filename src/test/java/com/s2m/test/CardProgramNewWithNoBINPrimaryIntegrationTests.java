@@ -37,6 +37,7 @@ public class CardProgramNewWithNoBINPrimaryIntegrationTests {
     new Select(driver.findElement(By.id("ListeCardForm:title"))).selectByVisibleText("OBZI Bank");
     driver.findElement(By.id("ListeCardForm:idIdenValid")).clear();
     driver.findElement(By.id("ListeCardForm:idIdenValid")).sendKeys("id111");
+    Thread.sleep(500);
     driver.findElement(By.id("ListeCardForm:laaaaaaaabe")).clear();
     driver.findElement(By.id("ListeCardForm:laaaaaaaabe")).sendKeys("nom111");
     driver.findElement(By.id("ListeCardForm:AZD11heu")).click();

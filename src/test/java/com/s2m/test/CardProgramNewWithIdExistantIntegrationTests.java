@@ -37,6 +37,7 @@ public class CardProgramNewWithIdExistantIntegrationTests {
     new Select(driver.findElement(By.id("ListeCardForm:title"))).selectByVisibleText("OBZI Bank");
     driver.findElement(By.id("ListeCardForm:idIdenValid")).clear();
     driver.findElement(By.id("ListeCardForm:idIdenValid")).sendKeys("IdExistant");
+    Thread.sleep(1000);
     driver.findElement(By.id("ListeCardForm:laaaaaaaabe")).clear();
     driver.findElement(By.id("ListeCardForm:laaaaaaaabe")).sendKeys("NomExistan");
     new Select(driver.findElement(By.id("ListeCardForm:Laffffngzzz"))).selectByVisibleText("<100001>........<100002>");
@@ -60,7 +61,7 @@ public class CardProgramNewWithIdExistantIntegrationTests {
     driver.findElement(By.id("ListeCardForm:AZD11heu")).click();
     new Select(driver.findElement(By.id("ListeCardForm:ProgrammesEMV"))).selectByVisibleText("OBZI VSDC ELECTRON");
     new Select(driver.findElement(By.id("ListeCardForm:piste102E"))).selectByVisibleText("Programme Risk FUS");
-    new Select(driver.findElement(By.id("ListeCardForm:cardProgramControlItemsId"))).selectByVisibleText("Controles Produit Fusion");
+   // new Select(driver.findElement(By.id("ListeCardForm:cardProgramControlItemsId"))).selectByVisibleText("Controles Produit Fusion");
     driver.findElement(By.cssSelector("img[alt=\"save2\"]")).click();
     driver.findElement(By.xpath("(//img[@alt='save2'])[2]")).click();
     driver.findElement(By.id("ListeTransactionForm:hsqyo54354")).click();

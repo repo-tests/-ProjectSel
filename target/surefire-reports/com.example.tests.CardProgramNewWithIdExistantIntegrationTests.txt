@@ -1,0 +1,31 @@
+-------------------------------------------------------------------------------
+Test set: com.example.tests.CardProgramNewWithIdExistantIntegrationTests
+-------------------------------------------------------------------------------
+Tests run: 1, Failures: 0, Errors: 1, Skipped: 0, Time elapsed: 44.992 sec <<< FAILURE! - in com.example.tests.CardProgramNewWithIdExistantIntegrationTests
+testCardProgramNewWithIdExistantIntegrationTests(com.example.tests.CardProgramNewWithIdExistantIntegrationTests)  Time elapsed: 44.992 sec  <<< ERROR!
+org.openqa.selenium.ElementNotVisibleException: Element is not currently visible and so may not be interacted with
+Command duration or timeout: 30.12 seconds
+Build info: version: '2.40.0', revision: '4c5c0568b004f67810ee41c459549aa4b09c651e', time: '2014-02-19 11:13:01'
+System info: host: 'vaio-VAIO', ip: '192.168.56.1', os.name: 'Windows 7', os.arch: 'amd64', os.version: '6.1', java.version: '1.7.0_25'
+Session ID: fa89809f-3f49-45a2-9654-8aa3f3f3f91b
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Capabilities [{platform=XP, acceptSslCerts=true, javascriptEnabled=true, cssSelectorsEnabled=true, databaseEnabled=true, browserName=firefox, handlesAlerts=true, browserConnectionEnabled=true, webStorageEnabled=true, nativeEvents=true, rotatable=false, locationContextEnabled=true, applicationCacheEnabled=true, takesScreenshot=true, version=27.0.1}]
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:57)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:526)
+	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:193)
+	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:145)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:573)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:268)
+	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:79)
+	at com.example.tests.CardProgramNewWithIdExistantIntegrationTests.testCardProgramNewWithIdExistantIntegrationTests(CardProgramNewWithIdExistantIntegrationTests.java:53)
+Caused by: org.openqa.selenium.remote.ErrorHandler$UnknownServerException: Element is not currently visible and so may not be interacted with
+Build info: version: '2.40.0', revision: '4c5c0568b004f67810ee41c459549aa4b09c651e', time: '2014-02-19 11:13:01'
+System info: host: 'vaio-VAIO', ip: '192.168.56.1', os.name: 'Windows 7', os.arch: 'amd64', os.version: '6.1', java.version: '1.7.0_25'
+Driver info: driver.version: unknown
+	at <anonymous class>.fxdriver.preconditions.visible(file:///C:/Users/vaio/AppData/Local/Temp/anonymous2285276369718502189webdriver-profile/extensions/fxdriver@googlecode.com/components/command_processor.js:8225)
+	at <anonymous class>.DelayedCommand.prototype.checkPreconditions_(file:///C:/Users/vaio/AppData/Local/Temp/anonymous2285276369718502189webdriver-profile/extensions/fxdriver@googlecode.com/components/command_processor.js:10861)
+	at <anonymous class>.DelayedCommand.prototype.executeInternal_/h(file:///C:/Users/vaio/AppData/Local/Temp/anonymous2285276369718502189webdriver-profile/extensions/fxdriver@googlecode.com/components/command_processor.js:10878)
+	at <anonymous class>.fxdriver.Timer.prototype.setTimeout/<.notify(file:///C:/Users/vaio/AppData/Local/Temp/anonymous2285276369718502189webdriver-profile/extensions/fxdriver@googlecode.com/components/command_processor.js:396)
+

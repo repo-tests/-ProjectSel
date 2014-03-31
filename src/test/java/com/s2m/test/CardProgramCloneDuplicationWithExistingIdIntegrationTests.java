@@ -39,6 +39,7 @@ public class CardProgramCloneDuplicationWithExistingIdIntegrationTests {
     driver.findElement(By.id("ListeCardForm:idIdenValid")).sendKeys("id1");
     driver.findElement(By.id("ListeCardForm:laaaaaaaabe")).clear();
     driver.findElement(By.id("ListeCardForm:laaaaaaaabe")).sendKeys("nom1");
+    Thread.sleep(500);
     new Select(driver.findElement(By.id("ListeCardForm:Laffffngzzz"))).selectByVisibleText("<100001>........<100002>");
     driver.findElement(By.id("ListeCardForm:idIdenValid")).clear();
     driver.findElement(By.id("ListeCardForm:idIdenValid")).sendKeys("id1");
@@ -62,6 +63,7 @@ public class CardProgramCloneDuplicationWithExistingIdIntegrationTests {
     new Select(driver.findElement(By.id("ListeCardForm:piste102E"))).selectByVisibleText("Programme Risk FUS");
    // new Select(driver.findElement(By.id("ListeCardForm:cardProgramControlItemsId"))).selectByVisibleText("Controles Produit Fusion");
     driver.findElement(By.cssSelector("img[alt=\"save2\"]")).click();
+    Thread.sleep(1000);
     driver.findElement(By.xpath("//a[@onclick=\"if(typeof jsfcljs == 'function'){jsfcljs(document.getElementById('ListeCardForm'),{'ListeCardForm:j_id695':'ListeCardForm:j_id695'},'');}return false\"]")).click();
     driver.findElement(By.linkText("Card program Clone")).click();
     new Select(driver.findElement(By.id("ListeTransactionForm:titled"))).selectByVisibleText("OBZI Bank");

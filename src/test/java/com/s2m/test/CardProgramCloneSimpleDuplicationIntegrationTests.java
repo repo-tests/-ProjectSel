@@ -39,7 +39,7 @@ public class CardProgramCloneSimpleDuplicationIntegrationTests {
     driver.findElement(By.id("ListeCardForm:idIdenValid")).sendKeys("idc");
     driver.findElement(By.id("ListeCardForm:laaaaaaaabe")).clear();
     driver.findElement(By.id("ListeCardForm:laaaaaaaabe")).sendKeys("nomec");
-    
+    Thread.sleep(500);
     new Select(driver.findElement(By.id("ListeCardForm:Laffffngzzz"))).selectByVisibleText("<100001>........<100002>");
     driver.findElement(By.id("ListeCardForm:idIdenValid")).clear();
     driver.findElement(By.id("ListeCardForm:idIdenValid")).sendKeys("idc");

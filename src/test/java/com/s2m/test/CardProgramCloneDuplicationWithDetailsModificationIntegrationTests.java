@@ -38,12 +38,12 @@ public class CardProgramCloneDuplicationWithDetailsModificationIntegrationTests 
     new Select(driver.findElement(By.id("ListeCardForm:title"))).selectByVisibleText("OBZI Bank");
     driver.findElement(By.id("ListeCardForm:idIdenValid")).clear();
     driver.findElement(By.id("ListeCardForm:idIdenValid")).sendKeys("id11");
-    driver.manage().timeouts().implicitlyWait(3, TimeUnit.SECONDS);
+    Thread.sleep(500);
     driver.findElement(By.id("ListeCardForm:laaaaaaaabe")).clear();  
     driver.findElement(By.id("ListeCardForm:laaaaaaaabe")).sendKeys("nom11");
-    driver.manage().timeouts().implicitlyWait(3, TimeUnit.SECONDS);
+    Thread.sleep(500);
     new Select(driver.findElement(By.id("ListeCardForm:Laffffngzzz"))).selectByVisibleText("<100001>........<100002>");
-    driver.manage().timeouts().implicitlyWait(3, TimeUnit.SECONDS);
+ // Thread.sleep(500);
     driver.findElement(By.id("ListeCardForm:idIdenValid")).clear();
     driver.findElement(By.id("ListeCardForm:idIdenValid")).sendKeys("id11");
     driver.findElement(By.id("ListeCardForm:laaaaaaaabe")).clear();
