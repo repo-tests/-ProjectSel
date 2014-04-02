@@ -58,18 +58,17 @@
 			<artifactId>selenium-server</artifactId>
 			<version>2.40.0</version>
 		</dependency>
-		<!-- <dependency> -->
-		<!-- <groupId>org.seleniumhq.selenium</groupId> -->
-		<!-- <artifactId>selenium-firefox-driver</artifactId> -->
-		<!-- <version>2.40.0</version> -->
-		<!-- </dependency> -->
 		<dependency>
 			<groupId>org.seleniumhq.selenium</groupId>
 			<artifactId>selenium-java</artifactId>
 			<version>2.40.0</version>
 		</dependency>
+		<dependency>
+			<groupId>commons-io</groupId>
+			<artifactId>commons-io</artifactId>
+			<version>2.4</version>
+		</dependency>
 	</dependencies>
-
 	<build>
 		<plugins>
 			<plugin>
@@ -117,6 +116,7 @@
 					</execution>
 				</executions>
 			</plugin>
+
 			<plugin>
 				<groupId>org.codehaus.mojo</groupId>
 				<artifactId>selenium-maven-plugin</artifactId>
@@ -129,53 +129,51 @@
 							<goal>start-server</goal>
 						</goals>
 					</execution>
-					<execution>
-						<id>stop-selenium-server</id>
-						<phase>post-integration-test</phase>
+<!-- 					<execution> -->
+<!-- 						<id>stop-selenium-server</id> -->
+<!-- 						<phase>post-integration-test</phase> -->
 <!-- 						<goals> -->
 <!-- 							<goal>stop-server</goal> -->
 <!-- 						</goals> -->
-					</execution>
-
+<!-- 					</execution> -->
 				</executions>
-
 				<configuration>
 					<background>true</background>
 					<logOutput>true</logOutput>
 					<multiWindow>true</multiWindow>
 				</configuration>
-
 			</plugin>
-			<!-- <plugin> -->
-			<!-- <groupId>org.mortbay.jetty</groupId> -->
-			<!-- <artifactId>maven-jetty-plugin</artifactId> -->
-			<!-- <version>6.1.26</version> -->
-			<!-- <configuration> -->
-			<!-- <scanIntervalSeconds>10</scanIntervalSeconds> -->
-			<!-- <stopKey>foo</stopKey> -->
-			<!-- <stopPort>9999</stopPort> -->
-			<!-- </configuration> -->
-			<!-- <executions> -->
-			<!-- <execution> -->
-			<!-- <id>start-jetty</id> -->
-			<!-- <phase>pre-integration-test</phase> -->
-			<!-- <goals> -->
-			<!-- <goal>run</goal> -->
-			<!-- </goals> -->
-			<!-- <configuration> -->
-			<!-- <scanIntervalSeconds>5</scanIntervalSeconds> -->
-			<!-- <daemon>true</daemon> -->
-			<!-- </configuration> -->
-			<!-- </execution> -->
-			<!-- <execution> -->
-			<!-- <id>stop-jetty</id> -->
-			<!-- <phase>post-integration-test</phase> -->
-			<!-- <goals> -->
-			<!-- <goal>stop</goal> -->
-			<!-- </goals> -->
-			<!-- </execution> -->
-			<!-- </executions> -->
-			<!-- </plugin> -->
+
+<!-- 	<plugin> -->
+<!-- 		<groupId>org.mortbay.jetty</groupId> -->
+<!-- 		<artifactId>maven-jetty-plugin</artifactId> -->
+<!-- 		<version>6.1.26</version> -->
+<!-- 		<configuration> -->
+<!-- 			<scanIntervalSeconds>10</scanIntervalSeconds> -->
+<!-- 			<stopKey>foo</stopKey> -->
+<!-- 			<stopPort>9999</stopPort> -->
+<!-- 		</configuration> -->
+<!-- 		<executions> -->
+<!-- 			<execution> -->
+<!-- 				<id>start-jetty</id> -->
+<!-- 				<phase>pre-integration-test</phase> -->
+<!-- 				<goals> -->
+<!-- 					<goal>run</goal> -->
+<!-- 				</goals> -->
+<!-- 				<configuration> -->
+<!-- 					<scanIntervalSeconds>5</scanIntervalSeconds> -->
+<!-- 					<daemon>true</daemon> -->
+<!-- 				</configuration> -->
+<!-- 			</execution> -->
+<!-- 			<execution> -->
+<!-- 				<id>stop-jetty</id> -->
+<!-- 				<phase>post-integration-test</phase> -->
+<!-- 				<goals> -->
+<!-- 					<goal>stop</goal> -->
+<!-- 				</goals> -->
+<!-- 			</execution> -->
+<!-- 		</executions> -->
+<!-- 	</plugin> -->
 
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
@@ -199,6 +197,7 @@
 					</execution>
 				</executions>
 			</plugin>
+			
 		</plugins>
 	</build>
 
