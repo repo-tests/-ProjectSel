@@ -26,7 +26,7 @@ private ScreenRecorder screenRecorder;
 
   public void startRecording() throws Exception
   {
-	  File file = new File("target\\surefire-reports\\");
+	  File file = new File("target\\surefire-reports\\"+this.getClass().getSimpleName()+"\\");
       
       java.awt.Dimension screenSize = Toolkit.getDefaultToolkit().getScreenSize();
       int width = screenSize.width;
