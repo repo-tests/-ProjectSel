@@ -26,7 +26,7 @@ public class AddingNewCardDebitIntegrationTests {
     driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
   }
 
-  @Test
+ // @Test
   public void testAddingNewCardDebitIntegrationTests() throws Exception {
     driver.get(baseUrl + "/selectsystem-view-tomcat-oracle/login.xhtml");
     driver.findElement(By.id("j_username")).clear();

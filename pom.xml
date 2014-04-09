@@ -68,6 +68,12 @@
 			<artifactId>commons-io</artifactId>
 			<version>2.4</version>
 		</dependency>
+			<dependency>
+			<groupId>org.monte</groupId>
+			<artifactId>monte-screen-recorder</artifactId>
+			<version>0.7.5</version>
+			<scope>test</scope>
+		</dependency>
 	</dependencies>
 	<build>
 		<plugins>
@@ -129,13 +135,13 @@
 							<goal>start-server</goal>
 						</goals>
 					</execution>
-<!-- 					<execution> -->
-<!-- 						<id>stop-selenium-server</id> -->
-<!-- 						<phase>post-integration-test</phase> -->
-<!-- 						<goals> -->
-<!-- 							<goal>stop-server</goal> -->
-<!-- 						</goals> -->
-<!-- 					</execution> -->
+					<!-- <execution> -->
+					<!-- <id>stop-selenium-server</id> -->
+					<!-- <phase>post-integration-test</phase> -->
+					<!-- <goals> -->
+					<!-- <goal>stop-server</goal> -->
+					<!-- </goals> -->
+					<!-- </execution> -->
 				</executions>
 				<configuration>
 					<background>true</background>
@@ -144,36 +150,36 @@
 				</configuration>
 			</plugin>
 
-<!-- 	<plugin> -->
-<!-- 		<groupId>org.mortbay.jetty</groupId> -->
-<!-- 		<artifactId>maven-jetty-plugin</artifactId> -->
-<!-- 		<version>6.1.26</version> -->
-<!-- 		<configuration> -->
-<!-- 			<scanIntervalSeconds>10</scanIntervalSeconds> -->
-<!-- 			<stopKey>foo</stopKey> -->
-<!-- 			<stopPort>9999</stopPort> -->
-<!-- 		</configuration> -->
-<!-- 		<executions> -->
-<!-- 			<execution> -->
-<!-- 				<id>start-jetty</id> -->
-<!-- 				<phase>pre-integration-test</phase> -->
-<!-- 				<goals> -->
-<!-- 					<goal>run</goal> -->
-<!-- 				</goals> -->
-<!-- 				<configuration> -->
-<!-- 					<scanIntervalSeconds>5</scanIntervalSeconds> -->
-<!-- 					<daemon>true</daemon> -->
-<!-- 				</configuration> -->
-<!-- 			</execution> -->
-<!-- 			<execution> -->
-<!-- 				<id>stop-jetty</id> -->
-<!-- 				<phase>post-integration-test</phase> -->
-<!-- 				<goals> -->
-<!-- 					<goal>stop</goal> -->
-<!-- 				</goals> -->
-<!-- 			</execution> -->
-<!-- 		</executions> -->
-<!-- 	</plugin> -->
+			<!-- <plugin> -->
+			<!-- <groupId>org.mortbay.jetty</groupId> -->
+			<!-- <artifactId>maven-jetty-plugin</artifactId> -->
+			<!-- <version>6.1.26</version> -->
+			<!-- <configuration> -->
+			<!-- <scanIntervalSeconds>10</scanIntervalSeconds> -->
+			<!-- <stopKey>foo</stopKey> -->
+			<!-- <stopPort>9999</stopPort> -->
+			<!-- </configuration> -->
+			<!-- <executions> -->
+			<!-- <execution> -->
+			<!-- <id>start-jetty</id> -->
+			<!-- <phase>pre-integration-test</phase> -->
+			<!-- <goals> -->
+			<!-- <goal>run</goal> -->
+			<!-- </goals> -->
+			<!-- <configuration> -->
+			<!-- <scanIntervalSeconds>5</scanIntervalSeconds> -->
+			<!-- <daemon>true</daemon> -->
+			<!-- </configuration> -->
+			<!-- </execution> -->
+			<!-- <execution> -->
+			<!-- <id>stop-jetty</id> -->
+			<!-- <phase>post-integration-test</phase> -->
+			<!-- <goals> -->
+			<!-- <goal>stop</goal> -->
+			<!-- </goals> -->
+			<!-- </execution> -->
+			<!-- </executions> -->
+			<!-- </plugin> -->
 
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
@@ -197,7 +203,7 @@
 					</execution>
 				</executions>
 			</plugin>
-			
+
 		</plugins>
 	</build>
 
