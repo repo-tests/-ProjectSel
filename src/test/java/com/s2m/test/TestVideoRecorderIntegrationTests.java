@@ -70,7 +70,7 @@ private  WebElement findElement( final By locator) {
             return driver.findElement(locator);
         }
 
-  @Test
+  //@Test
   public void testVideoRecorderIntegrationTests() throws Exception {
     driver.get(baseUrl + "/selectsystem-view-tomcat-oracle/login.xhtml");
     Thread.sleep(1000); findElement(By.id("j_username")).clear();
