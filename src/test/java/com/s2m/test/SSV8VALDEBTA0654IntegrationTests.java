@@ -61,7 +61,7 @@ private ScreenRecorder screenRecorder;
     driver = new FirefoxDriver();
     baseUrl = "http://10.0.0.107:8080/";
     driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
-startRecording();
+    startRecording();
   }
 private  WebElement findElement( final By locator) {
     

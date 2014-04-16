@@ -24,7 +24,7 @@ public class SSV8VALDEBTA0650IntegrationTests {
   private String baseUrl;
   private boolean acceptNextAlert = true;
   private StringBuffer verificationErrors = new StringBuffer();
-private ScreenRecorder screenRecorder;
+  private ScreenRecorder screenRecorder;
 
   public void startRecording() throws Exception
   {
