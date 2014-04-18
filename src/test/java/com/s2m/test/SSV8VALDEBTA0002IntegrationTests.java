@@ -27,6 +27,8 @@ public class SSV8VALDEBTA0002IntegrationTests {
     driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
     recorder.startRecording();
   }
+  
+  //  ***** Test de création des agences pour les banques*********
 
   //@Test
   public void testSSV8VALDEBTA0002IntegrationTests() throws Exception {

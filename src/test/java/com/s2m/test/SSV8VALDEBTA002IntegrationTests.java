@@ -30,7 +30,7 @@ public class SSV8VALDEBTA002IntegrationTests {
   }
 
   @Test
-  public void testSSV8VALDEBTA002IntegrationTests() throws Exception {
+  public void testSSV8VALDEBTA002aIntegrationTests() throws Exception {
 	Select select;
     driver.get(baseUrl + "/selectsystem-view-tomcat-oracle/login.xhtml");
     Thread.sleep(1000); findElement(By.id("j_username")).clear();
@@ -55,7 +55,7 @@ public class SSV8VALDEBTA002IntegrationTests {
     findElement(By.id("AccountInquiryForm:RangeMin")).sendKeys("400000");
     //((JavascriptExecutor) driver).executeScript("document.getElementById('AccountInquiryForm:RangeMax').disabled = false");
     Thread.sleep(1000); findElement(By.id("AccountInquiryForm:RangeMax")).clear();
-    findElement(By.id("AccountInquiryForm:RangeMax")).sendKeys("450000");
+    findElement(By.id("AccountInquiryForm:RangeMax")).sendKeys("410000");
     new Select(findElement(By.id("AccountInquiryForm:cardUsage"))).selectByVisibleText("Visa Check Card II");
     Thread.sleep(1000);
     new Select(findElement(By.id("AccountInquiryForm:cardNumbGenerationMethod"))).selectByVisibleText("Serial Method");
@@ -73,10 +73,10 @@ public class SSV8VALDEBTA002IntegrationTests {
     Thread.sleep(1000);
    // ((JavascriptExecutor) driver).executeScript("document.getElementById('AccountInquiryForm:RangeMin').disabled = false");
     Thread.sleep(1000); findElement(By.id("AccountInquiryForm:RangeMin")).clear();
-    findElement(By.id("AccountInquiryForm:RangeMin")).sendKeys("500000");
+    findElement(By.id("AccountInquiryForm:RangeMin")).sendKeys("510000");
     //((JavascriptExecutor) driver).executeScript("document.getElementById('AccountInquiryForm:RangeMax').disabled = false");
     Thread.sleep(1000); findElement(By.id("AccountInquiryForm:RangeMax")).clear();
-    findElement(By.id("AccountInquiryForm:RangeMax")).sendKeys("550000");
+    findElement(By.id("AccountInquiryForm:RangeMax")).sendKeys("520000");
     new Select(findElement(By.id("AccountInquiryForm:cardNumbGenerationMethod"))).selectByVisibleText("Random Active Range / Random Number");
     Thread.sleep(1000);
     new Select(findElement(By.id("AccountInquiryForm:cardTypeNetwork"))).selectByVisibleText("World MAsterCard Card");
@@ -94,10 +94,10 @@ public class SSV8VALDEBTA002IntegrationTests {
     Thread.sleep(1000);
    // ((JavascriptExecutor) driver).executeScript("document.getElementById('AccountInquiryForm:RangeMin').disabled = false");
     Thread.sleep(1000); findElement(By.id("AccountInquiryForm:RangeMin")).clear();
-    findElement(By.id("AccountInquiryForm:RangeMin")).sendKeys("600000");
+    findElement(By.id("AccountInquiryForm:RangeMin")).sendKeys("530000");
     //((JavascriptExecutor) driver).executeScript("document.getElementById('AccountInquiryForm:RangeMax').disabled = false");
     Thread.sleep(1000); findElement(By.id("AccountInquiryForm:RangeMax")).clear();
-    findElement(By.id("AccountInquiryForm:RangeMax")).sendKeys("650000");
+    findElement(By.id("AccountInquiryForm:RangeMax")).sendKeys("540000");
     new Select(findElement(By.id("AccountInquiryForm:cardNumbGenerationMethod"))).selectByVisibleText("ABC Card Method");
     Thread.sleep(1000);
     new Select(findElement(By.id("AccountInquiryForm:domain"))).selectByVisibleText("National");
@@ -108,7 +108,7 @@ public class SSV8VALDEBTA002IntegrationTests {
   }
 
   @Test
-  public void testSSV8VALDEBTA0022IntegrationTests() throws Exception {
+  public void testSSV8VALDEBTA002bIntegrationTests() throws Exception {
     driver.get(baseUrl + "/selectsystem-view-tomcat-oracle/login.xhtml");
     Thread.sleep(1000); findElement(By.id("j_username")).clear();
     findElement(By.id("j_username")).sendKeys("usercenter");
@@ -133,10 +133,15 @@ public class SSV8VALDEBTA002IntegrationTests {
    // ((JavascriptExecutor) driver).executeScript("document.getElementById('AccountInquiryForm:RangeMax').disabled = false");
     Thread.sleep(1000); findElement(By.id("AccountInquiryForm:RangeMax")).clear();
     findElement(By.id("AccountInquiryForm:RangeMax")).sendKeys("750000");
-    Thread.sleep(1000); findElement(By.id("AccountInquiryForm:SequenceBin")).clear();
-    findElement(By.id("AccountInquiryForm:SequenceBin")).sendKeys("1");
     new Select(findElement(By.id("AccountInquiryForm:pvkiSelectionMethod"))).selectByVisibleText("pvki 1");
     Thread.sleep(1000);
+    Thread.sleep(1000); findElement(By.id("AccountInquiryForm:SequenceBin")).clear();
+    findElement(By.id("AccountInquiryForm:SequenceBin")).sendKeys("1");
+    new Select(findElement(By.id("AccountInquiryForm:cardNumbGenerationMethod"))).selectByVisibleText("Random Active Range / Random Number");
+    Thread.sleep(1000);
+    new Select(findElement(By.id("AccountInquiryForm:cardTypeNetwork"))).selectByVisibleText("World MAsterCard Card");
+    Thread.sleep(1000);
+    
     new Select(findElement(By.id("AccountInquiryForm:domain"))).selectByVisibleText("National");
     Thread.sleep(1000);
     findElement(By.cssSelector("img[alt=\"save2\"]")).click();
@@ -154,12 +159,13 @@ public class SSV8VALDEBTA002IntegrationTests {
    // ((JavascriptExecutor) driver).executeScript("document.getElementById('AccountInquiryForm:RangeMax').disabled = false");
     Thread.sleep(1000); findElement(By.id("AccountInquiryForm:RangeMax")).clear();
     findElement(By.id("AccountInquiryForm:RangeMax")).sendKeys("850000");
+    new Select(findElement(By.id("AccountInquiryForm:cardTypeNetwork"))).selectByVisibleText("Visa Electron");
+    Thread.sleep(1000);
     Thread.sleep(1000); findElement(By.id("AccountInquiryForm:SequenceBin")).clear();
     findElement(By.id("AccountInquiryForm:SequenceBin")).sendKeys("2345678901");
     new Select(findElement(By.id("AccountInquiryForm:cardNumbGenerationMethod"))).selectByVisibleText("Random Active Range / Random Number");
     Thread.sleep(1000);
-    new Select(findElement(By.id("AccountInquiryForm:cardTypeNetwork"))).selectByVisibleText("Visa Electron");
-    Thread.sleep(1000);
+    
     findElement(By.cssSelector("img[alt=\"save2\"]")).click();
     findElement(By.xpath("//a[@onclick=\"if(typeof jsfcljs == 'function'){jsfcljs(document.getElementById('AccountInquiryForm'),{'AccountInquiryForm:j_id714':'AccountInquiryForm:j_id714'},'');}return false\"]")).click();
     findElement(By.id("ListeNationalBinForm:hsqyoqpllll")).click();
@@ -192,7 +198,7 @@ public class SSV8VALDEBTA002IntegrationTests {
     findElement(By.xpath("(//img[@alt='English'])[2]")).click();
   }
   @Test
-  public void testSSV8VALDEBTA0023IntegrationTests() throws Exception {
+  public void testSSV8VALDEBTA002cIntegrationTests() throws Exception {
     driver.get(baseUrl + "/selectsystem-view-tomcat-oracle/login.xhtml");
     Thread.sleep(1000); findElement(By.id("j_username")).clear();
     findElement(By.id("j_username")).sendKeys("usercenter");
@@ -219,9 +225,9 @@ public class SSV8VALDEBTA002IntegrationTests {
     findElement(By.id("AccountInquiryForm:RangeMax")).sendKeys("2600000");
     Thread.sleep(1000); findElement(By.id("AccountInquiryForm:SequenceBin")).clear();
     findElement(By.id("AccountInquiryForm:SequenceBin")).sendKeys("1234567890");
-    new Select(findElement(By.id("AccountInquiryForm:pvkiSelectionMethod"))).selectByVisibleText("pvki 1");
-    Thread.sleep(1000);
     new Select(findElement(By.id("AccountInquiryForm:domain"))).selectByVisibleText("National");
+    Thread.sleep(1000);
+    new Select(findElement(By.id("AccountInquiryForm:pvkiSelectionMethod"))).selectByVisibleText("pvki 1");
     Thread.sleep(1000);
     findElement(By.cssSelector("img[alt=\"save2\"]")).click();
     findElement(By.xpath("//a[@onclick=\"if(typeof jsfcljs == 'function'){jsfcljs(document.getElementById('AccountInquiryForm'),{'AccountInquiryForm:j_id714':'AccountInquiryForm:j_id714'},'');}return false\"]")).click();
@@ -238,10 +244,10 @@ public class SSV8VALDEBTA002IntegrationTests {
    // ((JavascriptExecutor) driver).executeScript("document.getElementById('AccountInquiryForm:RangeMax').disabled = false");
     Thread.sleep(1000); findElement(By.id("AccountInquiryForm:RangeMax")).clear();
     findElement(By.id("AccountInquiryForm:RangeMax")).sendKeys("2800000");
-    Thread.sleep(1000); findElement(By.id("AccountInquiryForm:SequenceBin")).clear();
-    findElement(By.id("AccountInquiryForm:SequenceBin")).sendKeys("2345678901");
     new Select(findElement(By.id("AccountInquiryForm:cardNumbGenerationMethod"))).selectByVisibleText("Serial Method");
     Thread.sleep(1000);
+    Thread.sleep(1000); findElement(By.id("AccountInquiryForm:SequenceBin")).clear();
+    findElement(By.id("AccountInquiryForm:SequenceBin")).sendKeys("2345678901");
     new Select(findElement(By.id("AccountInquiryForm:cardTypeNetwork"))).selectByVisibleText("Visa Electron");
     Thread.sleep(1000);
     findElement(By.cssSelector("img[alt=\"save2\"]")).click();

@@ -28,6 +28,8 @@ public class SSV8VALDEBTA999IntegrationTests {
     recorder.startRecording();
   }
 
+  // **** Test de supression des banques****
+  
   //@Test
   public void testSSV8VALDEBTA999IntegrationTests() throws Exception {
 Select select;

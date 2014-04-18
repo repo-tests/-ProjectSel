@@ -27,7 +27,8 @@ public class SSV8VALDEBTA900IntegrationTests {
     driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
     recorder.startRecording();
   }
-
+// supression des données saisies dans le test * Définir un Programme Compte *
+  
   //@Test
   public void testSSV8VALDEBTA900IntegrationTests() throws Exception {
 Select select;

@@ -37,22 +37,19 @@ public class ToAdd {
     Thread.sleep(1000); findElement(By.id("j_password")).clear();
     findElement(By.id("j_password")).sendKeys("pwd8888");
     findElement(By.cssSelector("#login > img[alt=\"Frensh\"]")).click();
-    findElement(By.xpath("//a[@onclick=\"if(typeof jsfcljs == 'function'){jsfcljs(document.getElementById('form'),{'form:j_id1037':'form:j_id1037'},'');}return false\"]")).click();
     findElement(By.id("form:table:1:sdksds")).click();
     findElement(By.xpath("(//img[@alt='English'])[10]")).click();
-    findElement(By.linkText("Manage BIN")).click();
-    new Select(findElement(By.id("ListeNationalBinForm:title"))).selectByVisibleText("banque test 3");
+    findElement(By.linkText("Opposition")).click();
+    findElement(By.cssSelector("img[alt=\"save2\"]")).click();
+    new Select(findElement(By.id("globalOpposedBinSaisForm:title"))).selectByVisibleText("banque test 1");
     Thread.sleep(1000);
-    findElement(By.cssSelector("option[value=\"7817\"]")).click();
-    findElement(By.xpath("//span[@id='ListeNationalBinForm:searchResultNationalBin:0:j_id201']/a/img")).click();
-    findElement(By.xpath("//a[@onclick=\"if(typeof jsfcljs == 'function'){jsfcljs(document.getElementById('ListeNationalBinForm'),{'ListeNationalBinForm:j_id215':'ListeNationalBinForm:j_id215'},'');}return false\"]")).click();
-    findElement(By.xpath("//a[@onclick=\"if(typeof jsfcljs == 'function'){jsfcljs(document.getElementById('ListeNationalBinForm'),{'ListeNationalBinForm:j_id241':'ListeNationalBinForm:j_id241'},'');}return false\"]")).click();
-    findElement(By.xpath("//span[@id='ListeNationalBinForm:searchResultNationalBin:0:j_id201']/a/img")).click();
-    findElement(By.xpath("//a[@onclick=\"if(typeof jsfcljs == 'function'){jsfcljs(document.getElementById('ListeNationalBinForm'),{'ListeNationalBinForm:j_id215':'ListeNationalBinForm:j_id215'},'');}return false\"]")).click();
-    findElement(By.xpath("//a[@onclick=\"if(typeof jsfcljs == 'function'){jsfcljs(document.getElementById('ListeNationalBinForm'),{'ListeNationalBinForm:j_id241':'ListeNationalBinForm:j_id241'},'');}return false\"]")).click();
-    findElement(By.xpath("//span[@id='ListeNationalBinForm:searchResultNationalBin:0:j_id201']/a/img")).click();
-    findElement(By.xpath("//a[@onclick=\"if(typeof jsfcljs == 'function'){jsfcljs(document.getElementById('ListeNationalBinForm'),{'ListeNationalBinForm:j_id215':'ListeNationalBinForm:j_id215'},'');}return false\"]")).click();
-    findElement(By.xpath("//a[@onclick=\"if(typeof jsfcljs == 'function'){jsfcljs(document.getElementById('ListeNationalBinForm'),{'ListeNationalBinForm:j_id241':'ListeNationalBinForm:j_id241'},'');}return false\"]")).click();
+    findElement(By.cssSelector("option[value=\"7815\"]")).click();
+    findElement(By.cssSelector("img[alt=\"save2\"]")).click();
+    new Select(findElement(By.id("globalOpposedBinSaisForm:nationalBin"))).selectByVisibleText("<510000>........<520000>");
+    Thread.sleep(1000);
+    findElement(By.cssSelector("option[value=\"9758\"]")).click();
+    findElement(By.cssSelector("img[alt=\"save2\"]")).click();
+    findElement(By.xpath("//a[@onclick=\"if(typeof jsfcljs == 'function'){jsfcljs(document.getElementById('globalOpposedBinSaisForm'),{'globalOpposedBinSaisForm:j_id195':'globalOpposedBinSaisForm:j_id195'},'');}return false\"]")).click();
     findElement(By.xpath("(//img[@alt='English'])[2]")).click();
   }
 

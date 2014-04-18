@@ -27,8 +27,10 @@ public class SSV8VALDEBTA998IntegrationTests {
     driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
   }
 
+  // ****** test de supression de l'agence "agence test BNQ1", "agence test BNQ2" et "agence test BNQ3"
+  
  // @Test
-  public void testSSV8VALDEBTA998IntegrationTests() throws Exception {
+  public void testSSV8VALDEBTA998aIntegrationTests() throws Exception {
     driver.get(baseUrl + "/selectsystem-view-tomcat-oracle/login.xhtml");
     Thread.sleep(1000); findElement(By.id("j_username")).clear();
     findElement(By.id("j_username")).sendKeys("usercenter");
@@ -41,13 +43,56 @@ public class SSV8VALDEBTA998IntegrationTests {
     findElement(By.linkText("Managing Branch")).click();
     new Select(findElement(By.id("SearchBranchForm:bank"))).selectByVisibleText("banque test 1");
     Thread.sleep(1000);
-    new Select(findElement(By.id("SearchBranchForm:branch"))).selectByVisibleText("agence test 1 BNQ 1");
+    new Select(findElement(By.id("SearchBranchForm:branch"))).selectByVisibleText("agence test BNQ1");
     Thread.sleep(1000);
     findElement(By.id("SearchBranchForm:hsqyo54354")).click();
     findElement(By.cssSelector("img[alt=\"delete\"]")).click();
     findElement(By.xpath("//a[@onclick=\"if(typeof jsfcljs == 'function'){jsfcljs(document.getElementById('SearchBranchForm'),{'SearchBranchForm:j_id679':'SearchBranchForm:j_id679'},'');}return false\"]")).click();
     findElement(By.xpath("(//img[@alt='English'])[2]")).click();
   }
+//@Test
+ public void testSSV8VALDEBTA998bIntegrationTests() throws Exception {
+   driver.get(baseUrl + "/selectsystem-view-tomcat-oracle/login.xhtml");
+   Thread.sleep(1000); findElement(By.id("j_username")).clear();
+   findElement(By.id("j_username")).sendKeys("usercenter");
+   Thread.sleep(1000); findElement(By.id("j_password")).clear();
+   findElement(By.id("j_password")).sendKeys("pwd8888");
+   findElement(By.cssSelector("#login > img[alt=\"Frensh\"]")).click();
+   findElement(By.xpath("//a[@onclick=\"if(typeof jsfcljs == 'function'){jsfcljs(document.getElementById('form'),{'form:j_id1037':'form:j_id1037'},'');}return false\"]")).click();
+   findElement(By.id("form:table:0:sdksds")).click();
+   findElement(By.xpath("(//img[@alt='English'])[8]")).click();
+   findElement(By.linkText("Managing Branch")).click();
+   new Select(findElement(By.id("SearchBranchForm:bank"))).selectByVisibleText("banque test 2");
+   Thread.sleep(1000);
+   new Select(findElement(By.id("SearchBranchForm:branch"))).selectByVisibleText("agence test BNQ2");
+   Thread.sleep(1000);
+   findElement(By.id("SearchBranchForm:hsqyo54354")).click();
+   findElement(By.cssSelector("img[alt=\"delete\"]")).click();
+   findElement(By.xpath("//a[@onclick=\"if(typeof jsfcljs == 'function'){jsfcljs(document.getElementById('SearchBranchForm'),{'SearchBranchForm:j_id679':'SearchBranchForm:j_id679'},'');}return false\"]")).click();
+   findElement(By.xpath("(//img[@alt='English'])[2]")).click();
+ }
+ 
+//@Test
+public void testSSV8VALDEBTA998cIntegrationTests() throws Exception {
+  driver.get(baseUrl + "/selectsystem-view-tomcat-oracle/login.xhtml");
+  Thread.sleep(1000); findElement(By.id("j_username")).clear();
+  findElement(By.id("j_username")).sendKeys("usercenter");
+  Thread.sleep(1000); findElement(By.id("j_password")).clear();
+  findElement(By.id("j_password")).sendKeys("pwd8888");
+  findElement(By.cssSelector("#login > img[alt=\"Frensh\"]")).click();
+  findElement(By.xpath("//a[@onclick=\"if(typeof jsfcljs == 'function'){jsfcljs(document.getElementById('form'),{'form:j_id1037':'form:j_id1037'},'');}return false\"]")).click();
+  findElement(By.id("form:table:0:sdksds")).click();
+  findElement(By.xpath("(//img[@alt='English'])[8]")).click();
+  findElement(By.linkText("Managing Branch")).click();
+  new Select(findElement(By.id("SearchBranchForm:bank"))).selectByVisibleText("banque test 2");
+  Thread.sleep(1000);
+  new Select(findElement(By.id("SearchBranchForm:branch"))).selectByVisibleText("agence test BNQ3");
+  Thread.sleep(1000);
+  findElement(By.id("SearchBranchForm:hsqyo54354")).click();
+  findElement(By.cssSelector("img[alt=\"delete\"]")).click();
+  findElement(By.xpath("//a[@onclick=\"if(typeof jsfcljs == 'function'){jsfcljs(document.getElementById('SearchBranchForm'),{'SearchBranchForm:j_id679':'SearchBranchForm:j_id679'},'');}return false\"]")).click();
+  findElement(By.xpath("(//img[@alt='English'])[2]")).click();
+}
 
   @After
   public void tearDown() throws Exception {
