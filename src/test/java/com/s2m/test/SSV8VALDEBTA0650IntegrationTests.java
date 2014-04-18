@@ -1,11 +1,7 @@
 package com.example.tests;
 
-import java.util.regex.Pattern;
 import java.util.concurrent.TimeUnit;
 import org.junit.*;
-
-import java.io.*;
-import java.awt.*;
 import static org.junit.Assert.*;
 import static org.hamcrest.CoreMatchers.*;
 import org.openqa.selenium.*;
@@ -13,57 +9,24 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.support.ui.*;
 
 import com.google.common.base.Function;
-import org.monte.media.Format;
-import org.monte.media.math.Rational;
-import org.monte.screenrecorder.ScreenRecorder;
-import static org.monte.media.VideoFormatKeys.*;
-import com.s2m.SpecializedScreenRecorder;
+import s2m.automation.utilities.*;
+
+
 
 public class SSV8VALDEBTA0650IntegrationTests {
   private WebDriver driver;
   private String baseUrl;
   private boolean acceptNextAlert = true;
   private StringBuffer verificationErrors = new StringBuffer();
-  private ScreenRecorder screenRecorder;
+private Recorder recorder=new Recorder();
 
-  public void startRecording() throws Exception
-  {
-	  File file = new File("target\\surefire-reports\\"+this.getClass().getName()+"\\");
-      
-      java.awt.Dimension screenSize = Toolkit.getDefaultToolkit().getScreenSize();
-      int width = screenSize.width;
-      int height = screenSize.height;
-      Rectangle captureSize = new Rectangle(0,0, width, height);
-      GraphicsConfiguration gc = GraphicsEnvironment
-          .getLocalGraphicsEnvironment()
-          .getDefaultScreenDevice()
-          .getDefaultConfiguration();
-
-      this.screenRecorder = new SpecializedScreenRecorder(gc, captureSize,
-              new Format(MediaTypeKey, MediaType.FILE, MimeTypeKey, MIME_AVI),
-              new Format(MediaTypeKey, MediaType.VIDEO, EncodingKey, ENCODING_AVI_TECHSMITH_SCREEN_CAPTURE,
-                   CompressorNameKey, ENCODING_AVI_TECHSMITH_SCREEN_CAPTURE,
-                   DepthKey, 24, FrameRateKey, Rational.valueOf(15),
-                   QualityKey, 1.0f,
-                   KeyFrameIntervalKey, 15 * 60),
-              new Format(MediaTypeKey, MediaType.VIDEO, EncodingKey, "black",
-                   FrameRateKey, Rational.valueOf(30)),
-              null, file, this.getClass().getSimpleName());
-
-      this.screenRecorder.start();
-  }
-
-  public void stopRecording() throws Exception
-  {
-      this.screenRecorder.stop();
-  }
-  
+ 
   @Before
   public void setUp() throws Exception {
     driver = new FirefoxDriver();
     baseUrl = "http://10.0.0.107:8080/";
     driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
-startRecording();
+recorder.startRecording();
   }
 private  WebElement findElement( final By locator) {
     
@@ -72,7 +35,7 @@ private  WebElement findElement( final By locator) {
             return driver.findElement(locator);
         }
 
-  @Test
+  //@Test
   public void testSSV8VALDEBTA0650IntegrationTests() throws Exception {
     driver.get(baseUrl + "/selectsystem-view-tomcat-oracle/login.xhtml");
     Thread.sleep(1000); findElement(By.id("j_username")).clear();
@@ -101,7 +64,7 @@ private  WebElement findElement( final By locator) {
     findElement(By.xpath("(//img[@alt='English'])[2]")).click();
   }
 
-  @Test
+//  @Test
   public void testSSV8VALDEBTA0652IntegrationTests() throws Exception {
     driver.get(baseUrl + "/selectsystem-view-tomcat-oracle/login.xhtml");
     Thread.sleep(1000); findElement(By.id("j_username")).clear();
@@ -128,7 +91,7 @@ private  WebElement findElement( final By locator) {
     findElement(By.xpath("(//a[contains(text(),'Debit Program')])[2]")).click();
     findElement(By.xpath("(//img[@alt='English'])[2]")).click();
   }
-  @Test
+  //@Test
   public void testSSV8VALDEBTA0653IntegrationTests() throws Exception {
     driver.get(baseUrl + "/selectsystem-view-tomcat-oracle/login.xhtml");
     Thread.sleep(1000); findElement(By.id("j_username")).clear();
@@ -150,7 +113,7 @@ private  WebElement findElement( final By locator) {
     findElement(By.xpath("(//a[contains(text(),'Produit Débit')])[2]")).click();
     findElement(By.xpath("(//img[@alt='English'])[2]")).click();
   }
-  @Test
+  //@Test
   public void testSSV8VALDEBTA0654IntegrationTests() throws Exception {
     driver.get(baseUrl + "/selectsystem-view-tomcat-oracle/login.xhtml");
     Thread.sleep(1000); findElement(By.id("j_username")).clear();
@@ -175,7 +138,7 @@ private  WebElement findElement( final By locator) {
   }
   @After
   public void tearDown() throws Exception {
-stopRecording();
+	  recorder.stopRecording();
     driver.quit();
     String verificationErrorString = verificationErrors.toString();
     if (!"".equals(verificationErrorString)) {
@@ -183,6 +146,7 @@ stopRecording();
     }
   }
 
+ 
   private boolean isElementPresent(By by) {
     try {
       driver.findElement(by);
