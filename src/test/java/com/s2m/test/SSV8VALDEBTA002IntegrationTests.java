@@ -286,9 +286,7 @@ public class SSV8VALDEBTA002IntegrationTests {
     (new WebDriverWait(driver, 30,1000)).until(ExpectedConditions.presenceOfElementLocated(locator));
       (new WebDriverWait(driver, 30,1000)).until(ExpectedConditions.visibilityOfElementLocated(locator));
       WebElement element=driver.findElement(locator);
-      (new WebDriverWait(driver, 30,1000)).until(ExpectedConditions.(locator));
       while (element.isEnabled()==false ){Thread.sleep(1000);}	  
-      }
       return element;
   }
 
