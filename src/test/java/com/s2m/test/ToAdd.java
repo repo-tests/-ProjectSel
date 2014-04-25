@@ -30,27 +30,22 @@ public class ToAdd {
 
   @Test
   public void testToAdd() throws Exception {
-
-    driver.get(baseUrl + "/selectsystem-view-tomcat-oracle/login.xhtml");
-    Thread.sleep(1000); findElement(By.id("j_username")).clear();
-    findElement(By.id("j_username")).sendKeys("usercenter");
-    Thread.sleep(1000); findElement(By.id("j_password")).clear();
-    findElement(By.id("j_password")).sendKeys("pwd8888");
-    findElement(By.cssSelector("#login > img[alt=\"Frensh\"]")).click();
-    findElement(By.id("form:table:1:sdksds")).click();
-    findElement(By.xpath("(//img[@alt='English'])[10]")).click();
-    findElement(By.linkText("Opposition")).click();
-    findElement(By.cssSelector("img[alt=\"save2\"]")).click();
-    new Select(findElement(By.id("globalOpposedBinSaisForm:title"))).selectByVisibleText("banque test 1");
+    driver.get(baseUrl + "/selectsystem-view-tomcat-oracle/modules/index.xhtml");
+    findElement(By.xpath("(//img[@alt='English'])[4]")).click();
+    findElement(By.linkText("Manage controls")).click();
+    new Select(findElement(By.id("ListeTransactionForm:titleBank1"))).selectByVisibleText("banque test 2");
     Thread.sleep(1000);
-    findElement(By.cssSelector("option[value=\"7815\"]")).click();
-    findElement(By.cssSelector("img[alt=\"save2\"]")).click();
-    new Select(findElement(By.id("globalOpposedBinSaisForm:nationalBin"))).selectByVisibleText("<510000>........<520000>");
+    findElement(By.cssSelector("td > a > img")).click();
+    findElement(By.cssSelector("img[alt=\"Modify\"]")).click();
+    findElement(By.xpath("(//img[@alt='save2'])[2]")).click();
+    findElement(By.xpath("//tr[2]/td[3]/center/table/tbody/tr/td[3]/span/a/img")).click();
+    findElement(By.xpath("//td/div[2]/a")).click();
+    findElement(By.xpath("(//img[@alt='Modify'])[3]")).click();
+    new Select(findElement(By.name("ListeTransactionForm:cardProgramControlSearchResultsOnlineId:0:j_id354"))).selectByVisibleText("Referal Control");
     Thread.sleep(1000);
-    findElement(By.cssSelector("option[value=\"9758\"]")).click();
     findElement(By.cssSelector("img[alt=\"save2\"]")).click();
-    findElement(By.xpath("//a[@onclick=\"if(typeof jsfcljs == 'function'){jsfcljs(document.getElementById('globalOpposedBinSaisForm'),{'globalOpposedBinSaisForm:j_id195':'globalOpposedBinSaisForm:j_id195'},'');}return false\"]")).click();
-    findElement(By.xpath("(//img[@alt='English'])[2]")).click();
+    findElement(By.xpath("//div[2]/span/a")).click();
+    findElement(By.linkText("Issuer Space")).click();
   }
 
   @After
@@ -66,7 +61,9 @@ public class ToAdd {
   private  WebElement findElement( final By locator) {
     (new WebDriverWait(driver, 30,1000)).until(ExpectedConditions.presenceOfElementLocated(locator));
       (new WebDriverWait(driver, 30,1000)).until(ExpectedConditions.visibilityOfElementLocated(locator));
-      return driver.findElement(locator);
+      WebElement element=driver.findElement(locator);
+      if (element.isEnabled()==false )  ((JavascriptExecutor) driver).executeScript("arguments[0].disabled = false", element);
+      return element;
   }
 
   private boolean isElementPresent(By by) {

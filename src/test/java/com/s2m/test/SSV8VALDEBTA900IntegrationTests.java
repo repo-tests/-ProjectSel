@@ -27,52 +27,46 @@ public class SSV8VALDEBTA900IntegrationTests {
     driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
     recorder.startRecording();
   }
-// supression des données saisies dans le test * Définir un Programme Compte *
-  
+  // *** supression du programm debit
+
   //@Test
   public void testSSV8VALDEBTA900IntegrationTests() throws Exception {
-Select select;
     driver.get(baseUrl + "/selectsystem-view-tomcat-oracle/login.xhtml");
     Thread.sleep(1000); findElement(By.id("j_username")).clear();
     findElement(By.id("j_username")).sendKeys("usercenter");
     Thread.sleep(1000); findElement(By.id("j_password")).clear();
     findElement(By.id("j_password")).sendKeys("pwd8888");
     findElement(By.cssSelector("#login > img[alt=\"Frensh\"]")).click();
-    findElement(By.xpath("//a[@onclick=\"if(typeof jsfcljs == 'function'){jsfcljs(document.getElementById('form'),{'form:j_id1037':'form:j_id1037'},'');}return false\"]")).click();
-    findElement(By.id("form:table:0:sdksds")).click();
+    findElement(By.xpath("//span/a")).click();
     findElement(By.id("form:table:1:sdksds")).click();
+    findElement(By.xpath("(//img[@alt='English'])[4]")).click();
+    findElement(By.linkText("Issuer Space")).click();
     findElement(By.xpath("(//img[@alt='English'])[7]")).click();
     findElement(By.xpath("(//a[contains(text(),'Debit Program')])[2]")).click();
     new Select(findElement(By.id("globalDebitProgramInquiryForm:bank"))).selectByVisibleText("banque test 1");
     Thread.sleep(1000);
-    findElement(By.cssSelector("option[value=\"7763\"]")).click();
     findElement(By.id("globalDebitProgramInquiryForm:debitProgramListId:0:sxqshxsqhtx")).click();
-    findElement(By.xpath("//a[@onclick=\"if(typeof jsfcljs == 'function'){jsfcljs(document.getElementById('globalDebitProgramInquiryForm'),{'globalDebitProgramInquiryForm:j_id266':'globalDebitProgramInquiryForm:j_id266'},'');}return false\"]")).click();
+    findElement(By.xpath("//td/div[3]/a")).click();
     findElement(By.id("globalDebitProgramInquiryForm:debitProgramListId:0:sxqshxsqhtx")).click();
-    findElement(By.xpath("//a[@onclick=\"if(typeof jsfcljs == 'function'){jsfcljs(document.getElementById('globalDebitProgramInquiryForm'),{'globalDebitProgramInquiryForm:j_id266':'globalDebitProgramInquiryForm:j_id266'},'');}return false\"]")).click();
+    findElement(By.xpath("//td/div[3]/a")).click();
     findElement(By.id("globalDebitProgramInquiryForm:debitProgramListId:0:sxqshxsqhtx")).click();
-    findElement(By.xpath("//a[@onclick=\"if(typeof jsfcljs == 'function'){jsfcljs(document.getElementById('globalDebitProgramInquiryForm'),{'globalDebitProgramInquiryForm:j_id266':'globalDebitProgramInquiryForm:j_id266'},'');}return false\"]")).click();
-    findElement(By.xpath("(//a[contains(text(),'Debit Program')])[2]")).click();
+    findElement(By.xpath("//td/div[3]/a")).click();
     new Select(findElement(By.id("globalDebitProgramInquiryForm:bank"))).selectByVisibleText("banque test 2");
     Thread.sleep(1000);
-    findElement(By.cssSelector("option[value=\"7764\"]")).click();
     findElement(By.id("globalDebitProgramInquiryForm:debitProgramListId:0:sxqshxsqhtx")).click();
-    findElement(By.xpath("//a[@onclick=\"if(typeof jsfcljs == 'function'){jsfcljs(document.getElementById('globalDebitProgramInquiryForm'),{'globalDebitProgramInquiryForm:j_id266':'globalDebitProgramInquiryForm:j_id266'},'');}return false\"]")).click();
+    findElement(By.xpath("//td/div[3]/a")).click();
     findElement(By.id("globalDebitProgramInquiryForm:debitProgramListId:0:sxqshxsqhtx")).click();
-    findElement(By.xpath("//a[@onclick=\"if(typeof jsfcljs == 'function'){jsfcljs(document.getElementById('globalDebitProgramInquiryForm'),{'globalDebitProgramInquiryForm:j_id266':'globalDebitProgramInquiryForm:j_id266'},'');}return false\"]")).click();
+    findElement(By.xpath("//td/div[3]/a")).click();
     findElement(By.id("globalDebitProgramInquiryForm:debitProgramListId:0:sxqshxsqhtx")).click();
-    findElement(By.xpath("//a[@onclick=\"if(typeof jsfcljs == 'function'){jsfcljs(document.getElementById('globalDebitProgramInquiryForm'),{'globalDebitProgramInquiryForm:j_id266':'globalDebitProgramInquiryForm:j_id266'},'');}return false\"]")).click();
-    findElement(By.xpath("(//a[contains(text(),'Debit Program')])[2]")).click();
+    findElement(By.xpath("//td/div[3]/a")).click();
     new Select(findElement(By.id("globalDebitProgramInquiryForm:bank"))).selectByVisibleText("banque test 3");
     Thread.sleep(1000);
-    findElement(By.cssSelector("option[value=\"7765\"]")).click();
     findElement(By.id("globalDebitProgramInquiryForm:debitProgramListId:0:sxqshxsqhtx")).click();
-    findElement(By.xpath("//a[@onclick=\"if(typeof jsfcljs == 'function'){jsfcljs(document.getElementById('globalDebitProgramInquiryForm'),{'globalDebitProgramInquiryForm:j_id266':'globalDebitProgramInquiryForm:j_id266'},'');}return false\"]")).click();
+    findElement(By.xpath("//td/div[3]/a")).click();
     findElement(By.id("globalDebitProgramInquiryForm:debitProgramListId:0:sxqshxsqhtx")).click();
-    findElement(By.xpath("//a[@onclick=\"if(typeof jsfcljs == 'function'){jsfcljs(document.getElementById('globalDebitProgramInquiryForm'),{'globalDebitProgramInquiryForm:j_id266':'globalDebitProgramInquiryForm:j_id266'},'');}return false\"]")).click();
+    findElement(By.xpath("//td/div[3]/a")).click();
     findElement(By.id("globalDebitProgramInquiryForm:debitProgramListId:0:sxqshxsqhtx")).click();
-    findElement(By.xpath("//a[@onclick=\"if(typeof jsfcljs == 'function'){jsfcljs(document.getElementById('globalDebitProgramInquiryForm'),{'globalDebitProgramInquiryForm:j_id266':'globalDebitProgramInquiryForm:j_id266'},'');}return false\"]")).click();
-    findElement(By.xpath("(//a[contains(text(),'Debit Program')])[2]")).click();
+    findElement(By.xpath("//td/div[3]/a")).click();
     findElement(By.xpath("(//img[@alt='English'])[2]")).click();
   }
 
@@ -89,7 +83,9 @@ Select select;
   private  WebElement findElement( final By locator) {
     (new WebDriverWait(driver, 30,1000)).until(ExpectedConditions.presenceOfElementLocated(locator));
       (new WebDriverWait(driver, 30,1000)).until(ExpectedConditions.visibilityOfElementLocated(locator));
-      return driver.findElement(locator);
+      WebElement element=driver.findElement(locator);
+      if (element.isEnabled()==false )  ((JavascriptExecutor) driver).executeScript("arguments[0].disabled = false", element);
+      return element;
   }
 
   private boolean isElementPresent(By by) {

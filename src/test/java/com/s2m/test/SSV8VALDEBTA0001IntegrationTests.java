@@ -28,16 +28,15 @@ public class SSV8VALDEBTA0001IntegrationTests {
     recorder.startRecording();
   }
 
-  //@Test
+ // @Test
   public void testSSV8VALDEBTA00001IntegrationTests() throws Exception {
-Select select;
     driver.get(baseUrl + "/selectsystem-view-tomcat-oracle/login.xhtml");
     Thread.sleep(1000); findElement(By.id("j_username")).clear();
     findElement(By.id("j_username")).sendKeys("usercenter");
     Thread.sleep(1000); findElement(By.id("j_password")).clear();
     findElement(By.id("j_password")).sendKeys("pwd8888");
     findElement(By.cssSelector("#login > img[alt=\"Frensh\"]")).click();
-    findElement(By.xpath("//a[@onclick=\"if(typeof jsfcljs == 'function'){jsfcljs(document.getElementById('form'),{'form:j_id1037':'form:j_id1037'},'');}return false\"]")).click();
+    findElement(By.xpath("//span/a[contains(@class,'btValider')]")).click();
     findElement(By.id("form:table:0:sdksds")).click();
     findElement(By.xpath("(//img[@alt='English'])[8]")).click();
     findElement(By.linkText("New Bank")).click();
@@ -59,7 +58,7 @@ Select select;
     new Select(findElement(By.id("AddBankForm:currency"))).selectByVisibleText("U.A.E. Dirham");
     Thread.sleep(1000);
     findElement(By.xpath("//form[@id='AddBankForm']/div[2]/a/img")).click();
-    findElement(By.xpath("//a[@onclick=\"if(typeof jsfcljs == 'function'){jsfcljs(document.getElementById('AddBankForm'),{'AddBankForm:j_id750':'AddBankForm:j_id750'},'');}return false\"]")).click();
+    findElement(By.xpath("//span/a[contains(@class,'btValider')]")).click();
     findElement(By.linkText("New Bank")).click();
     Thread.sleep(1000); findElement(By.id("AddBankForm:idenBK")).clear();
     findElement(By.id("AddBankForm:idenBK")).sendKeys("banque test2");
@@ -81,7 +80,7 @@ Select select;
     new Select(findElement(By.id("AddBankForm:currency"))).selectByVisibleText("Slovenia Tolar");
     Thread.sleep(1000);
     findElement(By.xpath("//form[@id='AddBankForm']/div[2]/a/img")).click();
-    findElement(By.xpath("//a[@onclick=\"if(typeof jsfcljs == 'function'){jsfcljs(document.getElementById('AddBankForm'),{'AddBankForm:j_id750':'AddBankForm:j_id750'},'');}return false\"]")).click();
+    findElement(By.xpath("//span/a[contains(@class,'btValider')]")).click();
     findElement(By.linkText("New Bank")).click();
     Thread.sleep(1000); findElement(By.id("AddBankForm:idenBK")).clear();
     findElement(By.id("AddBankForm:idenBK")).sendKeys("banque test 3");
@@ -100,7 +99,7 @@ Select select;
     new Select(findElement(By.id("AddBankForm:currency"))).selectByVisibleText("Swaziland Lilangeni");
     Thread.sleep(1000);
     findElement(By.xpath("//form[@id='AddBankForm']/div[2]/a/img")).click();
-    findElement(By.xpath("//a[@onclick=\"if(typeof jsfcljs == 'function'){jsfcljs(document.getElementById('AddBankForm'),{'AddBankForm:j_id750':'AddBankForm:j_id750'},'');}return false\"]")).click();
+    findElement(By.xpath("//span/a[contains(@class,'btValider')]")).click();
     findElement(By.xpath("(//img[@alt='English'])[2]")).click();
   }
 

@@ -3,6 +3,7 @@ package com.example.tests;
 import java.util.regex.Pattern;
 import java.util.concurrent.TimeUnit;
 import org.junit.*;
+
 import static org.junit.Assert.*;
 import static org.hamcrest.CoreMatchers.*;
 import org.openqa.selenium.*;
@@ -28,67 +29,94 @@ public class SSV8VALDEBTA003IntegrationTests {
     recorder.startRecording();
   }
 
-  @Test
-  public void testSSV8VALDEBTA003IntegrationTests() throws Exception {
-Select select;
+  //@Test
+  public void testSSV8VALDEBTA003aIntegrationTests() throws Exception {
     driver.get(baseUrl + "/selectsystem-view-tomcat-oracle/login.xhtml");
     Thread.sleep(1000); findElement(By.id("j_username")).clear();
     findElement(By.id("j_username")).sendKeys("usercenter");
     Thread.sleep(1000); findElement(By.id("j_password")).clear();
     findElement(By.id("j_password")).sendKeys("pwd8888");
     findElement(By.cssSelector("#login > img[alt=\"Frensh\"]")).click();
-    findElement(By.xpath("//a[@onclick=\"if(typeof jsfcljs == 'function'){jsfcljs(document.getElementById('form'),{'form:j_id1037':'form:j_id1037'},'');}return false\"]")).click();
+    findElement(By.xpath("//span/a")).click();
     findElement(By.id("form:table:1:sdksds")).click();
     findElement(By.xpath("(//img[@alt='English'])[10]")).click();
     findElement(By.linkText("Manage BIN")).click();
     new Select(findElement(By.id("ListeNationalBinForm:title"))).selectByVisibleText("banque test 1");
     Thread.sleep(1000);
-    findElement(By.cssSelector("option[value=\"7815\"]")).click();
     findElement(By.cssSelector("img[alt=\"Modify\"]")).click();
-    findElement(By.cssSelector("img[alt=\"save2\"]")).click();
-    findElement(By.xpath("//a[@onclick=\"if(typeof jsfcljs == 'function'){jsfcljs(document.getElementById('AccountInquiryForm'),{'AccountInquiryForm:j_id728':'AccountInquiryForm:j_id728'},'');}return false\"]")).click();
-    findElement(By.xpath("//span[@id='ListeNationalBinForm:searchResultNationalBin:1:j_id201']/a/img")).click();
-    findElement(By.xpath("//a[@onclick=\"if(typeof jsfcljs == 'function'){jsfcljs(document.getElementById('ListeNationalBinForm'),{'ListeNationalBinForm:j_id212':'ListeNationalBinForm:j_id212'},'');}return false\"]")).click();
-    findElement(By.xpath("(//img[@alt='Modify'])[3]")).click();
-    new Select(findElement(By.id("AccountInquiryForm:cardNumbGenerationMethod"))).selectByVisibleText("Random Active Range / Random Number");
+    new Select(findElement(By.id("AccountInquiryForm:cardUsage"))).selectByVisibleText("Credit Card");
     Thread.sleep(1000);
-    findElement(By.cssSelector("img[alt=\"save2\"]")).click();
-    findElement(By.xpath("//a[@onclick=\"if(typeof jsfcljs == 'function'){jsfcljs(document.getElementById('AccountInquiryForm'),{'AccountInquiryForm:j_id728':'AccountInquiryForm:j_id728'},'');}return false\"]")).click();
-    new Select(findElement(By.id("ListeNationalBinForm:title"))).selectByVisibleText("banque test 2");
-    Thread.sleep(1000);
-    findElement(By.xpath("//span[@id='ListeNationalBinForm:searchResultNationalBin:2:j_id201']/a/img")).click();
-    findElement(By.xpath("//a[@onclick=\"if(typeof jsfcljs == 'function'){jsfcljs(document.getElementById('ListeNationalBinForm'),{'ListeNationalBinForm:j_id212':'ListeNationalBinForm:j_id212'},'');}return false\"]")).click();
-    findElement(By.cssSelector("img[alt=\"Modify\"]")).click();
-    new Select(findElement(By.id("AccountInquiryForm:cardNumbGenerationMethod"))).selectByVisibleText("ABC Card Method");
-    Thread.sleep(1000);
-    findElement(By.cssSelector("img[alt=\"save2\"]")).click();
-    findElement(By.xpath("//a[@onclick=\"if(typeof jsfcljs == 'function'){jsfcljs(document.getElementById('AccountInquiryForm'),{'AccountInquiryForm:j_id728':'AccountInquiryForm:j_id728'},'');}return false\"]")).click();
-    findElement(By.cssSelector("img[alt=\"Modify\"]")).click();
-    findElement(By.cssSelector("img[alt=\"save2\"]")).click();
-    findElement(By.xpath("//a[@onclick=\"if(typeof jsfcljs == 'function'){jsfcljs(document.getElementById('AccountInquiryForm'),{'AccountInquiryForm:j_id728':'AccountInquiryForm:j_id728'},'');}return false\"]")).click();
-    new Select(findElement(By.id("ListeNationalBinForm:title"))).selectByVisibleText("banque test 3");
-    Thread.sleep(1000);
-    //findElement(By.id("ListeNationalBinForm:hsqyo54354")).click();
-    findElement(By.cssSelector("img[alt=\"Modify\"]")).click();
-    new Select(findElement(By.id("AccountInquiryForm:cardTypeNetwork"))).selectByVisibleText("Electronique");
-    Thread.sleep(1000);
-    new Select(findElement(By.id("AccountInquiryForm:cardNumbGenerationMethod"))).selectByVisibleText("Serial Method");
-    Thread.sleep(1000);
-    findElement(By.cssSelector("img[alt=\"save2\"]")).click();
-    findElement(By.xpath("//a[@onclick=\"if(typeof jsfcljs == 'function'){jsfcljs(document.getElementById('AccountInquiryForm'),{'AccountInquiryForm:j_id728':'AccountInquiryForm:j_id728'},'');}return false\"]")).click();
-    findElement(By.xpath("//span[@id='ListeNationalBinForm:searchResultNationalBin:1:j_id201']/a/img")).click();
-    findElement(By.xpath("//a[@onclick=\"if(typeof jsfcljs == 'function'){jsfcljs(document.getElementById('ListeNationalBinForm'),{'ListeNationalBinForm:j_id212':'ListeNationalBinForm:j_id212'},'');}return false\"]")).click();
-    findElement(By.xpath("(//img[@alt='Modify'])[3]")).click();
     new Select(findElement(By.id("AccountInquiryForm:pvkiSelectionMethod"))).selectByVisibleText("pvki 1");
     Thread.sleep(1000);
+    new Select(findElement(By.id("AccountInquiryForm:cardTypeNetwork"))).selectByVisibleText("Classic");
+    Thread.sleep(1000);
+    findElement(By.cssSelector("img[alt=\"save2\"]")).click();
+    findElement(By.xpath("//div[3]/div[2]/div/div[2]/table/tbody/tr/td/div[2]/span/a")).click();
+    findElement(By.xpath("//tr[2]/td[3]/center/table/tbody/tr/td[3]/span/a/img")).click();
+    findElement(By.xpath("//td/div[2]/a")).click();
+    findElement(By.xpath("(//img[@alt='Modify'])[3]")).click();
     new Select(findElement(By.id("AccountInquiryForm:domain"))).selectByVisibleText("National");
     Thread.sleep(1000);
     findElement(By.cssSelector("img[alt=\"save2\"]")).click();
-    findElement(By.xpath("//a[@onclick=\"if(typeof jsfcljs == 'function'){jsfcljs(document.getElementById('AccountInquiryForm'),{'AccountInquiryForm:j_id728':'AccountInquiryForm:j_id728'},'');}return false\"]")).click();
-    findElement(By.linkText("Manage BIN")).click();
+    findElement(By.xpath("//div[3]/div[2]/div/div[2]/table/tbody/tr/td/div[2]/span/a")).click();
+    findElement(By.linkText("Issuer Space")).click();
     findElement(By.xpath("(//img[@alt='English'])[2]")).click();
   }
 
+  //@Test
+  public void testSSV8VALDEBTA003bIntegrationTests() throws Exception {
+    driver.get(baseUrl + "/selectsystem-view-tomcat-oracle/login.xhtml");
+    Thread.sleep(1000); findElement(By.id("j_username")).clear();
+    findElement(By.id("j_username")).sendKeys("usercenter");
+    Thread.sleep(1000); findElement(By.id("j_password")).clear();
+    findElement(By.id("j_password")).sendKeys("pwd8888");
+    findElement(By.cssSelector("#login > img[alt=\"Frensh\"]")).click();
+    findElement(By.xpath("//span/a")).click();
+    findElement(By.id("form:table:1:sdksds")).click();
+    findElement(By.xpath("(//img[@alt='English'])[10]")).click();
+    findElement(By.linkText("Manage BIN")).click();
+    new Select(findElement(By.id("ListeNationalBinForm:title"))).selectByVisibleText("banque test 2");
+    Thread.sleep(1000);
+    findElement(By.cssSelector("img[alt=\"Modify\"]")).click();
+    new Select(findElement(By.id("AccountInquiryForm:cardUsage"))).selectByVisibleText("Check Card");
+    Thread.sleep(1000);
+    findElement(By.cssSelector("img[alt=\"save2\"]")).click();
+    findElement(By.xpath("//div[3]/div[2]/div/div[2]/table/tbody/tr/td/div[2]/span/a")).click();
+    findElement(By.xpath("(//img[@alt='Modify'])[2]")).click();
+    findElement(By.xpath("(//img[@alt='save2'])[2]")).click();
+    findElement(By.xpath("//tr[3]/td[3]/center/table/tbody/tr/td[3]/span/a/img")).click();
+    findElement(By.xpath("//td/div[2]/a")).click();
+    findElement(By.xpath("(//img[@alt='English'])[2]")).click();
+  }
+  
+  //@Test
+  public void testSSV8VALDEBTA003cIntegrationTests() throws Exception {
+    driver.get(baseUrl + "/selectsystem-view-tomcat-oracle/login.xhtml");
+    Thread.sleep(1000); findElement(By.id("j_username")).clear();
+    findElement(By.id("j_username")).sendKeys("usercenter");
+    Thread.sleep(1000); findElement(By.id("j_password")).clear();
+    findElement(By.id("j_password")).sendKeys("pwd8888");
+    findElement(By.cssSelector("#login > img[alt=\"Frensh\"]")).click();
+    findElement(By.xpath("//span/a")).click();
+    findElement(By.id("form:table:1:sdksds")).click();
+    findElement(By.xpath("(//img[@alt='English'])[10]")).click();
+    findElement(By.linkText("Manage BIN")).click();
+    new Select(findElement(By.id("ListeNationalBinForm:title"))).selectByVisibleText("banque test 3");
+    Thread.sleep(1000);
+    findElement(By.cssSelector("img[alt=\"Modify\"]")).click();
+    new Select(findElement(By.id("AccountInquiryForm:domain"))).selectByVisibleText("Regional");
+    Thread.sleep(1000);
+    new Select(findElement(By.id("AccountInquiryForm:cardUsage"))).selectByVisibleText("Credit Card");
+    Thread.sleep(1000);
+    findElement(By.cssSelector("img[alt=\"save2\"]")).click();
+    findElement(By.xpath("//div[3]/div[2]/div/div[2]/table/tbody/tr/td/div[2]/span/a")).click();
+    findElement(By.xpath("(//img[@alt='Modify'])[2]")).click();
+    findElement(By.xpath("(//img[@alt='save2'])[2]")).click();
+    findElement(By.xpath("//tr[3]/td[3]/center/table/tbody/tr/td[3]/span/a/img")).click();
+    findElement(By.xpath("//td/div[2]/a")).click();
+    findElement(By.linkText("Issuer Space")).click();
+    findElement(By.xpath("(//img[@alt='English'])[2]")).click();
+  }
   @After
   public void tearDown() throws Exception {
     recorder.stopRecording();
@@ -102,7 +130,9 @@ Select select;
   private  WebElement findElement( final By locator) {
     (new WebDriverWait(driver, 30,1000)).until(ExpectedConditions.presenceOfElementLocated(locator));
       (new WebDriverWait(driver, 30,1000)).until(ExpectedConditions.visibilityOfElementLocated(locator));
-      return driver.findElement(locator);
+      WebElement element=driver.findElement(locator);
+      if (element.isEnabled()==false )  ((JavascriptExecutor) driver).executeScript("arguments[0].disabled = false", element);
+      return element;
   }
 
   private boolean isElementPresent(By by) {

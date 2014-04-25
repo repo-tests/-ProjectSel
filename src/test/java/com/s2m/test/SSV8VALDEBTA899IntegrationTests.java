@@ -3,7 +3,6 @@ package com.example.tests;
 import java.util.regex.Pattern;
 import java.util.concurrent.TimeUnit;
 import org.junit.*;
-
 import static org.junit.Assert.*;
 import static org.hamcrest.CoreMatchers.*;
 import org.openqa.selenium.*;
@@ -28,93 +27,57 @@ public class SSV8VALDEBTA899IntegrationTests {
     driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
     recorder.startRecording();
   }
-  
-  // *** Test des donnes saisies pour le test Définir Bin du produit 
+  // Tests de supression des bins
 
- // @Test
-  public void testSSV8VALDEBTA899aIntegrationTests() throws Exception {
-
+  //@Test
+  public void testSSV8VALDEBTA899IntegrationTests() throws Exception {
     driver.get(baseUrl + "/selectsystem-view-tomcat-oracle/login.xhtml");
     Thread.sleep(1000); findElement(By.id("j_username")).clear();
     findElement(By.id("j_username")).sendKeys("usercenter");
     Thread.sleep(1000); findElement(By.id("j_password")).clear();
     findElement(By.id("j_password")).sendKeys("pwd8888");
     findElement(By.cssSelector("#login > img[alt=\"Frensh\"]")).click();
-    findElement(By.xpath("//a[@onclick=\"if(typeof jsfcljs == 'function'){jsfcljs(document.getElementById('form'),{'form:j_id1037':'form:j_id1037'},'');}return false\"]")).click();
+    findElement(By.xpath("//span/a")).click();
     findElement(By.id("form:table:1:sdksds")).click();
     findElement(By.xpath("(//img[@alt='English'])[10]")).click();
     findElement(By.linkText("Manage BIN")).click();
     new Select(findElement(By.id("ListeNationalBinForm:title"))).selectByVisibleText("banque test 1");
     Thread.sleep(1000);
-    findElement(By.cssSelector("option[value=\"7815\"]")).click();
-    findElement(By.xpath("//span[@id='ListeNationalBinForm:searchResultNationalBin:0:j_id201']/a/img")).click();
-    findElement(By.xpath("//a[@onclick=\"if(typeof jsfcljs == 'function'){jsfcljs(document.getElementById('ListeNationalBinForm'),{'ListeNationalBinForm:j_id215':'ListeNationalBinForm:j_id215'},'');}return false\"]")).click();
-    findElement(By.xpath("//a[@onclick=\"if(typeof jsfcljs == 'function'){jsfcljs(document.getElementById('ListeNationalBinForm'),{'ListeNationalBinForm:j_id241':'ListeNationalBinForm:j_id241'},'');}return false\"]")).click();
-    findElement(By.xpath("//span[@id='ListeNationalBinForm:searchResultNationalBin:0:j_id201']/a/img")).click();
-    findElement(By.xpath("//a[@onclick=\"if(typeof jsfcljs == 'function'){jsfcljs(document.getElementById('ListeNationalBinForm'),{'ListeNationalBinForm:j_id215':'ListeNationalBinForm:j_id215'},'');}return false\"]")).click();
-    findElement(By.xpath("//a[@onclick=\"if(typeof jsfcljs == 'function'){jsfcljs(document.getElementById('ListeNationalBinForm'),{'ListeNationalBinForm:j_id241':'ListeNationalBinForm:j_id241'},'');}return false\"]")).click();
-    findElement(By.xpath("//span[@id='ListeNationalBinForm:searchResultNationalBin:0:j_id201']/a/img")).click();
-    findElement(By.xpath("//a[@onclick=\"if(typeof jsfcljs == 'function'){jsfcljs(document.getElementById('ListeNationalBinForm'),{'ListeNationalBinForm:j_id215':'ListeNationalBinForm:j_id215'},'');}return false\"]")).click();
-    findElement(By.xpath("//a[@onclick=\"if(typeof jsfcljs == 'function'){jsfcljs(document.getElementById('ListeNationalBinForm'),{'ListeNationalBinForm:j_id241':'ListeNationalBinForm:j_id241'},'');}return false\"]")).click();
-    findElement(By.xpath("(//img[@alt='English'])[2]")).click();
-  }
-  
-  //@Test
-  public void testSSV8VALDEBTA899bIntegrationTests() throws Exception {
-
-    driver.get(baseUrl + "/selectsystem-view-tomcat-oracle/login.xhtml");
-    Thread.sleep(1000); findElement(By.id("j_username")).clear();
-    findElement(By.id("j_username")).sendKeys("usercenter");
-    Thread.sleep(1000); findElement(By.id("j_password")).clear();
-    findElement(By.id("j_password")).sendKeys("pwd8888");
-    findElement(By.cssSelector("#login > img[alt=\"Frensh\"]")).click();
-    findElement(By.xpath("//a[@onclick=\"if(typeof jsfcljs == 'function'){jsfcljs(document.getElementById('form'),{'form:j_id1037':'form:j_id1037'},'');}return false\"]")).click();
-    findElement(By.id("form:table:1:sdksds")).click();
-    findElement(By.xpath("(//img[@alt='English'])[10]")).click();
-    findElement(By.linkText("Manage BIN")).click();
+    findElement(By.xpath("//td[3]/span/a/img")).click();
+    findElement(By.xpath("//td/div[3]/a")).click();
+    findElement(By.xpath("//div[3]/div[2]/div/div[2]/table/tbody/tr/td/div[2]/span/a")).click();
+    findElement(By.xpath("//td[3]/span/a/img")).click();
+    findElement(By.xpath("//td/div[3]/a")).click();
+    findElement(By.xpath("//div[3]/div[2]/div/div[2]/table/tbody/tr/td/div[2]/span/a")).click();
+    findElement(By.xpath("//td[3]/span/a/img")).click();
+    findElement(By.xpath("//td/div[3]/a")).click();
+    findElement(By.xpath("//div[3]/div[2]/div/div[2]/table/tbody/tr/td/div[2]/span/a")).click();
     new Select(findElement(By.id("ListeNationalBinForm:title"))).selectByVisibleText("banque test 2");
     Thread.sleep(1000);
-    findElement(By.cssSelector("option[value=\"7816\"]")).click();
-    findElement(By.xpath("//span[@id='ListeNationalBinForm:searchResultNationalBin:0:j_id201']/a/img")).click();
-    findElement(By.xpath("//a[@onclick=\"if(typeof jsfcljs == 'function'){jsfcljs(document.getElementById('ListeNationalBinForm'),{'ListeNationalBinForm:j_id215':'ListeNationalBinForm:j_id215'},'');}return false\"]")).click();
-    findElement(By.xpath("//a[@onclick=\"if(typeof jsfcljs == 'function'){jsfcljs(document.getElementById('ListeNationalBinForm'),{'ListeNationalBinForm:j_id241':'ListeNationalBinForm:j_id241'},'');}return false\"]")).click();
-    findElement(By.xpath("//span[@id='ListeNationalBinForm:searchResultNationalBin:0:j_id201']/a/img")).click();
-    findElement(By.xpath("//a[@onclick=\"if(typeof jsfcljs == 'function'){jsfcljs(document.getElementById('ListeNationalBinForm'),{'ListeNationalBinForm:j_id215':'ListeNationalBinForm:j_id215'},'');}return false\"]")).click();
-    findElement(By.xpath("//a[@onclick=\"if(typeof jsfcljs == 'function'){jsfcljs(document.getElementById('ListeNationalBinForm'),{'ListeNationalBinForm:j_id241':'ListeNationalBinForm:j_id241'},'');}return false\"]")).click();
-    findElement(By.xpath("//span[@id='ListeNationalBinForm:searchResultNationalBin:0:j_id201']/a/img")).click();
-    findElement(By.xpath("//a[@onclick=\"if(typeof jsfcljs == 'function'){jsfcljs(document.getElementById('ListeNationalBinForm'),{'ListeNationalBinForm:j_id215':'ListeNationalBinForm:j_id215'},'');}return false\"]")).click();
-    findElement(By.xpath("//a[@onclick=\"if(typeof jsfcljs == 'function'){jsfcljs(document.getElementById('ListeNationalBinForm'),{'ListeNationalBinForm:j_id241':'ListeNationalBinForm:j_id241'},'');}return false\"]")).click();
-    findElement(By.xpath("(//img[@alt='English'])[2]")).click();
-  }
-
- // @Test
-  public void testSSV8VALDEBTA899cIntegrationTests() throws Exception {
-
-    driver.get(baseUrl + "/selectsystem-view-tomcat-oracle/login.xhtml");
-    Thread.sleep(1000); findElement(By.id("j_username")).clear();
-    findElement(By.id("j_username")).sendKeys("usercenter");
-    Thread.sleep(1000); findElement(By.id("j_password")).clear();
-    findElement(By.id("j_password")).sendKeys("pwd8888");
-    findElement(By.cssSelector("#login > img[alt=\"Frensh\"]")).click();
-    findElement(By.xpath("//a[@onclick=\"if(typeof jsfcljs == 'function'){jsfcljs(document.getElementById('form'),{'form:j_id1037':'form:j_id1037'},'');}return false\"]")).click();
-    findElement(By.id("form:table:1:sdksds")).click();
-    findElement(By.xpath("(//img[@alt='English'])[10]")).click();
-    findElement(By.linkText("Manage BIN")).click();
+    findElement(By.xpath("//td[3]/span/a/img")).click();
+    findElement(By.xpath("//td/div[3]/a")).click();
+    findElement(By.xpath("//div[3]/div[2]/div/div[2]/table/tbody/tr/td/div[2]/span/a")).click();
+    findElement(By.xpath("//td[3]/span/a/img")).click();
+    findElement(By.xpath("//td/div[3]/a")).click();
+    findElement(By.xpath("//div[3]/div[2]/div/div[2]/table/tbody/tr/td/div[2]/span/a")).click();
+    findElement(By.xpath("//td[3]/span/a/img")).click();
+    findElement(By.xpath("//td/div[3]/a")).click();
+    findElement(By.xpath("//div[3]/div[2]/div/div[2]/table/tbody/tr/td/div[2]/span/a")).click();
     new Select(findElement(By.id("ListeNationalBinForm:title"))).selectByVisibleText("banque test 3");
     Thread.sleep(1000);
-    findElement(By.cssSelector("option[value=\"7817\"]")).click();
-    findElement(By.xpath("//span[@id='ListeNationalBinForm:searchResultNationalBin:0:j_id201']/a/img")).click();
-    findElement(By.xpath("//a[@onclick=\"if(typeof jsfcljs == 'function'){jsfcljs(document.getElementById('ListeNationalBinForm'),{'ListeNationalBinForm:j_id215':'ListeNationalBinForm:j_id215'},'');}return false\"]")).click();
-    findElement(By.xpath("//a[@onclick=\"if(typeof jsfcljs == 'function'){jsfcljs(document.getElementById('ListeNationalBinForm'),{'ListeNationalBinForm:j_id241':'ListeNationalBinForm:j_id241'},'');}return false\"]")).click();
-    findElement(By.xpath("//span[@id='ListeNationalBinForm:searchResultNationalBin:0:j_id201']/a/img")).click();
-    findElement(By.xpath("//a[@onclick=\"if(typeof jsfcljs == 'function'){jsfcljs(document.getElementById('ListeNationalBinForm'),{'ListeNationalBinForm:j_id215':'ListeNationalBinForm:j_id215'},'');}return false\"]")).click();
-    findElement(By.xpath("//a[@onclick=\"if(typeof jsfcljs == 'function'){jsfcljs(document.getElementById('ListeNationalBinForm'),{'ListeNationalBinForm:j_id241':'ListeNationalBinForm:j_id241'},'');}return false\"]")).click();
-    findElement(By.xpath("//span[@id='ListeNationalBinForm:searchResultNationalBin:0:j_id201']/a/img")).click();
-    findElement(By.xpath("//a[@onclick=\"if(typeof jsfcljs == 'function'){jsfcljs(document.getElementById('ListeNationalBinForm'),{'ListeNationalBinForm:j_id215':'ListeNationalBinForm:j_id215'},'');}return false\"]")).click();
-    findElement(By.xpath("//a[@onclick=\"if(typeof jsfcljs == 'function'){jsfcljs(document.getElementById('ListeNationalBinForm'),{'ListeNationalBinForm:j_id241':'ListeNationalBinForm:j_id241'},'');}return false\"]")).click();
+    findElement(By.id("ListeNationalBinForm:hsqyo54354")).click();
+    findElement(By.xpath("//td[3]/span/a/img")).click();
+    findElement(By.xpath("//td/div[3]/a")).click();
+    findElement(By.xpath("//div[3]/div[2]/div/div[2]/table/tbody/tr/td/div[2]/span/a")).click();
+    findElement(By.xpath("//td[3]/span/a/img")).click();
+    findElement(By.xpath("//td/div[3]/a")).click();
+    findElement(By.xpath("//div[3]/div[2]/div/div[2]/table/tbody/tr/td/div[2]/span/a")).click();
+    findElement(By.xpath("//td[3]/span/a/img")).click();
+    findElement(By.xpath("//td/div[3]/a")).click();
+    findElement(By.xpath("//div[3]/div[2]/div/div[2]/table/tbody/tr/td/div[2]/span/a")).click();
     findElement(By.xpath("(//img[@alt='English'])[2]")).click();
   }
-  
+
   @After
   public void tearDown() throws Exception {
     recorder.stopRecording();
@@ -128,7 +91,9 @@ public class SSV8VALDEBTA899IntegrationTests {
   private  WebElement findElement( final By locator) {
     (new WebDriverWait(driver, 30,1000)).until(ExpectedConditions.presenceOfElementLocated(locator));
       (new WebDriverWait(driver, 30,1000)).until(ExpectedConditions.visibilityOfElementLocated(locator));
-      return driver.findElement(locator);
+      WebElement element=driver.findElement(locator);
+      if (element.isEnabled()==false )  ((JavascriptExecutor) driver).executeScript("arguments[0].disabled = false", element);
+      return element;
   }
 
   private boolean isElementPresent(By by) {

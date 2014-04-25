@@ -3,7 +3,6 @@ package com.example.tests;
 import java.util.regex.Pattern;
 import java.util.concurrent.TimeUnit;
 import org.junit.*;
-
 import static org.junit.Assert.*;
 import static org.hamcrest.CoreMatchers.*;
 import org.openqa.selenium.*;
@@ -29,55 +28,36 @@ public class SSV8VALDEBTA004IntegrationTests {
     recorder.startRecording();
   }
 
-  // *** Mise en opposition fonctionnelle du Bin****
-  
-  @Test
-  public void testSSV8VALDEBTA004aIntegrationTests() throws Exception {
-
+  //@Test
+  public void testSSV8VALDEBTA004IntegrationTests() throws Exception {
     driver.get(baseUrl + "/selectsystem-view-tomcat-oracle/login.xhtml");
     Thread.sleep(1000); findElement(By.id("j_username")).clear();
     findElement(By.id("j_username")).sendKeys("usercenter");
     Thread.sleep(1000); findElement(By.id("j_password")).clear();
     findElement(By.id("j_password")).sendKeys("pwd8888");
     findElement(By.cssSelector("#login > img[alt=\"Frensh\"]")).click();
-    findElement(By.xpath("//a[@onclick=\"if(typeof jsfcljs == 'function'){jsfcljs(document.getElementById('form'),{'form:j_id1037':'form:j_id1037'},'');}return false\"]")).click();
+    findElement(By.xpath("//span/a")).click();
     findElement(By.id("form:table:1:sdksds")).click();
     findElement(By.xpath("(//img[@alt='English'])[10]")).click();
     findElement(By.linkText("Opposition")).click();
     new Select(findElement(By.id("globalOpposedBinSaisForm:title"))).selectByVisibleText("banque test 1");
     Thread.sleep(1000);
-    new Select(findElement(By.id("globalOpposedBinSaisForm:nationalBin"))).selectByVisibleText("<400000>........<410000>");
+    new Select(findElement(By.id("globalOpposedBinSaisForm:nationalBin"))).selectByVisibleText("<1900000>........<2000000>");
     Thread.sleep(1000);
     findElement(By.cssSelector("img[alt=\"save2\"]")).click();
-    findElement(By.xpath("//a[@onclick=\"if(typeof jsfcljs == 'function'){jsfcljs(document.getElementById('globalOpposedBinSaisForm'),{'globalOpposedBinSaisForm:j_id195':'globalOpposedBinSaisForm:j_id195'},'');}return false\"]")).click();
-    findElement(By.xpath("(//img[@alt='English'])[2]")).click();
-  }
-  
-  // ** ce test permet de vérifier que les champs sont obligatoires + l'impossiblité de mettre en opotition un bin déja mis en oppostion
-
-  @Test
-  public void testSSV8VALDEBTA004bIntegrationTests() throws Exception{
-
-    driver.get(baseUrl + "/selectsystem-view-tomcat-oracle/login.xhtml");
-    Thread.sleep(1000); findElement(By.id("j_username")).clear();
-    findElement(By.id("j_username")).sendKeys("usercenter");
-    Thread.sleep(1000); findElement(By.id("j_password")).clear();
-    findElement(By.id("j_password")).sendKeys("pwd8888");
-    findElement(By.cssSelector("#login > img[alt=\"Frensh\"]")).click();
-    findElement(By.xpath("//a[@onclick=\"if(typeof jsfcljs == 'function'){jsfcljs(document.getElementById('form'),{'form:j_id1037':'form:j_id1037'},'');}return false\"]")).click();
-    findElement(By.id("form:table:1:sdksds")).click();
-    findElement(By.xpath("(//img[@alt='English'])[10]")).click();
-    findElement(By.linkText("Opposition")).click();
-    findElement(By.cssSelector("img[alt=\"save2\"]")).click();
-    new Select(findElement(By.id("globalOpposedBinSaisForm:title"))).selectByVisibleText("banque test 1");
+    findElement(By.xpath("//div[2]/span/a")).click();
+    new Select(findElement(By.id("globalOpposedBinSaisForm:title"))).selectByVisibleText("banque test 2");
     Thread.sleep(1000);
-    findElement(By.cssSelector("option[value=\"7815\"]")).click();
-    findElement(By.cssSelector("img[alt=\"save2\"]")).click();
-    new Select(findElement(By.id("globalOpposedBinSaisForm:nationalBin"))).selectByVisibleText("<510000>........<520000>");
+    new Select(findElement(By.id("globalOpposedBinSaisForm:nationalBin"))).selectByVisibleText("<2100000>........<2200000>");
     Thread.sleep(1000);
-    findElement(By.cssSelector("option[value=\"9758\"]")).click();
     findElement(By.cssSelector("img[alt=\"save2\"]")).click();
-    findElement(By.xpath("//a[@onclick=\"if(typeof jsfcljs == 'function'){jsfcljs(document.getElementById('globalOpposedBinSaisForm'),{'globalOpposedBinSaisForm:j_id195':'globalOpposedBinSaisForm:j_id195'},'');}return false\"]")).click();
+    findElement(By.xpath("//div[2]/span/a")).click();
+    new Select(findElement(By.id("globalOpposedBinSaisForm:title"))).selectByVisibleText("banque test 3");
+    Thread.sleep(1000);
+    new Select(findElement(By.id("globalOpposedBinSaisForm:nationalBin"))).selectByVisibleText("<2500000>........<2600000>");
+    Thread.sleep(1000);
+    findElement(By.cssSelector("img[alt=\"save2\"]")).click();
+    findElement(By.xpath("//div[2]/span/a")).click();
     findElement(By.xpath("(//img[@alt='English'])[2]")).click();
   }
 
@@ -94,7 +74,9 @@ public class SSV8VALDEBTA004IntegrationTests {
   private  WebElement findElement( final By locator) {
     (new WebDriverWait(driver, 30,1000)).until(ExpectedConditions.presenceOfElementLocated(locator));
       (new WebDriverWait(driver, 30,1000)).until(ExpectedConditions.visibilityOfElementLocated(locator));
-      return driver.findElement(locator);
+      WebElement element=driver.findElement(locator);
+      if (element.isEnabled()==false )  ((JavascriptExecutor) driver).executeScript("arguments[0].disabled = false", element);
+      return element;
   }
 
   private boolean isElementPresent(By by) {

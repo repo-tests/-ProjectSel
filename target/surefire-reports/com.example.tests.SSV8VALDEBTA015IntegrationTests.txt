@@ -1,0 +1,64 @@
+-------------------------------------------------------------------------------
+Test set: com.example.tests.SSV8VALDEBTA015IntegrationTests
+-------------------------------------------------------------------------------
+Tests run: 3, Failures: 0, Errors: 2, Skipped: 0, Time elapsed: 129.573 sec <<< FAILURE! - in com.example.tests.SSV8VALDEBTA015IntegrationTests
+testSSV8VALDEBTA015bIntegrationTests(com.example.tests.SSV8VALDEBTA015IntegrationTests)  Time elapsed: 51.786 sec  <<< ERROR!
+org.openqa.selenium.TimeoutException: Timed out after 30 seconds waiting for presence of element located by: By.xpath: //div[3]/div[2]/div/div[2]/table/tbody/tr/td/div[2]/span/a
+Build info: version: '2.40.0', revision: '4c5c0568b004f67810ee41c459549aa4b09c651e', time: '2014-02-19 11:13:01'
+System info: host: 'vaio-VAIO', ip: '192.168.56.1', os.name: 'Windows 7', os.arch: 'amd64', os.version: '6.1', java.version: '1.7.0_25'
+Driver info: driver.version: unknown
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:57)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:526)
+	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:193)
+	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:145)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:573)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:326)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:423)
+	at org.openqa.selenium.By$ByXPath.findElement(By.java:357)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:318)
+	at org.openqa.selenium.support.ui.ExpectedConditions.findElement(ExpectedConditions.java:730)
+	at org.openqa.selenium.support.ui.ExpectedConditions.access$000(ExpectedConditions.java:39)
+	at org.openqa.selenium.support.ui.ExpectedConditions$3.apply(ExpectedConditions.java:106)
+	at org.openqa.selenium.support.ui.ExpectedConditions$3.apply(ExpectedConditions.java:103)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:208)
+	at com.example.tests.SSV8VALDEBTA015IntegrationTests.findElement(SSV8VALDEBTA015IntegrationTests.java:205)
+	at com.example.tests.SSV8VALDEBTA015IntegrationTests.testSSV8VALDEBTA015bIntegrationTests(SSV8VALDEBTA015IntegrationTests.java:106)
+Caused by: org.openqa.selenium.remote.ErrorHandler$UnknownServerException: Unable to locate element: {"method":"xpath","selector":"//div[3]/div[2]/div/div[2]/table/tbody/tr/td/div[2]/span/a"}
+Build info: version: '2.40.0', revision: '4c5c0568b004f67810ee41c459549aa4b09c651e', time: '2014-02-19 11:13:01'
+System info: host: 'vaio-VAIO', ip: '192.168.56.1', os.name: 'Windows 7', os.arch: 'amd64', os.version: '6.1', java.version: '1.7.0_25'
+Driver info: driver.version: unknown
+	at <anonymous class>.FirefoxDriver.prototype.findElementInternal_(file:///C:/Users/vaio/AppData/Local/Temp/anonymous1340160069910426171webdriver-profile/extensions/fxdriver@googlecode.com/components/driver_component.js:8904)
+	at <anonymous class>.fxdriver.Timer.prototype.setTimeout/<.notify(file:///C:/Users/vaio/AppData/Local/Temp/anonymous1340160069910426171webdriver-profile/extensions/fxdriver@googlecode.com/components/driver_component.js:396)
+
+testSSV8VALDEBTA015cIntegrationTests(com.example.tests.SSV8VALDEBTA015IntegrationTests)  Time elapsed: 40.554 sec  <<< ERROR!
+org.openqa.selenium.TimeoutException: Timed out after 30 seconds waiting for presence of element located by: By.selector: #login > img[alt="Frensh"]
+Build info: version: '2.40.0', revision: '4c5c0568b004f67810ee41c459549aa4b09c651e', time: '2014-02-19 11:13:01'
+System info: host: 'vaio-VAIO', ip: '192.168.56.1', os.name: 'Windows 7', os.arch: 'amd64', os.version: '6.1', java.version: '1.7.0_25'
+Driver info: driver.version: unknown
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:57)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:526)
+	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:193)
+	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:145)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:573)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:326)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByCssSelector(RemoteWebDriver.java:415)
+	at org.openqa.selenium.By$ByCssSelector.findElement(By.java:425)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:318)
+	at org.openqa.selenium.support.ui.ExpectedConditions.findElement(ExpectedConditions.java:730)
+	at org.openqa.selenium.support.ui.ExpectedConditions.access$000(ExpectedConditions.java:39)
+	at org.openqa.selenium.support.ui.ExpectedConditions$3.apply(ExpectedConditions.java:106)
+	at org.openqa.selenium.support.ui.ExpectedConditions$3.apply(ExpectedConditions.java:103)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:208)
+	at com.example.tests.SSV8VALDEBTA015IntegrationTests.findElement(SSV8VALDEBTA015IntegrationTests.java:205)
+	at com.example.tests.SSV8VALDEBTA015IntegrationTests.testSSV8VALDEBTA015cIntegrationTests(SSV8VALDEBTA015IntegrationTests.java:138)
+Caused by: org.openqa.selenium.remote.ErrorHandler$UnknownServerException: Unable to locate element: {"method":"css selector","selector":"#login > img[alt=\"Frensh\"]"}
+Build info: version: '2.40.0', revision: '4c5c0568b004f67810ee41c459549aa4b09c651e', time: '2014-02-19 11:13:01'
+System info: host: 'vaio-VAIO', ip: '192.168.56.1', os.name: 'Windows 7', os.arch: 'amd64', os.version: '6.1', java.version: '1.7.0_25'
+Driver info: driver.version: unknown
+	at <anonymous class>.FirefoxDriver.prototype.findElementInternal_(file:///C:/Users/vaio/AppData/Local/Temp/anonymous8664882331162769126webdriver-profile/extensions/fxdriver@googlecode.com/components/driver_component.js:8904)
+	at <anonymous class>.fxdriver.Timer.prototype.setTimeout/<.notify(file:///C:/Users/vaio/AppData/Local/Temp/anonymous8664882331162769126webdriver-profile/extensions/fxdriver@googlecode.com/components/driver_component.js:396)
+
