@@ -1,0 +1,14 @@
+-------------------------------------------------------------------------------
+Test set: com.example.tests.SSV8VALDEBTA024IntegrationTests
+-------------------------------------------------------------------------------
+Tests run: 1, Failures: 0, Errors: 1, Skipped: 0, Time elapsed: 88.655 sec <<< FAILURE! - in com.example.tests.SSV8VALDEBTA024IntegrationTests
+testSSV8VALDEBTA024IntegrationTests(com.example.tests.SSV8VALDEBTA024IntegrationTests)  Time elapsed: 88.655 sec  <<< ERROR!
+org.openqa.selenium.TimeoutException: Timed out after 30 seconds waiting for visibility of element located by By.xpath: //div[2]/span/a
+Build info: version: '2.40.0', revision: '4c5c0568b004f67810ee41c459549aa4b09c651e', time: '2014-02-19 11:13:01'
+System info: host: 'vaio-VAIO', ip: '192.168.56.1', os.name: 'Windows 7', os.arch: 'amd64', os.version: '6.1', java.version: '1.7.0_25'
+Driver info: driver.version: unknown
+	at org.openqa.selenium.support.ui.FluentWait.timeoutException(FluentWait.java:259)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:228)
+	at com.example.tests.SSV8VALDEBTA024IntegrationTests.findElement(SSV8VALDEBTA024IntegrationTests.java:126)
+	at com.example.tests.SSV8VALDEBTA024IntegrationTests.testSSV8VALDEBTA024IntegrationTests(SSV8VALDEBTA024IntegrationTests.java:110)
+

@@ -26,13 +26,14 @@ public class SSV8VALDEBTA013IntegrationTests {
     recorder = new Recorder();
     baseUrl = "http://10.0.0.107:8080/";
     driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
-    recorder.startRecording();
+    driver.manage().window().maximize() ;
+    recorder.startRecording(this.getClass().getSimpleName());
   }
   // **** Tests de cration de recalculation de PIN
   
   // Verification : enregistrement juste+ les champs id te nom sont obligatoires
 
-  @Test
+  //@Test
   public void testSSV8VALDEBTA013aIntegrationTests() throws Exception {
     driver.get(baseUrl + "/selectsystem-view-tomcat-oracle/login.xhtml");
     Thread.sleep(1000); findElement(By.id("j_username")).clear();
@@ -83,7 +84,7 @@ public class SSV8VALDEBTA013IntegrationTests {
   
   /// **** Verification que le champ montant est obligatoire + des donnnes non valides pour le champs montant
   /// ne seront pas acceptes
-  @Test
+//@Test
   public void testSSV8VALDEBTA013bIntegrationTests() throws Exception {
     driver.get(baseUrl + "/selectsystem-view-tomcat-oracle/login.xhtml");
     Thread.sleep(1000); findElement(By.id("j_username")).clear();
@@ -134,7 +135,7 @@ public class SSV8VALDEBTA013IntegrationTests {
     findElement(By.xpath("(//img[@alt='English'])[2]")).click();
   }
   // *** données non valides divers
-  @Test
+ //@Test
   public void testSSV8VALDEBTA013cIntegrationTests() throws Exception {
     driver.get(baseUrl + "/selectsystem-view-tomcat-oracle/login.xhtml");
     Thread.sleep(1000); findElement(By.id("j_username")).clear();

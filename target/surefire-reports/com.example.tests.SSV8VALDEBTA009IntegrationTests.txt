@@ -1,4 +1,0 @@
--------------------------------------------------------------------------------
-Test set: com.example.tests.SSV8VALDEBTA009IntegrationTests
--------------------------------------------------------------------------------
-Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 126.179 sec - in com.example.tests.SSV8VALDEBTA009IntegrationTests

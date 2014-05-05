@@ -22,30 +22,28 @@ public class ToAdd {
   @Before
   public void setUp() throws Exception {
     driver = new FirefoxDriver();
+driver.manage().window().maximize() ;
     recorder = new Recorder();
     baseUrl = "http://10.0.0.107:8080/";
     driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
-    recorder.startRecording();
+    recorder.startRecording(this.getClass().getSimpleName());
   }
 
   @Test
   public void testToAdd() throws Exception {
-    driver.get(baseUrl + "/selectsystem-view-tomcat-oracle/modules/index.xhtml");
-    findElement(By.xpath("(//img[@alt='English'])[4]")).click();
-    findElement(By.linkText("Manage controls")).click();
-    new Select(findElement(By.id("ListeTransactionForm:titleBank1"))).selectByVisibleText("banque test 2");
+    driver.get(baseUrl + "/selectsystem-view-tomcat-oracle/modules/issuer/fees/SSV8_ECR0029_RENEW_FEES.xhtml");
+    findElement(By.linkText("Renew Fees")).click();
+    new Select(findElement(By.id("ListeRenewFeesFrom:titleaaayyyy"))).selectByVisibleText("banque test 1");
     Thread.sleep(1000);
-    findElement(By.cssSelector("td > a > img")).click();
+    findElement(By.id("ListeRenewFeesFrom:hsqyoqpllll")).click();
+    Thread.sleep(1000); findElement(By.id("ListeRenewFeesFrom:searchResultsCardManagementFeesId:0:inputIdaaayyyy")).clear();
+    findElement(By.id("ListeRenewFeesFrom:searchResultsCardManagementFeesId:0:inputIdaaayyyy")).sendKeys("test1");
+    Thread.sleep(1000); findElement(By.id("ListeRenewFeesFrom:searchResultsCardManagementFeesId:0:inputLabeaaayyy")).clear();
+    findElement(By.id("ListeRenewFeesFrom:searchResultsCardManagementFeesId:0:inputLabeaaayyy")).sendKeys("test2");
+    Thread.sleep(1000); findElement(By.id("ListeRenewFeesFrom:searchResultsCardManagementFeesId:0:inputAmoulll")).clear();
+    findElement(By.id("ListeRenewFeesFrom:searchResultsCardManagementFeesId:0:inputAmoulll")).sendKeys("2200");
     findElement(By.cssSelector("img[alt=\"Modify\"]")).click();
-    findElement(By.xpath("(//img[@alt='save2'])[2]")).click();
-    findElement(By.xpath("//tr[2]/td[3]/center/table/tbody/tr/td[3]/span/a/img")).click();
-    findElement(By.xpath("//td/div[2]/a")).click();
-    findElement(By.xpath("(//img[@alt='Modify'])[3]")).click();
-    new Select(findElement(By.name("ListeTransactionForm:cardProgramControlSearchResultsOnlineId:0:j_id354"))).selectByVisibleText("Referal Control");
-    Thread.sleep(1000);
-    findElement(By.cssSelector("img[alt=\"save2\"]")).click();
-    findElement(By.xpath("//div[2]/span/a")).click();
-    findElement(By.linkText("Issuer Space")).click();
+    findElement(By.xpath("//div[3]/div[2]/div/div[2]/table/tbody/tr/td/div[2]/span/a")).click();
   }
 
   @After

@@ -1,14 +1,14 @@
-08:46:26,628 INFO  [org.openqa.selenium.server.SeleniumServer] Java: Oracle Corporation 23.25-b01
-08:46:26,628 INFO  [org.openqa.selenium.server.SeleniumServer] OS: Windows 7 6.1 amd64
-08:46:26,704 INFO  [org.openqa.selenium.server.SeleniumServer] v2.21.0, with Core v2.21.0. Built from revision 16551
-08:46:28,952 INFO  [org.openqa.selenium.server.SeleniumServer] RemoteWebDriver instances should connect to: http://127.0.0.1:4444/wd/hub
-08:46:28,965 INFO  [org.openqa.jetty.http.HttpServer] Version Jetty/5.1.x
-08:46:28,967 INFO  [org.openqa.jetty.util.Container] Started HttpContext[/selenium-server/driver,/selenium-server/driver]
-08:46:28,981 INFO  [org.openqa.jetty.util.Container] Started HttpContext[/selenium-server,/selenium-server]
-08:46:28,981 INFO  [org.openqa.jetty.util.Container] Started HttpContext[/,/]
-08:46:29,263 INFO  [org.openqa.jetty.util.Container] Started org.openqa.jetty.jetty.servlet.ServletHandler@62db5e9c
-08:46:29,263 INFO  [org.openqa.jetty.util.Container] Started HttpContext[/wd,/wd]
-08:46:29,266 WARN  [org.openqa.jetty.util.ThreadedServer] Failed to start: SocketListener0@0.0.0.0:4444
+10:03:20,422 INFO  [org.openqa.selenium.server.SeleniumServer] Java: Oracle Corporation 23.25-b01
+10:03:20,423 INFO  [org.openqa.selenium.server.SeleniumServer] OS: Windows 7 6.1 amd64
+10:03:20,434 INFO  [org.openqa.selenium.server.SeleniumServer] v2.21.0, with Core v2.21.0. Built from revision 16551
+10:03:20,632 INFO  [org.openqa.selenium.server.SeleniumServer] RemoteWebDriver instances should connect to: http://127.0.0.1:4444/wd/hub
+10:03:20,634 INFO  [org.openqa.jetty.http.HttpServer] Version Jetty/5.1.x
+10:03:20,634 INFO  [org.openqa.jetty.util.Container] Started HttpContext[/selenium-server/driver,/selenium-server/driver]
+10:03:20,635 INFO  [org.openqa.jetty.util.Container] Started HttpContext[/selenium-server,/selenium-server]
+10:03:20,635 INFO  [org.openqa.jetty.util.Container] Started HttpContext[/,/]
+10:03:20,695 INFO  [org.openqa.jetty.util.Container] Started org.openqa.jetty.jetty.servlet.ServletHandler@30208678
+10:03:20,695 INFO  [org.openqa.jetty.util.Container] Started HttpContext[/wd,/wd]
+10:03:20,698 WARN  [org.openqa.jetty.util.ThreadedServer] Failed to start: SocketListener0@0.0.0.0:4444
 Exception in thread "main" java.net.BindException: Selenium is already running on port 4444. Or some other service is.
 	at org.openqa.selenium.server.SeleniumServer.start(SeleniumServer.java:483)
 	at org.openqa.selenium.server.SeleniumServer.boot(SeleniumServer.java:283)

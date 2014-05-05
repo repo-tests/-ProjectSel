@@ -26,14 +26,14 @@ public class SSV8VALDEBTA012IntegrationTests {
     recorder = new Recorder();
     baseUrl = "http://10.0.0.107:8080/";
     driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
-    recorder.startRecording();
+    driver.manage().window().maximize() ;
+    recorder.startRecording(this.getClass().getName());
   }
   
   //  tests de creation des frais de livraison rapide
   
   //**** verifier un enregistrement fonctionnele+unicté de l'id par banque + id obligatoire
-
-  @Test
+ //@Test
   public void testSSV8VALDEBTA012aIntegrationTests() throws Exception {
     driver.get(baseUrl + "/selectsystem-view-tomcat-oracle/login.xhtml");
     Thread.sleep(1000); findElement(By.id("j_username")).clear();
@@ -89,7 +89,7 @@ public class SSV8VALDEBTA012IntegrationTests {
 
   
   ///****   verification : nom montant operateur obligatoires
-  @Test
+ //@Test
   public void testSSV8VALDEBTA012bIntegrationTests() throws Exception {
     driver.get(baseUrl + "/selectsystem-view-tomcat-oracle/login.xhtml");
     Thread.sleep(1000); findElement(By.id("j_username")).clear();
@@ -149,15 +149,13 @@ public class SSV8VALDEBTA012IntegrationTests {
   }
   ///*** verification: des données varies pour le champ montant "," et "." et "-12"
   
-  @Test
+//@Test
   public void testSSV8VALDEBTA012cIntegrationTests() throws Exception {
     driver.get(baseUrl + "/selectsystem-view-tomcat-oracle/login.xhtml");
     Thread.sleep(1000); findElement(By.id("j_username")).clear();
     findElement(By.id("j_username")).sendKeys("usercenter");
     Thread.sleep(1000); findElement(By.id("j_password")).clear();
     findElement(By.id("j_password")).sendKeys("pwd8888");
-    findElement(By.cssSelector("#login > img[alt=\"Frensh\"]")).click();
-    findElement(By.cssSelector("#login > img[alt=\"Frensh\"]")).click();
     findElement(By.cssSelector("#login > img[alt=\"Frensh\"]")).click();
     findElement(By.xpath("//span/a")).click();
     findElement(By.id("form:table:1:sdksds")).click();

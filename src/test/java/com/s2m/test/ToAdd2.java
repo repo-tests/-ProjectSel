@@ -22,31 +22,91 @@ public class ToAdd2 {
   @Before
   public void setUp() throws Exception {
     driver = new FirefoxDriver();
+driver.manage().window().maximize() ;
     recorder = new Recorder();
     baseUrl = "http://10.0.0.107:8080/";
     driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
-    recorder.startRecording();
+    recorder.startRecording(this.getClass().getSimpleName());
   }
 
   @Test
   public void testToAdd2() throws Exception {
-    driver.get(baseUrl + "/selectsystem-view-tomcat-oracle/modules/index.xhtml");
-    findElement(By.xpath("(//img[@alt='English'])[4]")).click();
-    findElement(By.linkText("Manage controls")).click();
-    new Select(findElement(By.id("ListeTransactionForm:titleBank1"))).selectByVisibleText("banque test 3");
+    driver.get(baseUrl + "/selectsystem-view-tomcat-oracle/modules/issuer/fees/SSV8_ECR0029_RENEW_FEES.xhtml");
+    new Select(findElement(By.id("ListeRenewFeesFrom:titleaaayyyy"))).selectByVisibleText("banque test 2");
     Thread.sleep(1000);
-    findElement(By.cssSelector("td > a > img")).click();
-    findElement(By.xpath("//td[3]/span/a/img")).click();
-    findElement(By.xpath("//td/div[2]/a")).click();
-    findElement(By.xpath("(//img[@alt='Modify'])[2]")).click();
-    new Select(findElement(By.name("ListeTransactionForm:cardProgramControlSearchResultsOnlineId:0:j_id364"))).selectByVisibleText("Log with decline");
+    findElement(By.id("ListeRenewFeesFrom:hsqyo54354")).click();
+    findElement(By.id("ListeRenewFeesFrom:hsqyoqpllll")).click();
+    Thread.sleep(1000); findElement(By.id("ListeRenewFeesFrom:searchResultsCardManagementFeesId:0:inputLabeaaayyy")).clear();
+    findElement(By.id("ListeRenewFeesFrom:searchResultsCardManagementFeesId:0:inputLabeaaayyy")).sendKeys("Fr_Ren_021");
+    Thread.sleep(1000); findElement(By.id("ListeRenewFeesFrom:searchResultsCardManagementFeesId:0:inputAmoulll")).clear();
+    findElement(By.id("ListeRenewFeesFrom:searchResultsCardManagementFeesId:0:inputAmoulll")).sendKeys("30");
+    findElement(By.cssSelector("img[alt=\"Modify\"]")).click();
+    Thread.sleep(1000); findElement(By.id("ListeRenewFeesFrom:searchResultsCardManagementFeesId:0:inputIdaaayyyy")).clear();
+    findElement(By.id("ListeRenewFeesFrom:searchResultsCardManagementFeesId:0:inputIdaaayyyy")).sendKeys("Fr_Ren_021");
+    findElement(By.cssSelector("img[alt=\"Modify\"]")).click();
+    findElement(By.xpath("//div[3]/div[2]/div/div[2]/table/tbody/tr/td/div[2]/span/a")).click();
+    findElement(By.id("ListeRenewFeesFrom:hsqyoqpllll")).click();
+    Thread.sleep(1000); findElement(By.id("ListeRenewFeesFrom:searchResultsCardManagementFeesId:0:inputIdaaayyyy")).clear();
+    findElement(By.id("ListeRenewFeesFrom:searchResultsCardManagementFeesId:0:inputIdaaayyyy")).sendKeys("Fr_Ren_022");
+    Thread.sleep(1000); findElement(By.id("ListeRenewFeesFrom:searchResultsCardManagementFeesId:0:inputLabeaaayyy")).clear();
+    findElement(By.id("ListeRenewFeesFrom:searchResultsCardManagementFeesId:0:inputLabeaaayyy")).sendKeys("Fr_Ren_022");
+    Thread.sleep(1000); findElement(By.id("ListeRenewFeesFrom:searchResultsCardManagementFeesId:0:inputAmoulll")).clear();
+    findElement(By.id("ListeRenewFeesFrom:searchResultsCardManagementFeesId:0:inputAmoulll")).sendKeys("");
+    findElement(By.cssSelector("img[alt=\"Modify\"]")).click();
+    Thread.sleep(1000); findElement(By.id("ListeRenewFeesFrom:searchResultsCardManagementFeesId:0:inputAmoulll")).clear();
+    findElement(By.id("ListeRenewFeesFrom:searchResultsCardManagementFeesId:0:inputAmoulll")).sendKeys("25");
+    findElement(By.cssSelector("img[alt=\"Modify\"]")).click();
+    findElement(By.xpath("//div[3]/div[2]/div/div[2]/table/tbody/tr/td/div[2]/span/a")).click();
+    findElement(By.id("ListeRenewFeesFrom:hsqyoqpllll")).click();
+    Thread.sleep(1000); findElement(By.id("ListeRenewFeesFrom:searchResultsCardManagementFeesId:0:inputIdaaayyyy")).clear();
+    findElement(By.id("ListeRenewFeesFrom:searchResultsCardManagementFeesId:0:inputIdaaayyyy")).sendKeys("Fr_Ren_023");
+    Thread.sleep(1000); findElement(By.id("ListeRenewFeesFrom:searchResultsCardManagementFeesId:0:inputLabeaaayyy")).clear();
+    findElement(By.id("ListeRenewFeesFrom:searchResultsCardManagementFeesId:0:inputLabeaaayyy")).sendKeys("Fr_Ren_023");
+    Thread.sleep(1000); findElement(By.id("ListeRenewFeesFrom:searchResultsCardManagementFeesId:0:inputAmoulll")).clear();
+    findElement(By.id("ListeRenewFeesFrom:searchResultsCardManagementFeesId:0:inputAmoulll")).sendKeys("0");
+    findElement(By.cssSelector("img[alt=\"Modify\"]")).click();
+    findElement(By.xpath("//div[3]/div[2]/div/div[2]/table/tbody/tr/td/div[2]/span/a")).click();
+    new Select(findElement(By.id("ListeRenewFeesFrom:titleaaayyyy"))).selectByVisibleText("banque test 3");
     Thread.sleep(1000);
-    Thread.sleep(1000); findElement(By.id("ListeTransactionForm:label")).clear();
-    findElement(By.id("ListeTransactionForm:label")).sendKeys("Control_032");
-    findElement(By.cssSelector("img[alt=\"save2\"]")).click();
-    findElement(By.xpath("//div[2]/span/a")).click();
+    findElement(By.id("ListeRenewFeesFrom:hsqyo54354")).click();
+    findElement(By.id("ListeRenewFeesFrom:hsqyoqpllll")).click();
+    Thread.sleep(1000); findElement(By.id("ListeRenewFeesFrom:searchResultsCardManagementFeesId:0:inputIdaaayyyy")).clear();
+    findElement(By.id("ListeRenewFeesFrom:searchResultsCardManagementFeesId:0:inputIdaaayyyy")).sendKeys("Fr_Ren_031");
+    Thread.sleep(1000); findElement(By.id("ListeRenewFeesFrom:searchResultsCardManagementFeesId:0:inputLabeaaayyy")).clear();
+    findElement(By.id("ListeRenewFeesFrom:searchResultsCardManagementFeesId:0:inputLabeaaayyy")).sendKeys("vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv");
+    Thread.sleep(1000); findElement(By.id("ListeRenewFeesFrom:searchResultsCardManagementFeesId:0:inputAmoulll")).clear();
+    findElement(By.id("ListeRenewFeesFrom:searchResultsCardManagementFeesId:0:inputAmoulll")).sendKeys("200");
+    findElement(By.cssSelector("img[alt=\"Modify\"]")).click();
+    findElement(By.xpath("//div[3]/div[2]/div/div[2]/table/tbody/tr/td/div[2]/span/a")).click();
+    findElement(By.cssSelector("img[alt=\"Modify\"]")).click();
+    Thread.sleep(1000); findElement(By.id("ListeRenewFeesFrom:searchResultsCardManagementFeesId:0:inputLabeaaayyy")).clear();
+    findElement(By.id("ListeRenewFeesFrom:searchResultsCardManagementFeesId:0:inputLabeaaayyy")).sendKeys("vvvvvvvvvvvvvvvv");
+    Thread.sleep(1000); findElement(By.id("ListeRenewFeesFrom:searchResultsCardManagementFeesId:0:inputLabeaaayyy")).clear();
+    findElement(By.id("ListeRenewFeesFrom:searchResultsCardManagementFeesId:0:inputLabeaaayyy")).sendKeys("Fr_Ren_031");
+    findElement(By.cssSelector("img[alt=\"Modify\"]")).click();
+    findElement(By.xpath("//div[3]/div[2]/div/div[2]/table/tbody/tr/td/div[2]/span/a")).click();
+    findElement(By.id("ListeRenewFeesFrom:hsqyoqpllll")).click();
+    Thread.sleep(1000); findElement(By.id("ListeRenewFeesFrom:searchResultsCardManagementFeesId:0:inputIdaaayyyy")).clear();
+    findElement(By.id("ListeRenewFeesFrom:searchResultsCardManagementFeesId:0:inputIdaaayyyy")).sendKeys("Fr_Ren_032");
+    Thread.sleep(1000); findElement(By.id("ListeRenewFeesFrom:searchResultsCardManagementFeesId:0:inputLabeaaayyy")).clear();
+    findElement(By.id("ListeRenewFeesFrom:searchResultsCardManagementFeesId:0:inputLabeaaayyy")).sendKeys("Fr_Ren_032");
+    Thread.sleep(1000); findElement(By.id("ListeRenewFeesFrom:searchResultsCardManagementFeesId:0:inputAmoulll")).clear();
+    findElement(By.id("ListeRenewFeesFrom:searchResultsCardManagementFeesId:0:inputAmoulll")).sendKeys("-12");
+    findElement(By.cssSelector("img[alt=\"Modify\"]")).click();
+    Thread.sleep(1000); findElement(By.id("ListeRenewFeesFrom:searchResultsCardManagementFeesId:0:inputAmoulll")).clear();
+    findElement(By.id("ListeRenewFeesFrom:searchResultsCardManagementFeesId:0:inputAmoulll")).sendKeys("12.000");
+    findElement(By.cssSelector("img[alt=\"Modify\"]")).click();
+    findElement(By.xpath("//div[3]/div[2]/div/div[2]/table/tbody/tr/td/div[2]/span/a")).click();
+    findElement(By.id("ListeRenewFeesFrom:hsqyoqpllll")).click();
+    Thread.sleep(1000); findElement(By.id("ListeRenewFeesFrom:searchResultsCardManagementFeesId:0:inputIdaaayyyy")).clear();
+    findElement(By.id("ListeRenewFeesFrom:searchResultsCardManagementFeesId:0:inputIdaaayyyy")).sendKeys("Fr_Ren_033");
+    Thread.sleep(1000); findElement(By.id("ListeRenewFeesFrom:searchResultsCardManagementFeesId:0:inputLabeaaayyy")).clear();
+    findElement(By.id("ListeRenewFeesFrom:searchResultsCardManagementFeesId:0:inputLabeaaayyy")).sendKeys("Fr_Ren_033");
+    Thread.sleep(1000); findElement(By.id("ListeRenewFeesFrom:searchResultsCardManagementFeesId:0:inputAmoulll")).clear();
+    findElement(By.id("ListeRenewFeesFrom:searchResultsCardManagementFeesId:0:inputAmoulll")).sendKeys("2222222222");
+    findElement(By.cssSelector("img[alt=\"Modify\"]")).click();
+    findElement(By.xpath("//div[3]/div[2]/div/div[2]/table/tbody/tr/td/div[2]/span/a")).click();
     findElement(By.linkText("Issuer Space")).click();
-    findElement(By.xpath("(//img[@alt='English'])[2]")).click();
   }
 
   @After

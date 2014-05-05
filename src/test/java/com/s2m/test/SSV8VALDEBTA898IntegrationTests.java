@@ -25,11 +25,12 @@ public class SSV8VALDEBTA898IntegrationTests {
     recorder = new Recorder();
     baseUrl = "http://10.0.0.107:8080/";
     driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
-    recorder.startRecording();
+    driver.manage().window().maximize();
+    recorder.startRecording(this.getClass().getName());
   }
 
   // ***supression des frais de remplacement
- // @Test
+  @Test
   public void testSSV8VALDEBTA898IntegrationTests() throws Exception {
     driver.get(baseUrl + "/selectsystem-view-tomcat-oracle/login.xhtml");
     Thread.sleep(1000); findElement(By.id("j_username")).clear();

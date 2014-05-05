@@ -19,12 +19,16 @@ public class SSV8VALDEBTA998IntegrationTests {
   private String baseUrl;
   private boolean acceptNextAlert = true;
   private StringBuffer verificationErrors = new StringBuffer();
+  private Recorder recorder;
 
   @Before
   public void setUp() throws Exception {
     driver = new FirefoxDriver();
+    recorder=new Recorder();
     baseUrl = "http://10.0.0.107:8080/";
     driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+    driver.manage().window().maximize();
+    recorder.startRecording(this.getClass().getName());
   }
 
   // ****** test de supression de l'agence "agence test BNQ1", "agence test BNQ2" et "agence test BNQ3"

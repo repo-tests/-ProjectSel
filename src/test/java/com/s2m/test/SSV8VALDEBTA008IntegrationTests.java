@@ -26,13 +26,14 @@ public class SSV8VALDEBTA008IntegrationTests {
     recorder = new Recorder();
     baseUrl = "http://10.0.0.107:8080/";
     driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
-    recorder.startRecording();
+    driver.manage().window().maximize() ;
+    recorder.startRecording(this.getClass().getName());
   }
 
   // ***creation des motifs de remplacement
   //***** un enregistrement fonctionnel (juste) et l'unicité d'id par banque
   // *** la longeur du champ id limitée mais le champ nom ne l'est pas
- // @Test
+// @Test
   public void testSSV8VALDEBTA008aIntegrationTests() throws Exception {
     driver.get(baseUrl + "/selectsystem-view-tomcat-oracle/login.xhtml");
     Thread.sleep(1000); findElement(By.id("j_username")).clear();
@@ -78,7 +79,7 @@ public class SSV8VALDEBTA008IntegrationTests {
     findElement(By.xpath("(//img[@alt='English'])[2]")).click();
   }
   //** vérifier que les champs banque, identifiant et banque sont obligatoires
-//  @Test
+ //@Test
   public void testSSV8VALDEBTA008bIntegrationTests() throws Exception {
     driver.get(baseUrl + "/selectsystem-view-tomcat-oracle/login.xhtml");
     Thread.sleep(1000); findElement(By.id("j_username")).clear();
@@ -122,7 +123,7 @@ public class SSV8VALDEBTA008IntegrationTests {
   // *** l'utilisation des données "......"
   //** et des données de longeurs de "nnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnn" pour le champ nom
   //* l'impossibilité de modifier l'id d'un motif de remplacemnt une fois enregistré
-// @Test
+//@Test
   public void testSSV8VALDEBTA008cIntegrationTests() throws Exception {
 	 driver.get(baseUrl + "/selectsystem-view-tomcat-oracle/login.xhtml");
 	    Thread.sleep(1000); findElement(By.id("j_username")).clear();

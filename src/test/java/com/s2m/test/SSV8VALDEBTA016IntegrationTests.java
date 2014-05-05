@@ -26,10 +26,11 @@ public class SSV8VALDEBTA016IntegrationTests {
     recorder = new Recorder();
     baseUrl = "http://10.0.0.107:8080/";
     driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
-    recorder.startRecording();
+    driver.manage().window().maximize() ;
+    recorder.startRecording(this.getClass().getName());
   }
 
-  @Test
+//@Test
   public void testSSV8VALDEBTA016aIntegrationTests() throws Exception {
     driver.get(baseUrl + "/selectsystem-view-tomcat-oracle/login.xhtml");
     Thread.sleep(1000); findElement(By.id("j_username")).clear();
@@ -79,7 +80,7 @@ public class SSV8VALDEBTA016IntegrationTests {
     findElement(By.xpath("(//img[@alt='English'])[2]")).click();
   }
   
-  @Test
+//@Test
   public void testSSV8VALDEBTA016bIntegrationTests() throws Exception {
     driver.get(baseUrl + "/selectsystem-view-tomcat-oracle/login.xhtml");
     Thread.sleep(1000); findElement(By.id("j_username")).clear();
@@ -128,7 +129,7 @@ public class SSV8VALDEBTA016IntegrationTests {
     findElement(By.xpath("(//img[@alt='English'])[2]")).click();
   }
   
-  @Test
+//@Test
   public void testSSV8VALDEBTA016cIntegrationTests() throws Exception {
     driver.get(baseUrl + "/selectsystem-view-tomcat-oracle/login.xhtml");
     Thread.sleep(1000); findElement(By.id("j_username")).clear();

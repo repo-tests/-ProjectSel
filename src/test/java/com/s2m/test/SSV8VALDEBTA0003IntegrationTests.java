@@ -25,11 +25,12 @@ public class SSV8VALDEBTA0003IntegrationTests {
     recorder = new Recorder();
     baseUrl = "http://10.0.0.107:8080/";
     driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
-    recorder.startRecording();
+    driver.manage().window().maximize() ;
+    recorder.startRecording(this.getClass().getCanonicalName());
   }
   // ** enregistrement des risques pour les trois banques
 
- // @Test
+// @Test
   public void testSSV8VALDEBTA0003IntegrationTests() throws Exception {
 
 driver.get(baseUrl + "/selectsystem-view-tomcat-oracle/login.xhtml");

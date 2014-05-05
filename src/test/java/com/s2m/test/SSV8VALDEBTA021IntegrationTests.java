@@ -26,10 +26,11 @@ public class SSV8VALDEBTA021IntegrationTests {
     recorder = new Recorder();
     baseUrl = "http://10.0.0.107:8080/";
     driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
-    recorder.startRecording();
+    driver.manage().window().maximize() ;
+    recorder.startRecording(this.getClass().getName());
   }
 
-  @Test
+  //@Test
   public void testSSV8VALDEBTA021aIntegrationTests() throws Exception {
     driver.get(baseUrl + "/selectsystem-view-tomcat-oracle/login.xhtml");
     Thread.sleep(1000); findElement(By.id("j_username")).clear();
@@ -50,7 +51,7 @@ public class SSV8VALDEBTA021IntegrationTests {
     Thread.sleep(1000); findElement(By.id("ListeTransactionForm:label")).clear();
     findElement(By.id("ListeTransactionForm:label")).sendKeys("Control_011");
     findElement(By.cssSelector("img[alt=\"save2\"]")).click();
-    findElement(By.cssSelector("img[alt=\"save2\"]")).click();
+    
     findElement(By.xpath("//div[2]/span/a")).click();
     findElement(By.xpath("//td/a[3]/img")).click();
     Thread.sleep(1000); findElement(By.id("ListeTransactionForm:iden")).clear();
@@ -73,7 +74,7 @@ public class SSV8VALDEBTA021IntegrationTests {
     findElement(By.xpath("(//img[@alt='English'])[2]")).click();
   }
 
-  @Test
+ //@Test
   public void testSSV8VALDEBTA021bIntegrationTests() throws Exception {
 	  driver.get(baseUrl + "/selectsystem-view-tomcat-oracle/login.xhtml");
 	    Thread.sleep(1000); findElement(By.id("j_username")).clear();
@@ -127,7 +128,7 @@ public class SSV8VALDEBTA021IntegrationTests {
   }
   
   
-  @Test
+//@Test
   public void testSSV8VALDEBTA021cIntegrationTests() throws Exception {
 	  driver.get(baseUrl + "/selectsystem-view-tomcat-oracle/login.xhtml");
 	    Thread.sleep(1000); findElement(By.id("j_username")).clear();

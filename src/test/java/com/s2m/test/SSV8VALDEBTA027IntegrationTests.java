@@ -23,6 +23,7 @@ public class SSV8VALDEBTA027IntegrationTests {
     driver = new FirefoxDriver();
     baseUrl = "http://10.0.0.107:8080/";
     driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+    
   }
 
   //@Test

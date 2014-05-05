@@ -26,7 +26,8 @@ public class SSV8VALDEBTA062IntegrationTests {
     recorder = new Recorder();
     baseUrl = "http://10.0.0.107:8080/";
     driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
-    recorder.startRecording();
+    driver.manage().window().maximize() ;
+  //  recorder.startRecording();
   }
 
   //@Test

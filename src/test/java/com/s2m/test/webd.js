@@ -310,7 +310,7 @@ options.header =
         indents(2) + "recorder = new Recorder();\n" +
         indents(2) + "baseUrl = \"${baseURL}\";\n" +
         indents(2) + "driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);\n" +
-        indents(2) + "recorder.startRecording();\n" +
+        indents(2) + "recorder.startRecording(this.getClass().getSimpleName());\n" +
         indents(1) + "}\n" +
         indents(0) + "\n" +
         indents(1) + "@Test\n" +

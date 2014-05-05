@@ -25,11 +25,11 @@ public class SSV8VALDEBTA896IntegrationTests {
     recorder = new Recorder();
     baseUrl = "http://10.0.0.107:8080/";
     driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
-    recorder.startRecording();
+    driver.manage().window().maximize() ;
+    recorder.startRecording(this.getClass().getName());
   }
-
-  @Test
-  public void testSSV8VALDEBTA896IntegrationTests() throws Exception {
+ @Test
+  public void testSSV8VALDEBTA896aIntegrationTests() throws Exception {
     driver.get(baseUrl + "/selectsystem-view-tomcat-oracle/login.xhtml");
     Thread.sleep(1000); findElement(By.id("j_username")).clear();
     findElement(By.id("j_username")).sendKeys("usercenter");
@@ -48,141 +48,306 @@ public class SSV8VALDEBTA896IntegrationTests {
     findElement(By.xpath("//td[3]/span/a/img")).click();
     findElement(By.xpath("//td/div[3]/a")).click();
     findElement(By.xpath("//div[3]/div[2]/div/div[2]/table/tbody/tr/td/div[2]/span/a")).click();
-    new Select(findElement(By.id("ListeMembershipFeesFrom:titleaaayyyyxxxxrrr"))).selectByVisibleText("banque test 2");
-    Thread.sleep(1000);
-    findElement(By.id("ListeMembershipFeesFrom:hsqyo54354")).click();
-    findElement(By.xpath("//td[3]/span/a/img")).click();
-    findElement(By.xpath("//td/div[3]/a")).click();
-    findElement(By.xpath("//div[3]/div[2]/div/div[2]/table/tbody/tr/td/div[2]/span/a")).click();
-    findElement(By.xpath("//td[3]/span/a/img")).click();
-    findElement(By.xpath("//td/div[3]/a")).click();
-    findElement(By.xpath("//div[3]/div[2]/div/div[2]/table/tbody/tr/td/div[2]/span/a")).click();
-    findElement(By.xpath("//td[3]/span/a/img")).click();
-    findElement(By.xpath("//td/div[3]/a")).click();
-    findElement(By.xpath("//div[3]/div[2]/div/div[2]/table/tbody/tr/td/div[2]/span/a")).click();
-    new Select(findElement(By.id("ListeMembershipFeesFrom:titleaaayyyyxxxxrrr"))).selectByVisibleText("banque test 3");
-    Thread.sleep(1000);
-    findElement(By.xpath("//td[3]/span/a/img")).click();
-    findElement(By.xpath("//td/div[3]/a")).click();
-    findElement(By.xpath("//div[3]/div[2]/div/div[2]/table/tbody/tr/td/div[2]/span/a")).click();
-    findElement(By.xpath("//td[3]/span/a/img")).click();
-    findElement(By.xpath("//td/div[3]/a")).click();
-    findElement(By.xpath("//div[3]/div[2]/div/div[2]/table/tbody/tr/td/div[2]/span/a")).click();
-    findElement(By.xpath("//td[3]/span/a/img")).click();
-    findElement(By.xpath("//td/div[3]/a")).click();
-    findElement(By.xpath("//div[3]/div[2]/div/div[2]/table/tbody/tr/td/div[2]/span/a")).click();
-    findElement(By.linkText("Personalization Fees")).click();
-    new Select(findElement(By.id("globalChldPersonalizationFeesForm:title11"))).selectByVisibleText("banque test 1");
-    Thread.sleep(1000);
-    findElement(By.id("globalChldPersonalizationFeesForm:hsqyo54354")).click();
-    findElement(By.xpath("//td[3]/span/a/img")).click();
-    findElement(By.xpath("//td/div[3]/a")).click();
-    findElement(By.xpath("//div[3]/div[2]/div/div[2]/table/tbody/tr/td/div[2]/span/a")).click();
-    findElement(By.xpath("//td[3]/span/a/img")).click();
-    findElement(By.xpath("//td/div[3]/a")).click();
-    findElement(By.xpath("//div[3]/div[2]/div/div[2]/table/tbody/tr/td/div[2]/span/a")).click();
-    findElement(By.xpath("//td[3]/span/a/img")).click();
-    findElement(By.xpath("//td/div[3]/a")).click();
-    findElement(By.xpath("//div[3]/div[2]/div/div[2]/table/tbody/tr/td/div[2]/span/a")).click();
-    new Select(findElement(By.id("globalChldPersonalizationFeesForm:title11"))).selectByVisibleText("banque test 2");
-    Thread.sleep(1000);
-    findElement(By.id("globalChldPersonalizationFeesForm:hsqyo54354")).click();
-    findElement(By.xpath("//td[3]/span/a/img")).click();
-    findElement(By.xpath("//td/div[3]/a")).click();
-    findElement(By.xpath("//div[3]/div[2]/div/div[2]/table/tbody/tr/td/div[2]/span/a")).click();
-    findElement(By.xpath("//td[3]/span/a/img")).click();
-    findElement(By.xpath("//td/div[3]/a")).click();
-    findElement(By.xpath("//div[3]/div[2]/div/div[2]/table/tbody/tr/td/div[2]/span/a")).click();
-    findElement(By.xpath("//td[3]/span/a/img")).click();
-    findElement(By.xpath("//td/div[3]/a")).click();
-    findElement(By.xpath("//div[3]/div[2]/div/div[2]/table/tbody/tr/td/div[2]/span/a")).click();
-    new Select(findElement(By.id("globalChldPersonalizationFeesForm:title11"))).selectByVisibleText("banque test 3");
-    Thread.sleep(1000);
-    findElement(By.id("globalChldPersonalizationFeesForm:hsqyo54354")).click();
-    findElement(By.xpath("//td[3]/span/a/img")).click();
-    findElement(By.xpath("//td/div[3]/a")).click();
-    findElement(By.xpath("//div[3]/div[2]/div/div[2]/table/tbody/tr/td/div[2]/span/a")).click();
-    findElement(By.xpath("//td[3]/span/a/img")).click();
-    findElement(By.xpath("//td/div[3]/a")).click();
-    findElement(By.xpath("//div[3]/div[2]/div/div[2]/table/tbody/tr/td/div[2]/span/a")).click();
-    findElement(By.xpath("//td[3]/span/a/img")).click();
-    findElement(By.xpath("//td/div[3]/a")).click();
-    findElement(By.xpath("//div[3]/div[2]/div/div[2]/table/tbody/tr/td/div[2]/span/a")).click();
-    findElement(By.linkText("Insurance Fees")).click();
-    new Select(findElement(By.id("ListeCodeServiceForm:title"))).selectByVisibleText("banque test 1");
-    Thread.sleep(1000);
-    findElement(By.id("ListeCodeServiceForm:hsqyo54354")).click();
-    findElement(By.xpath("//td[3]/span/a/img")).click();
-    findElement(By.xpath("//td/div[3]/a")).click();
-    findElement(By.xpath("//div[3]/div[2]/div/div[2]/table/tbody/tr/td/div[2]/span/a")).click();
-    findElement(By.xpath("//td[3]/span/a/img")).click();
-    findElement(By.xpath("//td/div[3]/a")).click();
-    findElement(By.xpath("//div[3]/div[2]/div/div[2]/table/tbody/tr/td/div[2]/span/a")).click();
-    findElement(By.xpath("//td[3]/span/a/img")).click();
-    findElement(By.xpath("//td/div[3]/a")).click();
-    findElement(By.xpath("//div[3]/div[2]/div/div[2]/table/tbody/tr/td/div[2]/span/a")).click();
-    new Select(findElement(By.id("ListeCodeServiceForm:title"))).selectByVisibleText("banque test 2");
-    Thread.sleep(1000);
-    findElement(By.xpath("//td[3]/span/a/img")).click();
-    findElement(By.xpath("//td/div[3]/a")).click();
-    findElement(By.xpath("//div[3]/div[2]/div/div[2]/table/tbody/tr/td/div[2]/span/a")).click();
-    findElement(By.xpath("//td[3]/span/a/img")).click();
-    findElement(By.xpath("//td/div[3]/a")).click();
-    findElement(By.xpath("//div[3]/div[2]/div/div[2]/table/tbody/tr/td/div[2]/span/a")).click();
-    findElement(By.xpath("//td[3]/span/a/img")).click();
-    findElement(By.xpath("//td/div[3]/a")).click();
-    findElement(By.xpath("//div[3]/div[2]/div/div[2]/table/tbody/tr/td/div[2]/span/a")).click();
-    findElement(By.id("ListeCodeServiceForm:hsqyoqpllll")).click();
-    findElement(By.xpath("(//img[@alt='save2'])[2]")).click();
-    new Select(findElement(By.id("ListeCodeServiceForm:title"))).selectByVisibleText("banque test 3");
-    Thread.sleep(1000);
-    findElement(By.xpath("//td[3]/span/a/img")).click();
-    findElement(By.xpath("//td/div[3]/a")).click();
-    findElement(By.xpath("//div[3]/div[2]/div/div[2]/table/tbody/tr/td/div[2]/span/a")).click();
-    findElement(By.xpath("//td[3]/span/a/img")).click();
-    findElement(By.xpath("//td/div[3]/a")).click();
-    findElement(By.xpath("//div[3]/div[2]/div/div[2]/table/tbody/tr/td/div[2]/span/a")).click();
-    findElement(By.xpath("//td[3]/span/a/img")).click();
-    findElement(By.xpath("//td/div[3]/a")).click();
-    findElement(By.xpath("//div[3]/div[2]/div/div[2]/table/tbody/tr/td/div[2]/span/a")).click();
-    findElement(By.linkText("Express Delivery Fees")).click();
-    new Select(findElement(By.id("ListeExpressDeliveryForm:titlettt"))).selectByVisibleText("banque test 1");
-    Thread.sleep(1000);
-    findElement(By.xpath("//td[3]/span/a/img")).click();
-    findElement(By.xpath("//td/div[3]/a")).click();
-    findElement(By.xpath("//div[3]/div[2]/div/div[2]/table/tbody/tr/td/div[2]/span/a")).click();
-    findElement(By.xpath("//td[3]/span/a/img")).click();
-    findElement(By.xpath("//td/div[3]/a")).click();
-    findElement(By.xpath("//div[3]/div[2]/div/div[2]/table/tbody/tr/td/div[2]/span/a")).click();
-    findElement(By.xpath("//td[3]/span/a/img")).click();
-    findElement(By.xpath("//div[3]/div[2]/div/div[2]/table/tbody/tr/td/div[2]/span/a")).click();
-    new Select(findElement(By.id("ListeExpressDeliveryForm:titlettt"))).selectByVisibleText("banque test 2");
-    Thread.sleep(1000);
-    findElement(By.xpath("//td[3]/span/a/img")).click();
-    findElement(By.xpath("//td/div[3]/a")).click();
-    findElement(By.xpath("//div[3]/div[2]/div/div[2]/table/tbody/tr/td/div[2]/span/a")).click();
-    findElement(By.xpath("//td[3]/span/a/img")).click();
-    findElement(By.xpath("//td/div[3]/a")).click();
-    findElement(By.xpath("//div[3]/div[2]/div/div[2]/table/tbody/tr/td/div[2]/span/a")).click();
-    findElement(By.xpath("//td[3]/span/a/img")).click();
-    findElement(By.xpath("//td/div[3]/a")).click();
-    findElement(By.xpath("//div[3]/div[2]/div/div[2]/table/tbody/tr/td/div[2]/span/a")).click();
-    findElement(By.id("ListeCodeServiceForm:hsqyoqpllll")).click();
-    findElement(By.xpath("(//img[@alt='save2'])[2]")).click();
-    new Select(findElement(By.id("ListeExpressDeliveryForm:titlettt"))).selectByVisibleText("banque test 3");
-    Thread.sleep(1000);
-    findElement(By.xpath("//td[3]/span/a/img")).click();
-    findElement(By.xpath("//td/div[3]/a")).click();
-    findElement(By.xpath("//div[3]/div[2]/div/div[2]/table/tbody/tr/td/div[2]/span/a")).click();
-    findElement(By.xpath("//td[3]/span/a/img")).click();
-    findElement(By.xpath("//td/div[3]/a")).click();
-    findElement(By.xpath("//div[3]/div[2]/div/div[2]/table/tbody/tr/td/div[2]/span/a")).click();
-    findElement(By.xpath("//td[3]/span/a/img")).click();
-    findElement(By.xpath("//td/div[3]/a")).click();
-    findElement(By.xpath("//div[3]/div[2]/div/div[2]/table/tbody/tr/td/div[2]/span/a")).click();
     findElement(By.xpath("(//img[@alt='English'])[2]")).click();
   }
 
+  
+ @Test
+  public void testSSV8VALDEBTA896bIntegrationTests() throws Exception {
+	  
+	  driver.get(baseUrl + "/selectsystem-view-tomcat-oracle/login.xhtml");
+	    Thread.sleep(1000); findElement(By.id("j_username")).clear();
+	    findElement(By.id("j_username")).sendKeys("usercenter");
+	    Thread.sleep(1000); findElement(By.id("j_password")).clear();
+	    findElement(By.id("j_password")).sendKeys("pwd8888");
+	    findElement(By.cssSelector("#login > img[alt=\"Frensh\"]")).click();
+	    findElement(By.xpath("//span/a")).click();
+	    findElement(By.id("form:table:1:sdksds")).click();
+	    findElement(By.xpath("(//img[@alt='English'])[4]")).click();
+	    findElement(By.linkText("Membership Fees")).click();
+	    new Select(findElement(By.id("ListeMembershipFeesFrom:titleaaayyyyxxxxrrr"))).selectByVisibleText("banque test 2");
+	    Thread.sleep(1000);
+	    findElement(By.id("ListeMembershipFeesFrom:hsqyo54354")).click();
+	    findElement(By.xpath("//td[3]/span/a/img")).click();
+	    findElement(By.xpath("//td/div[3]/a")).click();
+	    findElement(By.xpath("//div[3]/div[2]/div/div[2]/table/tbody/tr/td/div[2]/span/a")).click();
+	    findElement(By.xpath("//td[3]/span/a/img")).click();
+	    findElement(By.xpath("//td/div[3]/a")).click();
+	    findElement(By.xpath("//div[3]/div[2]/div/div[2]/table/tbody/tr/td/div[2]/span/a")).click();
+	    findElement(By.xpath("//td[3]/span/a/img")).click();
+	    findElement(By.xpath("//td/div[3]/a")).click();
+	    findElement(By.xpath("//div[3]/div[2]/div/div[2]/table/tbody/tr/td/div[2]/span/a")).click();
+	  findElement(By.xpath("(//img[@alt='English'])[2]")).click();
+  }
+  
+@Test
+  public void testSSV8VALDEBTA896cIntegrationTests() throws Exception {
+	  
+	  driver.get(baseUrl + "/selectsystem-view-tomcat-oracle/login.xhtml");
+	    Thread.sleep(1000); findElement(By.id("j_username")).clear();
+	    findElement(By.id("j_username")).sendKeys("usercenter");
+	    Thread.sleep(1000); findElement(By.id("j_password")).clear();
+	    findElement(By.id("j_password")).sendKeys("pwd8888");
+	    findElement(By.cssSelector("#login > img[alt=\"Frensh\"]")).click();
+	    findElement(By.xpath("//span/a")).click();
+	    findElement(By.id("form:table:1:sdksds")).click();
+	    findElement(By.xpath("(//img[@alt='English'])[4]")).click();
+	    findElement(By.linkText("Membership Fees")).click();
+	    new Select(findElement(By.id("ListeMembershipFeesFrom:titleaaayyyyxxxxrrr"))).selectByVisibleText("banque test 3");
+	    Thread.sleep(1000);
+	    findElement(By.id("ListeMembershipFeesFrom:hsqyo54354")).click();
+	    findElement(By.xpath("//td[3]/span/a/img")).click();
+	    findElement(By.xpath("//td/div[3]/a")).click();
+	    findElement(By.xpath("//div[3]/div[2]/div/div[2]/table/tbody/tr/td/div[2]/span/a")).click();
+	    findElement(By.xpath("//td[3]/span/a/img")).click();
+	    findElement(By.xpath("//td/div[3]/a")).click();
+	    findElement(By.xpath("//div[3]/div[2]/div/div[2]/table/tbody/tr/td/div[2]/span/a")).click();
+	    findElement(By.xpath("//td[3]/span/a/img")).click();
+	    findElement(By.xpath("//td/div[3]/a")).click();
+	    findElement(By.xpath("//div[3]/div[2]/div/div[2]/table/tbody/tr/td/div[2]/span/a")).click();
+	  findElement(By.xpath("(//img[@alt='English'])[2]")).click();
+  }
+  
+@Test
+  public void testSSV8VALDEBTA896dIntegrationTests() throws Exception {
+	  
+	  driver.get(baseUrl + "/selectsystem-view-tomcat-oracle/login.xhtml");
+	    Thread.sleep(1000); findElement(By.id("j_username")).clear();
+	    findElement(By.id("j_username")).sendKeys("usercenter");
+	    Thread.sleep(1000); findElement(By.id("j_password")).clear();
+	    findElement(By.id("j_password")).sendKeys("pwd8888");
+	    findElement(By.cssSelector("#login > img[alt=\"Frensh\"]")).click();
+	    findElement(By.xpath("//span/a")).click();
+	    findElement(By.id("form:table:1:sdksds")).click();
+	    findElement(By.xpath("(//img[@alt='English'])[4]")).click();
+	    findElement(By.linkText("Personalization Fees")).click();
+	    new Select(findElement(By.id("globalChldPersonalizationFeesForm:title11"))).selectByVisibleText("banque test 1");
+	    Thread.sleep(1000);
+	    findElement(By.id("globalChldPersonalizationFeesForm:hsqyo54354")).click();
+	    findElement(By.xpath("//td[3]/span/a/img")).click();
+	    findElement(By.xpath("//td/div[3]/a")).click();
+	    findElement(By.xpath("//div[3]/div[2]/div/div[2]/table/tbody/tr/td/div[2]/span/a")).click();
+	    findElement(By.xpath("//td[3]/span/a/img")).click();
+	    findElement(By.xpath("//td/div[3]/a")).click();
+	    findElement(By.xpath("//div[3]/div[2]/div/div[2]/table/tbody/tr/td/div[2]/span/a")).click();
+	    findElement(By.xpath("//td[3]/span/a/img")).click();
+	    findElement(By.xpath("//td/div[3]/a")).click();
+	    findElement(By.xpath("//div[3]/div[2]/div/div[2]/table/tbody/tr/td/div[2]/span/a")).click();
+	  findElement(By.xpath("(//img[@alt='English'])[2]")).click();
+  }
+ @Test
+  public void testSSV8VALDEBTA896eIntegrationTests() throws Exception {
+	  
+	  driver.get(baseUrl + "/selectsystem-view-tomcat-oracle/login.xhtml");
+	    Thread.sleep(1000); findElement(By.id("j_username")).clear();
+	    findElement(By.id("j_username")).sendKeys("usercenter");
+	    Thread.sleep(1000); findElement(By.id("j_password")).clear();
+	    findElement(By.id("j_password")).sendKeys("pwd8888");
+	    findElement(By.cssSelector("#login > img[alt=\"Frensh\"]")).click();
+	    findElement(By.xpath("//span/a")).click();
+	    findElement(By.id("form:table:1:sdksds")).click();
+	    findElement(By.xpath("(//img[@alt='English'])[4]")).click();
+	    findElement(By.linkText("Personalization Fees")).click();
+	    new Select(findElement(By.id("globalChldPersonalizationFeesForm:title11"))).selectByVisibleText("banque test 2");
+	    Thread.sleep(1000);
+	    findElement(By.id("globalChldPersonalizationFeesForm:hsqyo54354")).click();
+	    findElement(By.xpath("//td[3]/span/a/img")).click();
+	    findElement(By.xpath("//td/div[3]/a")).click();
+	    findElement(By.xpath("//div[3]/div[2]/div/div[2]/table/tbody/tr/td/div[2]/span/a")).click();
+	    findElement(By.xpath("//td[3]/span/a/img")).click();
+	    findElement(By.xpath("//td/div[3]/a")).click();
+	    findElement(By.xpath("//div[3]/div[2]/div/div[2]/table/tbody/tr/td/div[2]/span/a")).click();
+	    findElement(By.xpath("//td[3]/span/a/img")).click();
+	    findElement(By.xpath("//td/div[3]/a")).click();
+	    findElement(By.xpath("//div[3]/div[2]/div/div[2]/table/tbody/tr/td/div[2]/span/a")).click();
+	  findElement(By.xpath("(//img[@alt='English'])[2]")).click();
+  }
+ @Test
+  public void testSSV8VALDEBTA896fIntegrationTests() throws Exception {
+	  
+	  driver.get(baseUrl + "/selectsystem-view-tomcat-oracle/login.xhtml");
+	    Thread.sleep(1000); findElement(By.id("j_username")).clear();
+	    findElement(By.id("j_username")).sendKeys("usercenter");
+	    Thread.sleep(1000); findElement(By.id("j_password")).clear();
+	    findElement(By.id("j_password")).sendKeys("pwd8888");
+	    findElement(By.cssSelector("#login > img[alt=\"Frensh\"]")).click();
+	    findElement(By.xpath("//span/a")).click();
+	    findElement(By.id("form:table:1:sdksds")).click();
+	    findElement(By.xpath("(//img[@alt='English'])[4]")).click();
+	    findElement(By.linkText("Personalization Fees")).click();
+	    new Select(findElement(By.id("globalChldPersonalizationFeesForm:title11"))).selectByVisibleText("banque test 3");
+	    Thread.sleep(1000);
+	    findElement(By.id("globalChldPersonalizationFeesForm:hsqyo54354")).click();
+	    findElement(By.xpath("//td[3]/span/a/img")).click();
+	    findElement(By.xpath("//td/div[3]/a")).click();
+	    findElement(By.xpath("//div[3]/div[2]/div/div[2]/table/tbody/tr/td/div[2]/span/a")).click();
+	    findElement(By.xpath("//td[3]/span/a/img")).click();
+	    findElement(By.xpath("//td/div[3]/a")).click();
+	    findElement(By.xpath("//div[3]/div[2]/div/div[2]/table/tbody/tr/td/div[2]/span/a")).click();
+	    findElement(By.xpath("//td[3]/span/a/img")).click();
+	    findElement(By.xpath("//td/div[3]/a")).click();
+	    findElement(By.xpath("//div[3]/div[2]/div/div[2]/table/tbody/tr/td/div[2]/span/a")).click();
+	  findElement(By.xpath("(//img[@alt='English'])[2]")).click();
+  }
+  
+ @Test
+  public void testSSV8VALDEBTA896gIntegrationTests() throws Exception {
+	  
+	  driver.get(baseUrl + "/selectsystem-view-tomcat-oracle/login.xhtml");
+	    Thread.sleep(1000); findElement(By.id("j_username")).clear();
+	    findElement(By.id("j_username")).sendKeys("usercenter");
+	    Thread.sleep(1000); findElement(By.id("j_password")).clear();
+	    findElement(By.id("j_password")).sendKeys("pwd8888");
+	    findElement(By.cssSelector("#login > img[alt=\"Frensh\"]")).click();
+	    findElement(By.xpath("//span/a")).click();
+	    findElement(By.id("form:table:1:sdksds")).click();
+	    findElement(By.xpath("(//img[@alt='English'])[4]")).click();
+	    findElement(By.linkText("Insurance Fees")).click();
+	    new Select(findElement(By.id("ListeCodeServiceForm:title"))).selectByVisibleText("banque test 1");
+	    Thread.sleep(1000);
+	    findElement(By.id("ListeCodeServiceForm:hsqyo54354")).click();
+	    findElement(By.xpath("//td[3]/span/a/img")).click();
+	    findElement(By.xpath("//td/div[3]/a")).click();
+	    findElement(By.xpath("//div[3]/div[2]/div/div[2]/table/tbody/tr/td/div[2]/span/a")).click();
+	    findElement(By.xpath("//td[3]/span/a/img")).click();
+	    findElement(By.xpath("//td/div[3]/a")).click();
+	    findElement(By.xpath("//div[3]/div[2]/div/div[2]/table/tbody/tr/td/div[2]/span/a")).click();
+	    findElement(By.xpath("//td[3]/span/a/img")).click();
+	    findElement(By.xpath("//td/div[3]/a")).click();
+	    findElement(By.xpath("//div[3]/div[2]/div/div[2]/table/tbody/tr/td/div[2]/span/a")).click();
+	  findElement(By.xpath("(//img[@alt='English'])[2]")).click();
+  }
+  @Test
+  public void testSSV8VALDEBTA896hIntegrationTests() throws Exception {
+	  
+	  driver.get(baseUrl + "/selectsystem-view-tomcat-oracle/login.xhtml");
+	    Thread.sleep(1000); findElement(By.id("j_username")).clear();
+	    findElement(By.id("j_username")).sendKeys("usercenter");
+	    Thread.sleep(1000); findElement(By.id("j_password")).clear();
+	    findElement(By.id("j_password")).sendKeys("pwd8888");
+	    findElement(By.cssSelector("#login > img[alt=\"Frensh\"]")).click();
+	    findElement(By.xpath("//span/a")).click();
+	    findElement(By.id("form:table:1:sdksds")).click();
+	    findElement(By.xpath("(//img[@alt='English'])[4]")).click();
+	    findElement(By.linkText("Insurance Fees")).click();
+	    new Select(findElement(By.id("ListeCodeServiceForm:title"))).selectByVisibleText("banque test 2");
+	    Thread.sleep(1000);
+	    findElement(By.id("ListeCodeServiceForm:hsqyo54354")).click();
+	    findElement(By.xpath("//td[3]/span/a/img")).click();
+	    findElement(By.xpath("//td/div[3]/a")).click();
+	    findElement(By.xpath("//div[3]/div[2]/div/div[2]/table/tbody/tr/td/div[2]/span/a")).click();
+	    findElement(By.xpath("//td[3]/span/a/img")).click();
+	    findElement(By.xpath("//td/div[3]/a")).click();
+	    findElement(By.xpath("//div[3]/div[2]/div/div[2]/table/tbody/tr/td/div[2]/span/a")).click();
+	    findElement(By.xpath("//td[3]/span/a/img")).click();
+	    findElement(By.xpath("//td/div[3]/a")).click();
+	    findElement(By.xpath("//div[3]/div[2]/div/div[2]/table/tbody/tr/td/div[2]/span/a")).click();
+	  findElement(By.xpath("(//img[@alt='English'])[2]")).click();
+  }
+ @Test
+  public void testSSV8VALDEBTA896iIntegrationTests() throws Exception {
+	  
+	  driver.get(baseUrl + "/selectsystem-view-tomcat-oracle/login.xhtml");
+	    Thread.sleep(1000); findElement(By.id("j_username")).clear();
+	    findElement(By.id("j_username")).sendKeys("usercenter");
+	    Thread.sleep(1000); findElement(By.id("j_password")).clear();
+	    findElement(By.id("j_password")).sendKeys("pwd8888");
+	    findElement(By.cssSelector("#login > img[alt=\"Frensh\"]")).click();
+	    findElement(By.xpath("//span/a")).click();
+	    findElement(By.id("form:table:1:sdksds")).click();
+	    findElement(By.xpath("(//img[@alt='English'])[4]")).click();
+	    findElement(By.linkText("Insurance Fees")).click();
+	    new Select(findElement(By.id("ListeCodeServiceForm:title"))).selectByVisibleText("banque test 3");
+	    Thread.sleep(1000);
+	    findElement(By.id("ListeCodeServiceForm:hsqyo54354")).click();
+	    findElement(By.xpath("//td[3]/span/a/img")).click();
+	    findElement(By.xpath("//td/div[3]/a")).click();
+	    findElement(By.xpath("//div[3]/div[2]/div/div[2]/table/tbody/tr/td/div[2]/span/a")).click();
+	    findElement(By.xpath("//td[3]/span/a/img")).click();
+	    findElement(By.xpath("//td/div[3]/a")).click();
+	    findElement(By.xpath("//div[3]/div[2]/div/div[2]/table/tbody/tr/td/div[2]/span/a")).click();
+	    findElement(By.xpath("//td[3]/span/a/img")).click();
+	    findElement(By.xpath("//td/div[3]/a")).click();
+	    findElement(By.xpath("//div[3]/div[2]/div/div[2]/table/tbody/tr/td/div[2]/span/a")).click();
+	  findElement(By.xpath("(//img[@alt='English'])[2]")).click();
+  }
+  
+ @Test
+  public void testSSV8VALDEBTA896jIntegrationTests() throws Exception {
+	  
+	  driver.get(baseUrl + "/selectsystem-view-tomcat-oracle/login.xhtml");
+	    Thread.sleep(1000); findElement(By.id("j_username")).clear();
+	    findElement(By.id("j_username")).sendKeys("usercenter");
+	    Thread.sleep(1000); findElement(By.id("j_password")).clear();
+	    findElement(By.id("j_password")).sendKeys("pwd8888");
+	    findElement(By.cssSelector("#login > img[alt=\"Frensh\"]")).click();
+	    findElement(By.xpath("//span/a")).click();
+	    findElement(By.id("form:table:1:sdksds")).click();
+	    findElement(By.xpath("(//img[@alt='English'])[4]")).click();
+	    findElement(By.linkText("Express Delivery Fees")).click();
+	    new Select(findElement(By.id("ListeExpressDeliveryForm:titlettt"))).selectByVisibleText("banque test 1");
+	    Thread.sleep(1000);
+	    findElement(By.xpath("//td[3]/span/a/img")).click();
+	    findElement(By.xpath("//td/div[3]/a")).click();
+	    findElement(By.xpath("//div[3]/div[2]/div/div[2]/table/tbody/tr/td/div[2]/span/a")).click();
+	    findElement(By.xpath("//td[3]/span/a/img")).click();
+	    findElement(By.xpath("//td/div[3]/a")).click();
+	    findElement(By.xpath("//div[3]/div[2]/div/div[2]/table/tbody/tr/td/div[2]/span/a")).click();
+	    findElement(By.xpath("//td[3]/span/a/img")).click();
+	    findElement(By.xpath("//div[3]/div[2]/div/div[2]/table/tbody/tr/td/div[2]/span/a")).click();
+	  findElement(By.xpath("(//img[@alt='English'])[2]")).click();
+  }
+  
+  @Test
+  public void testSSV8VALDEBTA896kIntegrationTests() throws Exception {
+	  
+	  driver.get(baseUrl + "/selectsystem-view-tomcat-oracle/login.xhtml");
+	    Thread.sleep(1000); findElement(By.id("j_username")).clear();
+	    findElement(By.id("j_username")).sendKeys("usercenter");
+	    Thread.sleep(1000); findElement(By.id("j_password")).clear();
+	    findElement(By.id("j_password")).sendKeys("pwd8888");
+	    findElement(By.cssSelector("#login > img[alt=\"Frensh\"]")).click();
+	    findElement(By.xpath("//span/a")).click();
+	    findElement(By.id("form:table:1:sdksds")).click();
+	    findElement(By.xpath("(//img[@alt='English'])[4]")).click();
+	    findElement(By.linkText("Express Delivery Fees")).click();
+	    new Select(findElement(By.id("ListeExpressDeliveryForm:titlettt"))).selectByVisibleText("banque test 2");
+	    Thread.sleep(1000);
+	    findElement(By.xpath("//td[3]/span/a/img")).click();
+	    findElement(By.xpath("//td/div[3]/a")).click();
+	    findElement(By.xpath("//div[3]/div[2]/div/div[2]/table/tbody/tr/td/div[2]/span/a")).click();
+	    findElement(By.xpath("//td[3]/span/a/img")).click();
+	    findElement(By.xpath("//td/div[3]/a")).click();
+	    findElement(By.xpath("//div[3]/div[2]/div/div[2]/table/tbody/tr/td/div[2]/span/a")).click();
+	    findElement(By.xpath("//td[3]/span/a/img")).click();
+	    findElement(By.xpath("//div[3]/div[2]/div/div[2]/table/tbody/tr/td/div[2]/span/a")).click();
+	  findElement(By.xpath("(//img[@alt='English'])[2]")).click();
+  }
+ @Test
+  public void testSSV8VALDEBTA896lIntegrationTests() throws Exception {
+	  
+	  driver.get(baseUrl + "/selectsystem-view-tomcat-oracle/login.xhtml");
+	    Thread.sleep(1000); findElement(By.id("j_username")).clear();
+	    findElement(By.id("j_username")).sendKeys("usercenter");
+	    Thread.sleep(1000); findElement(By.id("j_password")).clear();
+	    findElement(By.id("j_password")).sendKeys("pwd8888");
+	    findElement(By.cssSelector("#login > img[alt=\"Frensh\"]")).click();
+	    findElement(By.xpath("//span/a")).click();
+	    findElement(By.id("form:table:1:sdksds")).click();
+	    findElement(By.xpath("(//img[@alt='English'])[4]")).click();
+	    findElement(By.linkText("Express Delivery Fees")).click();
+	    new Select(findElement(By.id("ListeExpressDeliveryForm:titlettt"))).selectByVisibleText("banque test 3");
+	    Thread.sleep(1000);
+	    findElement(By.xpath("//td[3]/span/a/img")).click();
+	    findElement(By.xpath("//td/div[3]/a")).click();
+	    findElement(By.xpath("//div[3]/div[2]/div/div[2]/table/tbody/tr/td/div[2]/span/a")).click();
+	    findElement(By.xpath("//td[3]/span/a/img")).click();
+	    findElement(By.xpath("//td/div[3]/a")).click();
+	    findElement(By.xpath("//div[3]/div[2]/div/div[2]/table/tbody/tr/td/div[2]/span/a")).click();
+	    findElement(By.xpath("//td[3]/span/a/img")).click();
+	    findElement(By.xpath("//div[3]/div[2]/div/div[2]/table/tbody/tr/td/div[2]/span/a")).click();
+	  findElement(By.xpath("(//img[@alt='English'])[2]")).click();
+  }
   @After
   public void tearDown() throws Exception {
     recorder.stopRecording();

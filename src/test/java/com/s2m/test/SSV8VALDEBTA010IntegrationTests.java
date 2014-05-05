@@ -26,12 +26,13 @@ public class SSV8VALDEBTA010IntegrationTests {
     recorder = new Recorder();
     baseUrl = "http://10.0.0.107:8080/";
     driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
-    recorder.startRecording();
+    driver.manage().window().maximize() ;
+    recorder.startRecording(this.getClass().getName());
   }
   //**** tests de creation des frai de personnalisation
   
   //** creation fonctionnelle+unicité de l'id +Nom Obligé
-  @Test
+//@Test
   public void testSSV8VALDEBTA010aIntegrationTests() throws Exception {
     driver.get(baseUrl + "/selectsystem-view-tomcat-oracle/login.xhtml");
     Thread.sleep(1000); findElement(By.id("j_username")).clear();
@@ -90,7 +91,7 @@ public class SSV8VALDEBTA010IntegrationTests {
     findElement(By.xpath("(//img[@alt='English'])[2]")).click();
   }
   //**** id oblige +montant oblig+frai de generation obligé
-  @Test
+//@Test
   public void testSSV8VALDEBTA010bIntegrationTests() throws Exception {
     driver.get(baseUrl + "/selectsystem-view-tomcat-oracle/login.xhtml");
     Thread.sleep(1000); findElement(By.id("j_username")).clear();
@@ -145,7 +146,7 @@ public class SSV8VALDEBTA010IntegrationTests {
     findElement(By.xpath("(//img[@alt='English'])[2]")).click();
   }
   //***** donnes variés sur le champ montant "0.0" "10,5" et "0"
-  @Test
+//@Test
   public void testSSV8VALDEBTA010cIntegrationTests() throws Exception {
     driver.get(baseUrl + "/selectsystem-view-tomcat-oracle/login.xhtml");
     Thread.sleep(1000); findElement(By.id("j_username")).clear();

@@ -25,11 +25,12 @@ public class SSV8VALDEBTA895IntegrationTests {
     recorder = new Recorder();
     baseUrl = "http://10.0.0.107:8080/";
     driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
-    recorder.startRecording();
+    driver.manage().window().maximize() ;
+    recorder.startRecording(this.getClass().getName());
   }
 
   @Test
-  public void testSSV8VALDEBTA895IntegrationTests() throws Exception {
+  public void testSSV8VALDEBTA895aIntegrationTests() throws Exception {
     driver.get(baseUrl + "/selectsystem-view-tomcat-oracle/login.xhtml");
     Thread.sleep(1000); findElement(By.id("j_username")).clear();
     findElement(By.id("j_username")).sendKeys("usercenter");
@@ -51,6 +52,23 @@ public class SSV8VALDEBTA895IntegrationTests {
     findElement(By.xpath("//td[3]/span/a/img")).click();
     findElement(By.xpath("//td/div[3]/a")).click();
     findElement(By.xpath("//div[3]/div[2]/div/div[2]/table/tbody/tr/td/div[2]/span/a")).click();
+    
+    findElement(By.linkText("Issuer Space")).click();
+    findElement(By.xpath("(//img[@alt='English'])[2]")).click();
+  }
+  
+@Test
+  public void testSSV8VALDEBTA895bIntegrationTests() throws Exception {
+    driver.get(baseUrl + "/selectsystem-view-tomcat-oracle/login.xhtml");
+    Thread.sleep(1000); findElement(By.id("j_username")).clear();
+    findElement(By.id("j_username")).sendKeys("usercenter");
+    Thread.sleep(1000); findElement(By.id("j_password")).clear();
+    findElement(By.id("j_password")).sendKeys("pwd8888");
+    findElement(By.cssSelector("#login > img[alt=\"Frensh\"]")).click();
+    findElement(By.xpath("//span/a")).click();
+    findElement(By.id("form:table:1:sdksds")).click();
+    findElement(By.xpath("(//img[@alt='English'])[4]")).click();
+    findElement(By.linkText("PIN Recalculation Fees")).click();
     new Select(findElement(By.id("ListeRecalculPinFrom:titleaaayyyyxxxx"))).selectByVisibleText("banque test 2");
     Thread.sleep(1000);
     findElement(By.xpath("//td[3]/span/a/img")).click();
@@ -61,7 +79,24 @@ public class SSV8VALDEBTA895IntegrationTests {
     findElement(By.xpath("//div[3]/div[2]/div/div[2]/table/tbody/tr/td/div[2]/span/a")).click();
     findElement(By.xpath("//td[3]/span/a/img")).click();
     findElement(By.xpath("//td/div[3]/a")).click();
-    findElement(By.xpath("//div[3]/div[2]/div/div[2]/table/tbody/tr/td/div[2]/span/a")).click();
+    findElement(By.xpath("//div[3]/div[2]/div/div[2]/table/tbody/tr/td/div[2]/span/a")).click();   
+    findElement(By.linkText("Issuer Space")).click();
+    findElement(By.xpath("(//img[@alt='English'])[2]")).click();
+  }
+
+  
+  @Test
+  public void testSSV8VALDEBTA895cIntegrationTests() throws Exception {
+    driver.get(baseUrl + "/selectsystem-view-tomcat-oracle/login.xhtml");
+    Thread.sleep(1000); findElement(By.id("j_username")).clear();
+    findElement(By.id("j_username")).sendKeys("usercenter");
+    Thread.sleep(1000); findElement(By.id("j_password")).clear();
+    findElement(By.id("j_password")).sendKeys("pwd8888");
+    findElement(By.cssSelector("#login > img[alt=\"Frensh\"]")).click();
+    findElement(By.xpath("//span/a")).click();
+    findElement(By.id("form:table:1:sdksds")).click();
+    findElement(By.xpath("(//img[@alt='English'])[4]")).click();
+    findElement(By.linkText("PIN Recalculation Fees")).click();
     new Select(findElement(By.id("ListeRecalculPinFrom:titleaaayyyyxxxx"))).selectByVisibleText("banque test 3");
     Thread.sleep(1000);
     findElement(By.xpath("//td[3]/span/a/img")).click();
@@ -72,7 +107,21 @@ public class SSV8VALDEBTA895IntegrationTests {
     findElement(By.xpath("//div[3]/div[2]/div/div[2]/table/tbody/tr/td/div[2]/span/a")).click();
     findElement(By.xpath("//td[3]/span/a/img")).click();
     findElement(By.xpath("//td/div[3]/a")).click();
-    findElement(By.xpath("//div[3]/div[2]/div/div[2]/table/tbody/tr/td/div[2]/span/a")).click();
+    findElement(By.xpath("//div[3]/div[2]/div/div[2]/table/tbody/tr/td/div[2]/span/a")).click();   
+    findElement(By.linkText("Issuer Space")).click();
+    findElement(By.xpath("(//img[@alt='English'])[2]")).click();
+  }
+  @Test
+  public void testSSV8VALDEBTA895dIntegrationTests() throws Exception {
+    driver.get(baseUrl + "/selectsystem-view-tomcat-oracle/login.xhtml");
+    Thread.sleep(1000); findElement(By.id("j_username")).clear();
+    findElement(By.id("j_username")).sendKeys("usercenter");
+    Thread.sleep(1000); findElement(By.id("j_password")).clear();
+    findElement(By.id("j_password")).sendKeys("pwd8888");
+    findElement(By.cssSelector("#login > img[alt=\"Frensh\"]")).click();
+    findElement(By.xpath("//span/a")).click();
+    findElement(By.id("form:table:1:sdksds")).click();
+    findElement(By.xpath("(//img[@alt='English'])[4]")).click();
     findElement(By.linkText("Withdrawal Fees")).click();
     new Select(findElement(By.id("globalChldWithdrawalFeesForm:titlesss"))).selectByVisibleText("banque test 1");
     Thread.sleep(1000);
@@ -84,7 +133,22 @@ public class SSV8VALDEBTA895IntegrationTests {
     findElement(By.xpath("//div[3]/div[2]/div/div[2]/table/tbody/tr/td/div[2]/span/a")).click();
     findElement(By.xpath("//td[3]/span/a/img")).click();
     findElement(By.xpath("//td/div[3]/a")).click();
-    findElement(By.xpath("//div[3]/div[2]/div/div[2]/table/tbody/tr/td/div[2]/span/a")).click();
+    findElement(By.xpath("//div[3]/div[2]/div/div[2]/table/tbody/tr/td/div[2]/span/a")).click(); 
+    findElement(By.linkText("Issuer Space")).click();
+    findElement(By.xpath("(//img[@alt='English'])[2]")).click();
+  }
+ @Test
+  public void testSSV8VALDEBTA895eIntegrationTests() throws Exception {
+    driver.get(baseUrl + "/selectsystem-view-tomcat-oracle/login.xhtml");
+    Thread.sleep(1000); findElement(By.id("j_username")).clear();
+    findElement(By.id("j_username")).sendKeys("usercenter");
+    Thread.sleep(1000); findElement(By.id("j_password")).clear();
+    findElement(By.id("j_password")).sendKeys("pwd8888");
+    findElement(By.cssSelector("#login > img[alt=\"Frensh\"]")).click();
+    findElement(By.xpath("//span/a")).click();
+    findElement(By.id("form:table:1:sdksds")).click();
+    findElement(By.xpath("(//img[@alt='English'])[4]")).click();
+    findElement(By.linkText("Withdrawal Fees")).click();
     new Select(findElement(By.id("globalChldWithdrawalFeesForm:titlesss"))).selectByVisibleText("banque test 2");
     Thread.sleep(1000);
     findElement(By.xpath("//td[3]/span/a/img")).click();
@@ -95,7 +159,22 @@ public class SSV8VALDEBTA895IntegrationTests {
     findElement(By.xpath("//div[3]/div[2]/div/div[2]/table/tbody/tr/td/div[2]/span/a")).click();
     findElement(By.xpath("//td[3]/span/a/img")).click();
     findElement(By.xpath("//td/div[3]/a")).click();
-    findElement(By.xpath("//div[3]/div[2]/div/div[2]/table/tbody/tr/td/div[2]/span/a")).click();
+    findElement(By.xpath("//div[3]/div[2]/div/div[2]/table/tbody/tr/td/div[2]/span/a")).click(); 
+    findElement(By.linkText("Issuer Space")).click();
+    findElement(By.xpath("(//img[@alt='English'])[2]")).click();
+  }
+ @Test
+  public void testSSV8VALDEBTA895fIntegrationTests() throws Exception {
+    driver.get(baseUrl + "/selectsystem-view-tomcat-oracle/login.xhtml");
+    Thread.sleep(1000); findElement(By.id("j_username")).clear();
+    findElement(By.id("j_username")).sendKeys("usercenter");
+    Thread.sleep(1000); findElement(By.id("j_password")).clear();
+    findElement(By.id("j_password")).sendKeys("pwd8888");
+    findElement(By.cssSelector("#login > img[alt=\"Frensh\"]")).click();
+    findElement(By.xpath("//span/a")).click();
+    findElement(By.id("form:table:1:sdksds")).click();
+    findElement(By.xpath("(//img[@alt='English'])[4]")).click();
+    findElement(By.linkText("Withdrawal Fees")).click();
     new Select(findElement(By.id("globalChldWithdrawalFeesForm:titlesss"))).selectByVisibleText("banque test 3");
     Thread.sleep(1000);
     findElement(By.xpath("//td[3]/span/a/img")).click();
@@ -103,11 +182,24 @@ public class SSV8VALDEBTA895IntegrationTests {
     findElement(By.xpath("//div[3]/div[2]/div/div[2]/table/tbody/tr/td/div[2]/span/a")).click();
     findElement(By.xpath("//td[3]/span/a/img")).click();
     findElement(By.xpath("//td/div[3]/a")).click();
-    findElement(By.xpath("//td/div[3]/a")).click();
     findElement(By.xpath("//div[3]/div[2]/div/div[2]/table/tbody/tr/td/div[2]/span/a")).click();
     findElement(By.xpath("//td[3]/span/a/img")).click();
     findElement(By.xpath("//td/div[3]/a")).click();
-    findElement(By.xpath("//div[3]/div[2]/div/div[2]/table/tbody/tr/td/div[2]/span/a")).click();
+    findElement(By.xpath("//div[3]/div[2]/div/div[2]/table/tbody/tr/td/div[2]/span/a")).click(); 
+    findElement(By.linkText("Issuer Space")).click();
+    findElement(By.xpath("(//img[@alt='English'])[2]")).click();
+  }
+ @Test
+  public void testSSV8VALDEBTA895gIntegrationTests() throws Exception {
+    driver.get(baseUrl + "/selectsystem-view-tomcat-oracle/login.xhtml");
+    Thread.sleep(1000); findElement(By.id("j_username")).clear();
+    findElement(By.id("j_username")).sendKeys("usercenter");
+    Thread.sleep(1000); findElement(By.id("j_password")).clear();
+    findElement(By.id("j_password")).sendKeys("pwd8888");
+    findElement(By.cssSelector("#login > img[alt=\"Frensh\"]")).click();
+    findElement(By.xpath("//span/a")).click();
+    findElement(By.id("form:table:1:sdksds")).click();
+    findElement(By.xpath("(//img[@alt='English'])[4]")).click();
     findElement(By.linkText("Design Fees")).click();
     new Select(findElement(By.id("globalChldCardDesignFeesForm:titleeeee"))).selectByVisibleText("banque test 1");
     Thread.sleep(1000);
@@ -120,6 +212,21 @@ public class SSV8VALDEBTA895IntegrationTests {
     findElement(By.xpath("//td[3]/span/a/img")).click();
     findElement(By.xpath("//td/div[3]/a")).click();
     findElement(By.xpath("//div[3]/div[2]/div/div[2]/table/tbody/tr/td/div[2]/span/a")).click();
+    findElement(By.linkText("Issuer Space")).click();
+    findElement(By.xpath("(//img[@alt='English'])[2]")).click();}
+ 
+ @Test
+  public void testSSV8VALDEBTA895hIntegrationTests() throws Exception {
+    driver.get(baseUrl + "/selectsystem-view-tomcat-oracle/login.xhtml");
+    Thread.sleep(1000); findElement(By.id("j_username")).clear();
+    findElement(By.id("j_username")).sendKeys("usercenter");
+    Thread.sleep(1000); findElement(By.id("j_password")).clear();
+    findElement(By.id("j_password")).sendKeys("pwd8888");
+    findElement(By.cssSelector("#login > img[alt=\"Frensh\"]")).click();
+    findElement(By.xpath("//span/a")).click();
+    findElement(By.id("form:table:1:sdksds")).click();
+    findElement(By.xpath("(//img[@alt='English'])[4]")).click();
+    findElement(By.linkText("Design Fees")).click();
     new Select(findElement(By.id("globalChldCardDesignFeesForm:titleeeee"))).selectByVisibleText("banque test 2");
     Thread.sleep(1000);
     findElement(By.xpath("//td[3]/span/a/img")).click();
@@ -131,6 +238,21 @@ public class SSV8VALDEBTA895IntegrationTests {
     findElement(By.xpath("//td[3]/span/a/img")).click();
     findElement(By.xpath("//td/div[3]/a")).click();
     findElement(By.xpath("//div[3]/div[2]/div/div[2]/table/tbody/tr/td/div[2]/span/a")).click();
+    findElement(By.linkText("Issuer Space")).click();
+    findElement(By.xpath("(//img[@alt='English'])[2]")).click();
+  }
+  @Test
+  public void testSSV8VALDEBTA895iIntegrationTests() throws Exception {
+    driver.get(baseUrl + "/selectsystem-view-tomcat-oracle/login.xhtml");
+    Thread.sleep(1000); findElement(By.id("j_username")).clear();
+    findElement(By.id("j_username")).sendKeys("usercenter");
+    Thread.sleep(1000); findElement(By.id("j_password")).clear();
+    findElement(By.id("j_password")).sendKeys("pwd8888");
+    findElement(By.cssSelector("#login > img[alt=\"Frensh\"]")).click();
+    findElement(By.xpath("//span/a")).click();
+    findElement(By.id("form:table:1:sdksds")).click();
+    findElement(By.xpath("(//img[@alt='English'])[4]")).click();
+    findElement(By.linkText("Design Fees")).click();
     new Select(findElement(By.id("globalChldCardDesignFeesForm:titleeeee"))).selectByVisibleText("banque test 3");
     Thread.sleep(1000);
     findElement(By.xpath("//td[3]/span/a/img")).click();
@@ -142,6 +264,21 @@ public class SSV8VALDEBTA895IntegrationTests {
     findElement(By.xpath("//td[3]/span/a/img")).click();
     findElement(By.xpath("//td/div[3]/a")).click();
     findElement(By.xpath("//div[3]/div[2]/div/div[2]/table/tbody/tr/td/div[2]/span/a")).click();
+    findElement(By.linkText("Issuer Space")).click();
+    findElement(By.xpath("(//img[@alt='English'])[2]")).click();
+  }
+  
+ @Test
+  public void testSSV8VALDEBTA895jIntegrationTests() throws Exception {
+    driver.get(baseUrl + "/selectsystem-view-tomcat-oracle/login.xhtml");
+    Thread.sleep(1000); findElement(By.id("j_username")).clear();
+    findElement(By.id("j_username")).sendKeys("usercenter");
+    Thread.sleep(1000); findElement(By.id("j_password")).clear();
+    findElement(By.id("j_password")).sendKeys("pwd8888");
+    findElement(By.cssSelector("#login > img[alt=\"Frensh\"]")).click();
+    findElement(By.xpath("//span/a")).click();
+    findElement(By.id("form:table:1:sdksds")).click();
+    findElement(By.xpath("(//img[@alt='English'])[4]")).click();
     findElement(By.linkText("Misc Periodical Fees")).click();
     new Select(findElement(By.id("globalChldMiscPeriodicalFeesForm:titlezzz"))).selectByVisibleText("banque test 1");
     Thread.sleep(1000);
@@ -155,6 +292,21 @@ public class SSV8VALDEBTA895IntegrationTests {
     findElement(By.xpath("//td[3]/span/a/img")).click();
     findElement(By.xpath("//td/div[3]/a")).click();
     findElement(By.xpath("//div[3]/div[2]/div/div[2]/table/tbody/tr/td/div[2]/span/a")).click();
+    findElement(By.linkText("Issuer Space")).click();
+    findElement(By.xpath("(//img[@alt='English'])[2]")).click();}
+ 
+  @Test
+  public void testSSV8VALDEBTA895kIntegrationTests() throws Exception {
+    driver.get(baseUrl + "/selectsystem-view-tomcat-oracle/login.xhtml");
+    Thread.sleep(1000); findElement(By.id("j_username")).clear();
+    findElement(By.id("j_username")).sendKeys("usercenter");
+    Thread.sleep(1000); findElement(By.id("j_password")).clear();
+    findElement(By.id("j_password")).sendKeys("pwd8888");
+    findElement(By.cssSelector("#login > img[alt=\"Frensh\"]")).click();
+    findElement(By.xpath("//span/a")).click();
+    findElement(By.id("form:table:1:sdksds")).click();
+    findElement(By.xpath("(//img[@alt='English'])[4]")).click();
+    findElement(By.linkText("Misc Periodical Fees")).click();
     new Select(findElement(By.id("globalChldMiscPeriodicalFeesForm:titlezzz"))).selectByVisibleText("banque test 2");
     Thread.sleep(1000);
     findElement(By.id("globalChldMiscPeriodicalFeesForm:hsqyo54354")).click();
@@ -167,6 +319,21 @@ public class SSV8VALDEBTA895IntegrationTests {
     findElement(By.xpath("//td[3]/span/a/img")).click();
     findElement(By.xpath("//td/div[3]/a")).click();
     findElement(By.xpath("//div[3]/div[2]/div/div[2]/table/tbody/tr/td/div[2]/span/a")).click();
+    findElement(By.linkText("Issuer Space")).click();
+    findElement(By.xpath("(//img[@alt='English'])[2]")).click();
+  }
+ @Test
+  public void testSSV8VALDEBTA895lIntegrationTests() throws Exception {
+    driver.get(baseUrl + "/selectsystem-view-tomcat-oracle/login.xhtml");
+    Thread.sleep(1000); findElement(By.id("j_username")).clear();
+    findElement(By.id("j_username")).sendKeys("usercenter");
+    Thread.sleep(1000); findElement(By.id("j_password")).clear();
+    findElement(By.id("j_password")).sendKeys("pwd8888");
+    findElement(By.cssSelector("#login > img[alt=\"Frensh\"]")).click();
+    findElement(By.xpath("//span/a")).click();
+    findElement(By.id("form:table:1:sdksds")).click();
+    findElement(By.xpath("(//img[@alt='English'])[4]")).click();
+    findElement(By.linkText("Misc Periodical Fees")).click();
     new Select(findElement(By.id("globalChldMiscPeriodicalFeesForm:titlezzz"))).selectByVisibleText("banque test 3");
     Thread.sleep(1000);
     findElement(By.id("globalChldMiscPeriodicalFeesForm:hsqyo54354")).click();
@@ -179,6 +346,20 @@ public class SSV8VALDEBTA895IntegrationTests {
     findElement(By.xpath("//td[3]/span/a/img")).click();
     findElement(By.xpath("//td/div[3]/a")).click();
     findElement(By.xpath("//div[3]/div[2]/div/div[2]/table/tbody/tr/td/div[2]/span/a")).click();
+    findElement(By.linkText("Issuer Space")).click();
+    findElement(By.xpath("(//img[@alt='English'])[2]")).click();
+  }
+@Test
+  public void testSSV8VALDEBTA895mIntegrationTests() throws Exception {
+    driver.get(baseUrl + "/selectsystem-view-tomcat-oracle/login.xhtml");
+    Thread.sleep(1000); findElement(By.id("j_username")).clear();
+    findElement(By.id("j_username")).sendKeys("usercenter");
+    Thread.sleep(1000); findElement(By.id("j_password")).clear();
+    findElement(By.id("j_password")).sendKeys("pwd8888");
+    findElement(By.cssSelector("#login > img[alt=\"Frensh\"]")).click();
+    findElement(By.xpath("//span/a")).click();
+    findElement(By.id("form:table:1:sdksds")).click();
+    findElement(By.xpath("(//img[@alt='English'])[4]")).click();
     findElement(By.linkText("Misc OneShot Fees")).click();
     new Select(findElement(By.id("globalChldMiscOneShotFeesForm:titleChldMiscOneShot"))).selectByVisibleText("banque test 1");
     Thread.sleep(1000);
@@ -192,6 +373,21 @@ public class SSV8VALDEBTA895IntegrationTests {
     findElement(By.xpath("//td[3]/span/a/img")).click();
     findElement(By.xpath("//td/div[3]/a")).click();
     findElement(By.xpath("//div[3]/div[2]/div/div[2]/table/tbody/tr/td/div[2]/span/a")).click();
+    findElement(By.linkText("Issuer Space")).click();
+    findElement(By.xpath("(//img[@alt='English'])[2]")).click();
+  }
+ @Test
+  public void testSSV8VALDEBTA895nIntegrationTests() throws Exception {
+    driver.get(baseUrl + "/selectsystem-view-tomcat-oracle/login.xhtml");
+    Thread.sleep(1000); findElement(By.id("j_username")).clear();
+    findElement(By.id("j_username")).sendKeys("usercenter");
+    Thread.sleep(1000); findElement(By.id("j_password")).clear();
+    findElement(By.id("j_password")).sendKeys("pwd8888");
+    findElement(By.cssSelector("#login > img[alt=\"Frensh\"]")).click();
+    findElement(By.xpath("//span/a")).click();
+    findElement(By.id("form:table:1:sdksds")).click();
+    findElement(By.xpath("(//img[@alt='English'])[4]")).click();
+    findElement(By.linkText("Misc OneShot Fees")).click();
     new Select(findElement(By.id("globalChldMiscOneShotFeesForm:titleChldMiscOneShot"))).selectByVisibleText("banque test 2");
     Thread.sleep(1000);
     findElement(By.id("globalChldMiscOneShotFeesForm:hsqyo54354")).click();
@@ -204,6 +400,21 @@ public class SSV8VALDEBTA895IntegrationTests {
     findElement(By.xpath("//td[3]/span/a/img")).click();
     findElement(By.xpath("//td/div[3]/a")).click();
     findElement(By.xpath("//div[3]/div[2]/div/div[2]/table/tbody/tr/td/div[2]/span/a")).click();
+    findElement(By.linkText("Issuer Space")).click();
+    findElement(By.xpath("(//img[@alt='English'])[2]")).click();
+  }
+ @Test
+  public void testSSV8VALDEBTA895oIntegrationTests() throws Exception {
+    driver.get(baseUrl + "/selectsystem-view-tomcat-oracle/login.xhtml");
+    Thread.sleep(1000); findElement(By.id("j_username")).clear();
+    findElement(By.id("j_username")).sendKeys("usercenter");
+    Thread.sleep(1000); findElement(By.id("j_password")).clear();
+    findElement(By.id("j_password")).sendKeys("pwd8888");
+    findElement(By.cssSelector("#login > img[alt=\"Frensh\"]")).click();
+    findElement(By.xpath("//span/a")).click();
+    findElement(By.id("form:table:1:sdksds")).click();
+    findElement(By.xpath("(//img[@alt='English'])[4]")).click();
+    findElement(By.linkText("Misc OneShot Fees")).click();
     new Select(findElement(By.id("globalChldMiscOneShotFeesForm:titleChldMiscOneShot"))).selectByVisibleText("banque test 3");
     Thread.sleep(1000);
     findElement(By.id("globalChldMiscOneShotFeesForm:hsqyo54354")).click();
@@ -216,6 +427,20 @@ public class SSV8VALDEBTA895IntegrationTests {
     findElement(By.xpath("//td[3]/span/a/img")).click();
     findElement(By.xpath("//td/div[3]/a")).click();
     findElement(By.xpath("//div[3]/div[2]/div/div[2]/table/tbody/tr/td/div[2]/span/a")).click();
+    findElement(By.linkText("Issuer Space")).click();
+    findElement(By.xpath("(//img[@alt='English'])[2]")).click();
+  }
+@Test
+  public void testSSV8VALDEBTA895pIntegrationTests() throws Exception {
+    driver.get(baseUrl + "/selectsystem-view-tomcat-oracle/login.xhtml");
+    Thread.sleep(1000); findElement(By.id("j_username")).clear();
+    findElement(By.id("j_username")).sendKeys("usercenter");
+    Thread.sleep(1000); findElement(By.id("j_password")).clear();
+    findElement(By.id("j_password")).sendKeys("pwd8888");
+    findElement(By.cssSelector("#login > img[alt=\"Frensh\"]")).click();
+    findElement(By.xpath("//span/a")).click();
+    findElement(By.id("form:table:1:sdksds")).click();
+    findElement(By.xpath("(//img[@alt='English'])[4]")).click();
     findElement(By.linkText("Renew Fees")).click();
     new Select(findElement(By.id("ListeRenewFeesFrom:titleaaayyyy"))).selectByVisibleText("banque test 1");
     Thread.sleep(1000);
@@ -228,6 +453,22 @@ public class SSV8VALDEBTA895IntegrationTests {
     findElement(By.xpath("//td[3]/span/a/img")).click();
     findElement(By.xpath("//td/div[3]/a")).click();
     findElement(By.xpath("//div[3]/div[2]/div/div[2]/table/tbody/tr/td/div[2]/span/a")).click();
+    findElement(By.linkText("Issuer Space")).click();
+    findElement(By.xpath("(//img[@alt='English'])[2]")).click();
+  }
+  
+  @Test
+  public void testSSV8VALDEBTA895qIntegrationTests() throws Exception {
+    driver.get(baseUrl + "/selectsystem-view-tomcat-oracle/login.xhtml");
+    Thread.sleep(1000); findElement(By.id("j_username")).clear();
+    findElement(By.id("j_username")).sendKeys("usercenter");
+    Thread.sleep(1000); findElement(By.id("j_password")).clear();
+    findElement(By.id("j_password")).sendKeys("pwd8888");
+    findElement(By.cssSelector("#login > img[alt=\"Frensh\"]")).click();
+    findElement(By.xpath("//span/a")).click();
+    findElement(By.id("form:table:1:sdksds")).click();
+    findElement(By.xpath("(//img[@alt='English'])[4]")).click();
+    findElement(By.linkText("Renew Fees")).click();
     new Select(findElement(By.id("ListeRenewFeesFrom:titleaaayyyy"))).selectByVisibleText("banque test 2");
     Thread.sleep(1000);
     findElement(By.xpath("//td[3]/span/a/img")).click();
@@ -239,9 +480,23 @@ public class SSV8VALDEBTA895IntegrationTests {
     findElement(By.xpath("//td[3]/span/a/img")).click();
     findElement(By.xpath("//td/div[3]/a")).click();
     findElement(By.xpath("//div[3]/div[2]/div/div[2]/table/tbody/tr/td/div[2]/span/a")).click();
+    findElement(By.linkText("Issuer Space")).click();
+    findElement(By.xpath("(//img[@alt='English'])[2]")).click();
+  }
+@Test
+  public void testSSV8VALDEBTA895rIntegrationTests() throws Exception {
+    driver.get(baseUrl + "/selectsystem-view-tomcat-oracle/login.xhtml");
+    Thread.sleep(1000); findElement(By.id("j_username")).clear();
+    findElement(By.id("j_username")).sendKeys("usercenter");
+    Thread.sleep(1000); findElement(By.id("j_password")).clear();
+    findElement(By.id("j_password")).sendKeys("pwd8888");
+    findElement(By.cssSelector("#login > img[alt=\"Frensh\"]")).click();
+    findElement(By.xpath("//span/a")).click();
+    findElement(By.id("form:table:1:sdksds")).click();
+    findElement(By.xpath("(//img[@alt='English'])[4]")).click();
+    findElement(By.linkText("Renew Fees")).click();
     new Select(findElement(By.id("ListeRenewFeesFrom:titleaaayyyy"))).selectByVisibleText("banque test 3");
     Thread.sleep(1000);
-    findElement(By.id("ListeRenewFeesFrom:hsqyo54354")).click();
     findElement(By.xpath("//td[3]/span/a/img")).click();
     findElement(By.xpath("//td/div[3]/a")).click();
     findElement(By.xpath("//div[3]/div[2]/div/div[2]/table/tbody/tr/td/div[2]/span/a")).click();
@@ -252,6 +507,19 @@ public class SSV8VALDEBTA895IntegrationTests {
     findElement(By.xpath("//td/div[3]/a")).click();
     findElement(By.xpath("//div[3]/div[2]/div/div[2]/table/tbody/tr/td/div[2]/span/a")).click();
     findElement(By.linkText("Issuer Space")).click();
+    findElement(By.xpath("(//img[@alt='English'])[2]")).click();
+  }
+  
+ @Test
+  public void testSSV8VALDEBTA895sIntegrationTests() throws Exception {
+    driver.get(baseUrl + "/selectsystem-view-tomcat-oracle/login.xhtml");
+    Thread.sleep(1000); findElement(By.id("j_username")).clear();
+    findElement(By.id("j_username")).sendKeys("usercenter");
+    Thread.sleep(1000); findElement(By.id("j_password")).clear();
+    findElement(By.id("j_password")).sendKeys("pwd8888");
+    findElement(By.cssSelector("#login > img[alt=\"Frensh\"]")).click();
+    findElement(By.xpath("//span/a")).click();
+    findElement(By.id("form:table:1:sdksds")).click();
     findElement(By.xpath("(//img[@alt='English'])[4]")).click();
     findElement(By.linkText("Profil Account Routing")).click();
     new Select(findElement(By.id("ListeProfileAccountRoutingForm:title"))).selectByVisibleText("banque test 1");
@@ -263,6 +531,22 @@ public class SSV8VALDEBTA895IntegrationTests {
     findElement(By.xpath("//td/div[3]/a")).click();
     findElement(By.xpath("//td[3]/span/a/img")).click();
     findElement(By.xpath("//td/div[3]/a")).click();
+    findElement(By.linkText("Issuer Space")).click();
+    findElement(By.xpath("(//img[@alt='English'])[2]")).click();
+  }
+  
+ @Test
+  public void testSSV8VALDEBTA895tIntegrationTests() throws Exception {
+    driver.get(baseUrl + "/selectsystem-view-tomcat-oracle/login.xhtml");
+    Thread.sleep(1000); findElement(By.id("j_username")).clear();
+    findElement(By.id("j_username")).sendKeys("usercenter");
+    Thread.sleep(1000); findElement(By.id("j_password")).clear();
+    findElement(By.id("j_password")).sendKeys("pwd8888");
+    findElement(By.cssSelector("#login > img[alt=\"Frensh\"]")).click();
+    findElement(By.xpath("//span/a")).click();
+    findElement(By.id("form:table:1:sdksds")).click();
+    findElement(By.xpath("(//img[@alt='English'])[4]")).click();
+    findElement(By.linkText("Profil Account Routing")).click();
     new Select(findElement(By.id("ListeProfileAccountRoutingForm:title"))).selectByVisibleText("banque test 2");
     Thread.sleep(1000);
     findElement(By.id("ListeProfileAccountRoutingForm:hsqyo54354")).click();
@@ -272,6 +556,21 @@ public class SSV8VALDEBTA895IntegrationTests {
     findElement(By.xpath("//td/div[3]/a")).click();
     findElement(By.xpath("//td[3]/span/a/img")).click();
     findElement(By.xpath("//td/div[3]/a")).click();
+    findElement(By.linkText("Issuer Space")).click();
+    findElement(By.xpath("(//img[@alt='English'])[2]")).click();
+  }
+  @Test
+  public void testSSV8VALDEBTA895vIntegrationTests() throws Exception {
+    driver.get(baseUrl + "/selectsystem-view-tomcat-oracle/login.xhtml");
+    Thread.sleep(1000); findElement(By.id("j_username")).clear();
+    findElement(By.id("j_username")).sendKeys("usercenter");
+    Thread.sleep(1000); findElement(By.id("j_password")).clear();
+    findElement(By.id("j_password")).sendKeys("pwd8888");
+    findElement(By.cssSelector("#login > img[alt=\"Frensh\"]")).click();
+    findElement(By.xpath("//span/a")).click();
+    findElement(By.id("form:table:1:sdksds")).click();
+    findElement(By.xpath("(//img[@alt='English'])[4]")).click();
+    findElement(By.linkText("Profil Account Routing")).click();
     new Select(findElement(By.id("ListeProfileAccountRoutingForm:title"))).selectByVisibleText("banque test 3");
     Thread.sleep(1000);
     findElement(By.id("ListeProfileAccountRoutingForm:hsqyo54354")).click();
@@ -284,7 +583,6 @@ public class SSV8VALDEBTA895IntegrationTests {
     findElement(By.linkText("Issuer Space")).click();
     findElement(By.xpath("(//img[@alt='English'])[2]")).click();
   }
-
   @After
   public void tearDown() throws Exception {
     recorder.stopRecording();

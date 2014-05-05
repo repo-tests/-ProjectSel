@@ -25,10 +25,11 @@ public class SSV8VALDEBTA897IntegrationTests {
     recorder = new Recorder();
     baseUrl = "http://10.0.0.107:8080/";
     driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
-    recorder.startRecording();
+    driver.manage().window().maximize();
+    recorder.startRecording(this.getClass().getName());
   }
 //*** supression des données du test de creation des motifs de remplacemnt
-  //@Test
+ @Test
   public void testSSV8VALDEBTA897IntegrationTests() throws Exception {
     driver.get(baseUrl + "/selectsystem-view-tomcat-oracle/login.xhtml");
     Thread.sleep(1000); findElement(By.id("j_username")).clear();
@@ -36,7 +37,7 @@ public class SSV8VALDEBTA897IntegrationTests {
     Thread.sleep(1000); findElement(By.id("j_password")).clear();
     findElement(By.id("j_password")).sendKeys("pwd8888");
     findElement(By.cssSelector("#login > img[alt=\"Frensh\"]")).click();
-    findElement(By.xpath("//a[@onclick=\"if(typeof jsfcljs == 'function'){jsfcljs(document.getElementById('form'),{'form:j_id1037':'form:j_id1037'},'');}return false\"]")).click();
+    findElement(By.xpath("//span/a[contains(@class,'btValider')]")).click();
     findElement(By.id("form:table:1:sdksds")).click();
     findElement(By.xpath("(//img[@alt='English'])[4]")).click();
     findElement(By.xpath("(//a[contains(text(),'Card Replacement Motif')])[2]")).click();
