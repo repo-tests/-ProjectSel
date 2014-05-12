@@ -30,7 +30,7 @@ public class SSV8VALDEBTA002IntegrationTests {
     recorder.startRecording(this.getClass().getName());
   }
 
- //@Test
+ @Test
   public void testSSV8VALDEBTA002aIntegrationTests() throws Exception {
 	Select select;
     driver.get(baseUrl + "/selectsystem-view-tomcat-oracle/login.xhtml");
@@ -102,7 +102,7 @@ public class SSV8VALDEBTA002IntegrationTests {
     findElement(By.xpath("(//img[@alt='English'])[2]")).click();
   }
 
- //@Test
+ @Test
   public void testSSV8VALDEBTA002bIntegrationTests() throws Exception {
     driver.get(baseUrl + "/selectsystem-view-tomcat-oracle/login.xhtml");
     Thread.sleep(1000); findElement(By.id("j_username")).clear();
@@ -185,7 +185,7 @@ public class SSV8VALDEBTA002IntegrationTests {
     findElement(By.xpath("//div[3]/div[2]/div/div[2]/table/tbody/tr/td/div[2]/span/a")).click();
     findElement(By.xpath("(//img[@alt='English'])[2]")).click();
   }
- //@Test
+ @Test
   public void testSSV8VALDEBTA002cIntegrationTests() throws Exception {
     driver.get(baseUrl + "/selectsystem-view-tomcat-oracle/login.xhtml");
     Thread.sleep(1000); findElement(By.id("j_username")).clear();
@@ -206,9 +206,9 @@ public class SSV8VALDEBTA002IntegrationTests {
     new Select(findElement(By.id("AccountInquiryForm:FormatBin"))).selectByVisibleText("bin format 1");
     Thread.sleep(1000);
     Thread.sleep(1000); findElement(By.id("AccountInquiryForm:RangeMin")).clear();
-    findElement(By.id("AccountInquiryForm:RangeMin")).sendKeys("2500000");
+    findElement(By.id("AccountInquiryForm:RangeMin")).sendKeys("2300000");
     Thread.sleep(1000); findElement(By.id("AccountInquiryForm:RangeMax")).clear();
-    findElement(By.id("AccountInquiryForm:RangeMax")).sendKeys("2600000");
+    findElement(By.id("AccountInquiryForm:RangeMax")).sendKeys("2400000");
     Thread.sleep(1000); findElement(By.id("AccountInquiryForm:SequenceBin")).clear();
     findElement(By.id("AccountInquiryForm:SequenceBin")).sendKeys("1234567890");
     new Select(findElement(By.id("AccountInquiryForm:domain"))).selectByVisibleText("National");

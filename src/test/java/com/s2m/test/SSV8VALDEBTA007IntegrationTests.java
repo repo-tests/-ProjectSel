@@ -32,7 +32,7 @@ public class SSV8VALDEBTA007IntegrationTests {
 
   //creation des frais de remplacement
   // *** montant et nom obligatoire 
-//@Test
+@Test
   public void testSSV8VALDEBTA007aIntegrationTests() throws Exception {
     driver.get(baseUrl + "/selectsystem-view-tomcat-oracle/login.xhtml");
     Thread.sleep(1000); findElement(By.id("j_username")).clear();
@@ -85,7 +85,7 @@ public class SSV8VALDEBTA007IntegrationTests {
   }
   
   // **** id unique par banque et id obligatoire + champ montant de type numerique
-//@Test
+   @Test
   public void testSSV8VALDEBTA007bIntegrationTests() throws Exception {
     driver.get(baseUrl + "/selectsystem-view-tomcat-oracle/login.xhtml");
     Thread.sleep(1000); findElement(By.id("j_username")).clear();
@@ -137,7 +137,7 @@ public class SSV8VALDEBTA007IntegrationTests {
   }
   // **** Tests les valeurs 4,5 et 4.5 et le max de longeur 10 :1200000000
   
-//@Test
+@Test
   public void testSSV8VALDEBTA007cIntegrationTests() throws Exception {
     driver.get(baseUrl + "/selectsystem-view-tomcat-oracle/login.xhtml");
     Thread.sleep(1000); findElement(By.id("j_username")).clear();

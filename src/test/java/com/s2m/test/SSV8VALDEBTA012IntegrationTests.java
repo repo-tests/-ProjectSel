@@ -33,7 +33,7 @@ public class SSV8VALDEBTA012IntegrationTests {
   //  tests de creation des frais de livraison rapide
   
   //**** verifier un enregistrement fonctionnele+unicté de l'id par banque + id obligatoire
- //@Test
+ @Test
   public void testSSV8VALDEBTA012aIntegrationTests() throws Exception {
     driver.get(baseUrl + "/selectsystem-view-tomcat-oracle/login.xhtml");
     Thread.sleep(1000); findElement(By.id("j_username")).clear();
@@ -89,7 +89,7 @@ public class SSV8VALDEBTA012IntegrationTests {
 
   
   ///****   verification : nom montant operateur obligatoires
- //@Test
+ @Test
   public void testSSV8VALDEBTA012bIntegrationTests() throws Exception {
     driver.get(baseUrl + "/selectsystem-view-tomcat-oracle/login.xhtml");
     Thread.sleep(1000); findElement(By.id("j_username")).clear();
@@ -149,7 +149,7 @@ public class SSV8VALDEBTA012IntegrationTests {
   }
   ///*** verification: des données varies pour le champ montant "," et "." et "-12"
   
-//@Test
+@Test
   public void testSSV8VALDEBTA012cIntegrationTests() throws Exception {
     driver.get(baseUrl + "/selectsystem-view-tomcat-oracle/login.xhtml");
     Thread.sleep(1000); findElement(By.id("j_username")).clear();

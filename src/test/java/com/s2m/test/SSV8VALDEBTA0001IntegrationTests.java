@@ -37,6 +37,7 @@ public class SSV8VALDEBTA0001IntegrationTests {
     Thread.sleep(1000); findElement(By.id("j_password")).clear();
     findElement(By.id("j_password")).sendKeys("pwd8888");
     findElement(By.cssSelector("#login > img[alt=\"Frensh\"]")).click();
+    
     findElement(By.xpath("//span/a[contains(@class,'btValider')]")).click();
     findElement(By.id("form:table:0:sdksds")).click();
     findElement(By.xpath("(//img[@alt='English'])[8]")).click();

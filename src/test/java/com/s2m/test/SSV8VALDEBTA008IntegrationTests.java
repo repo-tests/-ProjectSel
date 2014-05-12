@@ -33,7 +33,7 @@ public class SSV8VALDEBTA008IntegrationTests {
   // ***creation des motifs de remplacement
   //***** un enregistrement fonctionnel (juste) et l'unicité d'id par banque
   // *** la longeur du champ id limitée mais le champ nom ne l'est pas
-// @Test
+ @Test
   public void testSSV8VALDEBTA008aIntegrationTests() throws Exception {
     driver.get(baseUrl + "/selectsystem-view-tomcat-oracle/login.xhtml");
     Thread.sleep(1000); findElement(By.id("j_username")).clear();
@@ -41,7 +41,7 @@ public class SSV8VALDEBTA008IntegrationTests {
     Thread.sleep(1000); findElement(By.id("j_password")).clear();
     findElement(By.id("j_password")).sendKeys("pwd8888");
     findElement(By.cssSelector("#login > img[alt=\"Frensh\"]")).click();
-    findElement(By.xpath("//a[@onclick=\"if(typeof jsfcljs == 'function'){jsfcljs(document.getElementById('form'),{'form:j_id1037':'form:j_id1037'},'');}return false\"]")).click();
+    findElement(By.xpath("//span/a[contains(@class,'btValider')]")).click();
     findElement(By.id("form:table:1:sdksds")).click();
     findElement(By.xpath("(//img[@alt='English'])[4]")).click();
     findElement(By.xpath("(//a[contains(text(),'Card Replacement Motif')])[2]")).click();
@@ -79,7 +79,7 @@ public class SSV8VALDEBTA008IntegrationTests {
     findElement(By.xpath("(//img[@alt='English'])[2]")).click();
   }
   //** vérifier que les champs banque, identifiant et banque sont obligatoires
- //@Test
+ @Test
   public void testSSV8VALDEBTA008bIntegrationTests() throws Exception {
     driver.get(baseUrl + "/selectsystem-view-tomcat-oracle/login.xhtml");
     Thread.sleep(1000); findElement(By.id("j_username")).clear();
@@ -87,7 +87,7 @@ public class SSV8VALDEBTA008IntegrationTests {
     Thread.sleep(1000); findElement(By.id("j_password")).clear();
     findElement(By.id("j_password")).sendKeys("pwd8888");
     findElement(By.cssSelector("#login > img[alt=\"Frensh\"]")).click();
-    findElement(By.xpath("//a[@onclick=\"if(typeof jsfcljs == 'function'){jsfcljs(document.getElementById('form'),{'form:j_id1037':'form:j_id1037'},'');}return false\"]")).click();
+    findElement(By.xpath("//span/a[contains(@class,'btValider')]")).click();
     findElement(By.id("form:table:1:sdksds")).click();
     findElement(By.xpath("(//img[@alt='English'])[4]")).click();
     findElement(By.xpath("(//a[contains(text(),'Card Replacement Motif')])[2]")).click();
@@ -123,7 +123,7 @@ public class SSV8VALDEBTA008IntegrationTests {
   // *** l'utilisation des données "......"
   //** et des données de longeurs de "nnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnn" pour le champ nom
   //* l'impossibilité de modifier l'id d'un motif de remplacemnt une fois enregistré
-//@Test
+@Test
   public void testSSV8VALDEBTA008cIntegrationTests() throws Exception {
 	 driver.get(baseUrl + "/selectsystem-view-tomcat-oracle/login.xhtml");
 	    Thread.sleep(1000); findElement(By.id("j_username")).clear();
@@ -131,8 +131,8 @@ public class SSV8VALDEBTA008IntegrationTests {
 	    Thread.sleep(1000); findElement(By.id("j_password")).clear();
 	    findElement(By.id("j_password")).sendKeys("pwd8888");
 	    findElement(By.cssSelector("#login > img[alt=\"Frensh\"]")).click();
-	    findElement(By.xpath("//a[@onclick=\"if(typeof jsfcljs == 'function'){jsfcljs(document.getElementById('form'),{'form:j_id1037':'form:j_id1037'},'');}return false\"]")).click();
-    findElement(By.id("form:table:1:sdksds")).click();
+	    findElement(By.xpath("//span/a[contains(@class,'btValider')]")).click();
+	    findElement(By.id("form:table:1:sdksds")).click();
     findElement(By.xpath("(//img[@alt='English'])[4]")).click();
     findElement(By.xpath("(//a[contains(text(),'Card Replacement Motif')])[2]")).click();
     new Select(findElement(By.id("globalCardReplacementMotifForm:bank"))).selectByVisibleText("banque test 3");

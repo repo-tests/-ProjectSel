@@ -26,7 +26,7 @@ public class SSV8VALDEBTA895IntegrationTests {
     baseUrl = "http://10.0.0.107:8080/";
     driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
     driver.manage().window().maximize() ;
-    recorder.startRecording(this.getClass().getName());
+    recorder.startRecording(this.getClass().getSimpleName());
   }
 
   @Test
@@ -57,7 +57,7 @@ public class SSV8VALDEBTA895IntegrationTests {
     findElement(By.xpath("(//img[@alt='English'])[2]")).click();
   }
   
-@Test
+  @Test
   public void testSSV8VALDEBTA895bIntegrationTests() throws Exception {
     driver.get(baseUrl + "/selectsystem-view-tomcat-oracle/login.xhtml");
     Thread.sleep(1000); findElement(By.id("j_username")).clear();
@@ -268,7 +268,7 @@ public class SSV8VALDEBTA895IntegrationTests {
     findElement(By.xpath("(//img[@alt='English'])[2]")).click();
   }
   
- @Test
+@Test
   public void testSSV8VALDEBTA895jIntegrationTests() throws Exception {
     driver.get(baseUrl + "/selectsystem-view-tomcat-oracle/login.xhtml");
     Thread.sleep(1000); findElement(By.id("j_username")).clear();
@@ -283,19 +283,19 @@ public class SSV8VALDEBTA895IntegrationTests {
     new Select(findElement(By.id("globalChldMiscPeriodicalFeesForm:titlezzz"))).selectByVisibleText("banque test 1");
     Thread.sleep(1000);
     findElement(By.id("globalChldMiscPeriodicalFeesForm:hsqyo54354")).click();
-    findElement(By.xpath("//td[3]/span/a/img")).click();
+    findElement(By.xpath("//td[5]/a[2]/img")).click();
     findElement(By.xpath("//td/div[3]/a")).click();
     findElement(By.xpath("//div[3]/div[2]/div/div[2]/table/tbody/tr/td/div[2]/span/a")).click();
-    findElement(By.xpath("//td[3]/span/a/img")).click();
+    findElement(By.xpath("//td[5]/a[2]/img")).click();
     findElement(By.xpath("//td/div[3]/a")).click();
     findElement(By.xpath("//div[3]/div[2]/div/div[2]/table/tbody/tr/td/div[2]/span/a")).click();
-    findElement(By.xpath("//td[3]/span/a/img")).click();
+    findElement(By.xpath("//td[5]/a[2]/img")).click();
     findElement(By.xpath("//td/div[3]/a")).click();
     findElement(By.xpath("//div[3]/div[2]/div/div[2]/table/tbody/tr/td/div[2]/span/a")).click();
     findElement(By.linkText("Issuer Space")).click();
     findElement(By.xpath("(//img[@alt='English'])[2]")).click();}
  
-  @Test
+ // @Test
   public void testSSV8VALDEBTA895kIntegrationTests() throws Exception {
     driver.get(baseUrl + "/selectsystem-view-tomcat-oracle/login.xhtml");
     Thread.sleep(1000); findElement(By.id("j_username")).clear();
@@ -310,19 +310,20 @@ public class SSV8VALDEBTA895IntegrationTests {
     new Select(findElement(By.id("globalChldMiscPeriodicalFeesForm:titlezzz"))).selectByVisibleText("banque test 2");
     Thread.sleep(1000);
     findElement(By.id("globalChldMiscPeriodicalFeesForm:hsqyo54354")).click();
-    findElement(By.xpath("//td[3]/span/a/img")).click();
+    findElement(By.xpath("//td[5]/a[2]/img")).click();
     findElement(By.xpath("//td/div[3]/a")).click();
     findElement(By.xpath("//div[3]/div[2]/div/div[2]/table/tbody/tr/td/div[2]/span/a")).click();
-    findElement(By.xpath("//td[3]/span/a/img")).click();
+    findElement(By.xpath("//td[5]/a[2]/img")).click();
     findElement(By.xpath("//td/div[3]/a")).click();
     findElement(By.xpath("//div[3]/div[2]/div/div[2]/table/tbody/tr/td/div[2]/span/a")).click();
-    findElement(By.xpath("//td[3]/span/a/img")).click();
+    findElement(By.xpath("//td[5]/a[2]/img")).click();
     findElement(By.xpath("//td/div[3]/a")).click();
     findElement(By.xpath("//div[3]/div[2]/div/div[2]/table/tbody/tr/td/div[2]/span/a")).click();
     findElement(By.linkText("Issuer Space")).click();
     findElement(By.xpath("(//img[@alt='English'])[2]")).click();
   }
- @Test
+ 
+  @Test
   public void testSSV8VALDEBTA895lIntegrationTests() throws Exception {
     driver.get(baseUrl + "/selectsystem-view-tomcat-oracle/login.xhtml");
     Thread.sleep(1000); findElement(By.id("j_username")).clear();
@@ -337,13 +338,13 @@ public class SSV8VALDEBTA895IntegrationTests {
     new Select(findElement(By.id("globalChldMiscPeriodicalFeesForm:titlezzz"))).selectByVisibleText("banque test 3");
     Thread.sleep(1000);
     findElement(By.id("globalChldMiscPeriodicalFeesForm:hsqyo54354")).click();
-    findElement(By.xpath("//td[3]/span/a/img")).click();
+    findElement(By.xpath("//td[5]/a[2]/img")).click();
     findElement(By.xpath("//td/div[3]/a")).click();
     findElement(By.xpath("//div[3]/div[2]/div/div[2]/table/tbody/tr/td/div[2]/span/a")).click();
-    findElement(By.xpath("//td[3]/span/a/img")).click();
+    findElement(By.xpath("//td[5]/a[2]/img")).click();
     findElement(By.xpath("//td/div[3]/a")).click();
     findElement(By.xpath("//div[3]/div[2]/div/div[2]/table/tbody/tr/td/div[2]/span/a")).click();
-    findElement(By.xpath("//td[3]/span/a/img")).click();
+    findElement(By.xpath("//td[5]/a[2]/img")).click();
     findElement(By.xpath("//td/div[3]/a")).click();
     findElement(By.xpath("//div[3]/div[2]/div/div[2]/table/tbody/tr/td/div[2]/span/a")).click();
     findElement(By.linkText("Issuer Space")).click();
@@ -444,13 +445,14 @@ public class SSV8VALDEBTA895IntegrationTests {
     findElement(By.linkText("Renew Fees")).click();
     new Select(findElement(By.id("ListeRenewFeesFrom:titleaaayyyy"))).selectByVisibleText("banque test 1");
     Thread.sleep(1000);
-    findElement(By.xpath("//td[3]/span/a/img")).click();
+    findElement(By.id("ListeRenewFeesFrom:hsqyo54354")).click();
+    findElement(By.xpath("//center/a[2]/img")).click();
     findElement(By.xpath("//td/div[3]/a")).click();
     findElement(By.xpath("//div[3]/div[2]/div/div[2]/table/tbody/tr/td/div[2]/span/a")).click();
-    findElement(By.xpath("//td[3]/span/a/img")).click();
+    findElement(By.xpath("//center/a[2]/img")).click();
     findElement(By.xpath("//td/div[3]/a")).click();
     findElement(By.xpath("//div[3]/div[2]/div/div[2]/table/tbody/tr/td/div[2]/span/a")).click();
-    findElement(By.xpath("//td[3]/span/a/img")).click();
+    findElement(By.xpath("//center/a[2]/img")).click();
     findElement(By.xpath("//td/div[3]/a")).click();
     findElement(By.xpath("//div[3]/div[2]/div/div[2]/table/tbody/tr/td/div[2]/span/a")).click();
     findElement(By.linkText("Issuer Space")).click();
@@ -471,13 +473,14 @@ public class SSV8VALDEBTA895IntegrationTests {
     findElement(By.linkText("Renew Fees")).click();
     new Select(findElement(By.id("ListeRenewFeesFrom:titleaaayyyy"))).selectByVisibleText("banque test 2");
     Thread.sleep(1000);
-    findElement(By.xpath("//td[3]/span/a/img")).click();
+    findElement(By.id("ListeRenewFeesFrom:hsqyo54354")).click();
+    findElement(By.xpath("//center/a[2]/img")).click();
     findElement(By.xpath("//td/div[3]/a")).click();
     findElement(By.xpath("//div[3]/div[2]/div/div[2]/table/tbody/tr/td/div[2]/span/a")).click();
-    findElement(By.xpath("//td[3]/span/a/img")).click();
+    findElement(By.xpath("//center/a[2]/img")).click();
     findElement(By.xpath("//td/div[3]/a")).click();
     findElement(By.xpath("//div[3]/div[2]/div/div[2]/table/tbody/tr/td/div[2]/span/a")).click();
-    findElement(By.xpath("//td[3]/span/a/img")).click();
+    findElement(By.xpath("//center/a[2]/img")).click();
     findElement(By.xpath("//td/div[3]/a")).click();
     findElement(By.xpath("//div[3]/div[2]/div/div[2]/table/tbody/tr/td/div[2]/span/a")).click();
     findElement(By.linkText("Issuer Space")).click();
@@ -497,13 +500,14 @@ public class SSV8VALDEBTA895IntegrationTests {
     findElement(By.linkText("Renew Fees")).click();
     new Select(findElement(By.id("ListeRenewFeesFrom:titleaaayyyy"))).selectByVisibleText("banque test 3");
     Thread.sleep(1000);
-    findElement(By.xpath("//td[3]/span/a/img")).click();
+    findElement(By.id("ListeRenewFeesFrom:hsqyo54354")).click();
+    findElement(By.xpath("//center/a[2]/img")).click();
     findElement(By.xpath("//td/div[3]/a")).click();
     findElement(By.xpath("//div[3]/div[2]/div/div[2]/table/tbody/tr/td/div[2]/span/a")).click();
-    findElement(By.xpath("//td[3]/span/a/img")).click();
+    findElement(By.xpath("//center/a[2]/img")).click();
     findElement(By.xpath("//td/div[3]/a")).click();
     findElement(By.xpath("//div[3]/div[2]/div/div[2]/table/tbody/tr/td/div[2]/span/a")).click();
-    findElement(By.xpath("//td[3]/span/a/img")).click();
+    findElement(By.xpath("//center/a[2]/img")).click();
     findElement(By.xpath("//td/div[3]/a")).click();
     findElement(By.xpath("//div[3]/div[2]/div/div[2]/table/tbody/tr/td/div[2]/span/a")).click();
     findElement(By.linkText("Issuer Space")).click();
@@ -525,17 +529,17 @@ public class SSV8VALDEBTA895IntegrationTests {
     new Select(findElement(By.id("ListeProfileAccountRoutingForm:title"))).selectByVisibleText("banque test 1");
     Thread.sleep(1000);
     findElement(By.id("ListeProfileAccountRoutingForm:hsqyo54354")).click();
-    findElement(By.xpath("//td[3]/span/a/img")).click();
+    findElement(By.cssSelector("a[title=\"delete\"] > img")).click();
     findElement(By.xpath("//td/div[3]/a")).click();
-    findElement(By.xpath("//td[3]/span/a/img")).click();
+    findElement(By.cssSelector("a[title=\"delete\"] > img")).click();
     findElement(By.xpath("//td/div[3]/a")).click();
-    findElement(By.xpath("//td[3]/span/a/img")).click();
+    findElement(By.cssSelector("a[title=\"delete\"] > img")).click();
     findElement(By.xpath("//td/div[3]/a")).click();
     findElement(By.linkText("Issuer Space")).click();
     findElement(By.xpath("(//img[@alt='English'])[2]")).click();
   }
   
- @Test
+@Test
   public void testSSV8VALDEBTA895tIntegrationTests() throws Exception {
     driver.get(baseUrl + "/selectsystem-view-tomcat-oracle/login.xhtml");
     Thread.sleep(1000); findElement(By.id("j_username")).clear();
@@ -550,16 +554,16 @@ public class SSV8VALDEBTA895IntegrationTests {
     new Select(findElement(By.id("ListeProfileAccountRoutingForm:title"))).selectByVisibleText("banque test 2");
     Thread.sleep(1000);
     findElement(By.id("ListeProfileAccountRoutingForm:hsqyo54354")).click();
-    findElement(By.xpath("//td[3]/span/a/img")).click();
+    findElement(By.cssSelector("a[title=\"delete\"] > img")).click();
     findElement(By.xpath("//td/div[3]/a")).click();
-    findElement(By.xpath("//td[3]/span/a/img")).click();
+    findElement(By.cssSelector("a[title=\"delete\"] > img")).click();
     findElement(By.xpath("//td/div[3]/a")).click();
-    findElement(By.xpath("//td[3]/span/a/img")).click();
+    findElement(By.cssSelector("a[title=\"delete\"] > img")).click();
     findElement(By.xpath("//td/div[3]/a")).click();
     findElement(By.linkText("Issuer Space")).click();
     findElement(By.xpath("(//img[@alt='English'])[2]")).click();
   }
-  @Test
+ @Test
   public void testSSV8VALDEBTA895vIntegrationTests() throws Exception {
     driver.get(baseUrl + "/selectsystem-view-tomcat-oracle/login.xhtml");
     Thread.sleep(1000); findElement(By.id("j_username")).clear();
@@ -574,11 +578,11 @@ public class SSV8VALDEBTA895IntegrationTests {
     new Select(findElement(By.id("ListeProfileAccountRoutingForm:title"))).selectByVisibleText("banque test 3");
     Thread.sleep(1000);
     findElement(By.id("ListeProfileAccountRoutingForm:hsqyo54354")).click();
-    findElement(By.xpath("//td[3]/span/a/img")).click();
+    findElement(By.cssSelector("a[title=\"delete\"] > img")).click();
     findElement(By.xpath("//td/div[3]/a")).click();
-    findElement(By.xpath("//td[3]/span/a/img")).click();
+    findElement(By.cssSelector("a[title=\"delete\"] > img")).click();
     findElement(By.xpath("//td/div[3]/a")).click();
-    findElement(By.xpath("//td[3]/span/a/img")).click();
+    findElement(By.cssSelector("a[title=\"delete\"] > img")).click();
     findElement(By.xpath("//td/div[3]/a")).click();
     findElement(By.linkText("Issuer Space")).click();
     findElement(By.xpath("(//img[@alt='English'])[2]")).click();

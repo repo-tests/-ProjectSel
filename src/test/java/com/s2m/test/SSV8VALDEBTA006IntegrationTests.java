@@ -30,7 +30,7 @@ public class SSV8VALDEBTA006IntegrationTests {
     recorder.startRecording(this.getClass().getName());
   }
 
-  //@Test
+  @Test
   public void testSSV8VALDEBTA006aIntegrationTests() throws Exception {
     driver.get(baseUrl + "/selectsystem-view-tomcat-oracle/login.xhtml");
     Thread.sleep(1000); findElement(By.id("j_username")).clear();
@@ -56,14 +56,13 @@ public class SSV8VALDEBTA006IntegrationTests {
     findElement(By.xpath("(//img[@alt='English'])[2]")).click();
   }
 
-  //@Test
+  @Test
   public void testSSV8VALDEBTA006bIntegrationTests() throws Exception {
     driver.get(baseUrl + "/selectsystem-view-tomcat-oracle/login.xhtml");
     Thread.sleep(1000); findElement(By.id("j_username")).clear();
     findElement(By.id("j_username")).sendKeys("usercenter");
     Thread.sleep(1000); findElement(By.id("j_password")).clear();
     findElement(By.id("j_password")).sendKeys("pwd8888");
-    findElement(By.cssSelector("#login > img[alt=\"Frensh\"]")).click();
     findElement(By.cssSelector("#login > img[alt=\"Frensh\"]")).click();
     findElement(By.xpath("//span/a")).click();
     findElement(By.id("form:table:1:sdksds")).click();
@@ -83,7 +82,7 @@ public class SSV8VALDEBTA006IntegrationTests {
     findElement(By.xpath("(//img[@alt='English'])[2]")).click();
   }
   
- // @Test
+ @Test
   public void testSSV8VALDEBTA006cIntegrationTests() throws Exception {
     driver.get(baseUrl + "/selectsystem-view-tomcat-oracle/login.xhtml");
     Thread.sleep(1000); findElement(By.id("j_username")).clear();
@@ -103,7 +102,7 @@ public class SSV8VALDEBTA006IntegrationTests {
     new Select(findElement(By.id("globalOpposedBinHistoryForm:nationalBin"))).selectByVisibleText("<2700000>........<2800000>");
     Thread.sleep(1000);
     findElement(By.cssSelector("td > a > img")).click();
-    new Select(findElement(By.id("globalOpposedBinHistoryForm:nationalBin"))).selectByVisibleText("<2500000>........<2600000>");
+    new Select(findElement(By.id("globalOpposedBinHistoryForm:nationalBin"))).selectByVisibleText("<2300000>........<2400000>");
     Thread.sleep(1000);
     findElement(By.cssSelector("td > a > img")).click();
     findElement(By.xpath("(//a[contains(text(),'BIN')])[4]")).click();

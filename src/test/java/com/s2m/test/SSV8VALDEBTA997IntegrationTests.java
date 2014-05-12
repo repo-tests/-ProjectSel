@@ -29,7 +29,7 @@ public class SSV8VALDEBTA997IntegrationTests {
     recorder.startRecording(this.getClass().getName());
   }
   // *** Supression des risques de banques
- // @Test
+  @Test
   public void testSSV8VALDEBTA997IntegrationTests() throws Exception {
 	  driver.get(baseUrl + "/selectsystem-view-tomcat-oracle/login.xhtml");
 	    Thread.sleep(1000); findElement(By.id("j_username")).clear();

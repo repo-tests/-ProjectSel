@@ -29,7 +29,7 @@ public class SSV8VALDEBTA001IntegrationTests {
     recorder.startRecording(this.getClass().getName());
   }
 //*** creation des Programmes debit
- // @Test
+ @Test
   public void testSSV8VALDEBTA001IntegrationTests() throws Exception {
     driver.get(baseUrl + "/selectsystem-view-tomcat-oracle/login.xhtml");
     Thread.sleep(1000); findElement(By.id("j_username")).clear();
@@ -117,8 +117,8 @@ public class SSV8VALDEBTA001IntegrationTests {
     findElement(By.id("globalDebitProgramInquiryForm:dprIden")).sendKeys("DPROG023");
     Thread.sleep(1000); findElement(By.id("globalDebitProgramInquiryForm:dprLabe")).clear();
     findElement(By.id("globalDebitProgramInquiryForm:dprLabe")).sendKeys("DEBITPROGRAM023");
-    Thread.sleep(1000); findElement(By.id("globalDebitProgramInquiryForm:dprPerc")).clear();
-    findElement(By.id("globalDebitProgramInquiryForm:dprPerc")).sendKeys("0");
+    Thread.sleep(1000); findElement(By.id("globalDebitProgramInquiryForm:dapIRProgramsugges")).clear();
+    findElement(By.id("globalDebitProgramInquiryForm:dapIRProgramsugges")).sendKeys("Risk Test 23");
     findElement(By.cssSelector("img[alt=\"Exporter\"]")).click();
     findElement(By.xpath("//span/a[contains(@class,'btValider')]")).click();
     findElement(By.xpath("(//a[contains(text(),'Debit Program')])[2]")).click();
@@ -141,8 +141,6 @@ public class SSV8VALDEBTA001IntegrationTests {
     findElement(By.id("globalDebitProgramInquiryForm:dprLabe")).sendKeys("DEBITPROGRAM032");
     Thread.sleep(1000); findElement(By.id("globalDebitProgramInquiryForm:dapIRProgramsugges")).clear();
     findElement(By.id("globalDebitProgramInquiryForm:dapIRProgramsugges")).sendKeys("Risk Test 32");
-    Thread.sleep(1000); findElement(By.id("globalDebitProgramInquiryForm:dprPerc")).clear();
-    findElement(By.id("globalDebitProgramInquiryForm:dprPerc")).sendKeys("999");
     findElement(By.cssSelector("img[alt=\"Exporter\"]")).click();
     findElement(By.xpath("//span/a[contains(@class,'btValider')]")).click();
     findElement(By.xpath("(//img[@alt='Exporter'])[2]")).click();
@@ -154,9 +152,6 @@ public class SSV8VALDEBTA001IntegrationTests {
     findElement(By.id("globalDebitProgramInquiryForm:dprValuDateDayCell9")).click();
     findElement(By.id("globalDebitProgramInquiryForm:dprExpiDatePopupButton")).click();
     findElement(By.id("globalDebitProgramInquiryForm:dprExpiDateDayCell25")).click();
-    Thread.sleep(1000); findElement(By.id("globalDebitProgramInquiryForm:dprPerc")).clear();
-    findElement(By.id("globalDebitProgramInquiryForm:dprPerc")).sendKeys("100");
-    findElement(By.cssSelector("img[alt=\"Exporter\"]")).click();
     findElement(By.cssSelector("img[alt=\"Exporter\"]")).click();
     findElement(By.xpath("//span/a[contains(@class,'btValider')]")).click();
     findElement(By.xpath("(//a[contains(text(),'Debit Program')])[2]")).click();

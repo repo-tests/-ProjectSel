@@ -29,7 +29,7 @@ public class SSV8VALDEBTA023IntegrationTests {
     recorder.startRecording(this.getClass().getSimpleName());
   }
 
- // @Test
+  @Test
   public void testSSV8VALDEBTA023IntegrationTests() throws Exception {
 	driver.get(baseUrl + "/selectsystem-view-tomcat-oracle/login.xhtml");
 	Thread.sleep(1000); findElement(By.id("j_username")).clear();
@@ -105,9 +105,6 @@ public class SSV8VALDEBTA023IntegrationTests {
     Thread.sleep(1000);
     new Select(findElement(By.id("ListeCardForm:idPinRecalculFeesItems"))).selectByVisibleText("FrPRec_011");
     Thread.sleep(1000);
-//    findElement(By.cssSelector("img[alt=\"save2\"]")).click();
-//    new Select(findElement(By.id("ListeCardForm:Laffffngzzz"))).selectByVisibleText("<1500000>........<1600000>");
-//    Thread.sleep(1000);
     findElement(By.cssSelector("img[alt=\"save2\"]")).click();
     findElement(By.xpath("//div[2]/span/a")).click();
     findElement(By.linkText("Issuer Space")).click();

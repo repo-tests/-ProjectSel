@@ -26,10 +26,11 @@ public class SSV8VALDEBTA897IntegrationTests {
     baseUrl = "http://10.0.0.107:8080/";
     driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
     driver.manage().window().maximize();
-    recorder.startRecording(this.getClass().getName());
+    recorder.startRecording(this.getClass().getSimpleName());
   }
 //*** supression des données du test de creation des motifs de remplacemnt
- @Test
+ 
+  @Test
   public void testSSV8VALDEBTA897IntegrationTests() throws Exception {
     driver.get(baseUrl + "/selectsystem-view-tomcat-oracle/login.xhtml");
     Thread.sleep(1000); findElement(By.id("j_username")).clear();

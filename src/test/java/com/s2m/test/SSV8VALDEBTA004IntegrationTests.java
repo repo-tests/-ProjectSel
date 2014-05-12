@@ -29,7 +29,7 @@ public class SSV8VALDEBTA004IntegrationTests {
     recorder.startRecording(this.getClass().getName());
   }
 
-  //@Test
+  @Test
   public void testSSV8VALDEBTA004IntegrationTests() throws Exception {
     driver.get(baseUrl + "/selectsystem-view-tomcat-oracle/login.xhtml");
     Thread.sleep(1000); findElement(By.id("j_username")).clear();
@@ -55,7 +55,7 @@ public class SSV8VALDEBTA004IntegrationTests {
     findElement(By.xpath("//div[2]/span/a")).click();
     new Select(findElement(By.id("globalOpposedBinSaisForm:title"))).selectByVisibleText("banque test 3");
     Thread.sleep(1000);
-    new Select(findElement(By.id("globalOpposedBinSaisForm:nationalBin"))).selectByVisibleText("<2500000>........<2600000>");
+    new Select(findElement(By.id("globalOpposedBinSaisForm:nationalBin"))).selectByVisibleText("<2300000>........<2400000>");
     Thread.sleep(1000);
     findElement(By.cssSelector("img[alt=\"save2\"]")).click();
     findElement(By.xpath("//div[2]/span/a")).click();

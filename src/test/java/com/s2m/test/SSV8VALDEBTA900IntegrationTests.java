@@ -30,7 +30,7 @@ public class SSV8VALDEBTA900IntegrationTests {
   }
   // *** supression du programm debit
 
-  //@Test
+  @Test
   public void testSSV8VALDEBTA900IntegrationTests() throws Exception {
     driver.get(baseUrl + "/selectsystem-view-tomcat-oracle/login.xhtml");
     Thread.sleep(1000); findElement(By.id("j_username")).clear();

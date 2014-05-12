@@ -26,7 +26,7 @@ public class SSV8VALDEBTA896IntegrationTests {
     baseUrl = "http://10.0.0.107:8080/";
     driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
     driver.manage().window().maximize() ;
-    recorder.startRecording(this.getClass().getName());
+    recorder.startRecording(this.getClass().getSimpleName());
   }
  @Test
   public void testSSV8VALDEBTA896aIntegrationTests() throws Exception {
@@ -80,7 +80,7 @@ public class SSV8VALDEBTA896IntegrationTests {
 	  findElement(By.xpath("(//img[@alt='English'])[2]")).click();
   }
   
-@Test
+   @Test
   public void testSSV8VALDEBTA896cIntegrationTests() throws Exception {
 	  
 	  driver.get(baseUrl + "/selectsystem-view-tomcat-oracle/login.xhtml");
@@ -108,7 +108,7 @@ public class SSV8VALDEBTA896IntegrationTests {
 	  findElement(By.xpath("(//img[@alt='English'])[2]")).click();
   }
   
-@Test
+  //@Test
   public void testSSV8VALDEBTA896dIntegrationTests() throws Exception {
 	  
 	  driver.get(baseUrl + "/selectsystem-view-tomcat-oracle/login.xhtml");
@@ -135,7 +135,7 @@ public class SSV8VALDEBTA896IntegrationTests {
 	    findElement(By.xpath("//div[3]/div[2]/div/div[2]/table/tbody/tr/td/div[2]/span/a")).click();
 	  findElement(By.xpath("(//img[@alt='English'])[2]")).click();
   }
- @Test
+ //@Test
   public void testSSV8VALDEBTA896eIntegrationTests() throws Exception {
 	  
 	  driver.get(baseUrl + "/selectsystem-view-tomcat-oracle/login.xhtml");
@@ -162,7 +162,7 @@ public class SSV8VALDEBTA896IntegrationTests {
 	    findElement(By.xpath("//div[3]/div[2]/div/div[2]/table/tbody/tr/td/div[2]/span/a")).click();
 	  findElement(By.xpath("(//img[@alt='English'])[2]")).click();
   }
- @Test
+ //@Test
   public void testSSV8VALDEBTA896fIntegrationTests() throws Exception {
 	  
 	  driver.get(baseUrl + "/selectsystem-view-tomcat-oracle/login.xhtml");
@@ -294,6 +294,7 @@ public class SSV8VALDEBTA896IntegrationTests {
 	    findElement(By.xpath("//td/div[3]/a")).click();
 	    findElement(By.xpath("//div[3]/div[2]/div/div[2]/table/tbody/tr/td/div[2]/span/a")).click();
 	    findElement(By.xpath("//td[3]/span/a/img")).click();
+	    findElement(By.xpath("//td/div[3]/a")).click();
 	    findElement(By.xpath("//div[3]/div[2]/div/div[2]/table/tbody/tr/td/div[2]/span/a")).click();
 	  findElement(By.xpath("(//img[@alt='English'])[2]")).click();
   }
@@ -320,6 +321,7 @@ public class SSV8VALDEBTA896IntegrationTests {
 	    findElement(By.xpath("//td/div[3]/a")).click();
 	    findElement(By.xpath("//div[3]/div[2]/div/div[2]/table/tbody/tr/td/div[2]/span/a")).click();
 	    findElement(By.xpath("//td[3]/span/a/img")).click();
+	    findElement(By.xpath("//td/div[3]/a")).click();
 	    findElement(By.xpath("//div[3]/div[2]/div/div[2]/table/tbody/tr/td/div[2]/span/a")).click();
 	  findElement(By.xpath("(//img[@alt='English'])[2]")).click();
   }
@@ -345,6 +347,7 @@ public class SSV8VALDEBTA896IntegrationTests {
 	    findElement(By.xpath("//td/div[3]/a")).click();
 	    findElement(By.xpath("//div[3]/div[2]/div/div[2]/table/tbody/tr/td/div[2]/span/a")).click();
 	    findElement(By.xpath("//td[3]/span/a/img")).click();
+	    findElement(By.xpath("//td/div[3]/a")).click();
 	    findElement(By.xpath("//div[3]/div[2]/div/div[2]/table/tbody/tr/td/div[2]/span/a")).click();
 	  findElement(By.xpath("(//img[@alt='English'])[2]")).click();
   }

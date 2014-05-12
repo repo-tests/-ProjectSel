@@ -31,7 +31,7 @@ public class SSV8VALDEBTA0002IntegrationTests {
   
   //  ***** Test de création des agences pour les banques*********
 
-  //@Test
+@Test
   public void testSSV8VALDEBTA0002IntegrationTests() throws Exception {
 Select select;
 driver.get(baseUrl + "/selectsystem-view-tomcat-oracle/login.xhtml");
@@ -50,10 +50,10 @@ findElement(By.id("j_username")).sendKeys("usercenter");
     findElement(By.id("MyBranchForm:bankOnglet1:braIden")).sendKeys("agence test BNQ1");
     Thread.sleep(1000); findElement(By.id("MyBranchForm:bankOnglet1:branch")).clear();
     findElement(By.id("MyBranchForm:bankOnglet1:branch")).sendKeys("agence test BNQ1");
-    Thread.sleep(1000); findElement(By.name("MyBranchForm:bankOnglet1:j_id253")).clear();
-    findElement(By.name("MyBranchForm:bankOnglet1:j_id253")).sendKeys("abnq1");
+    Thread.sleep(1000); findElement(By.name("MyBranchForm:bankOnglet1:j_id258")).clear();
+    findElement(By.name("MyBranchForm:bankOnglet1:j_id258")).sendKeys("abnq1");
     findElement(By.cssSelector("img[alt=\"save\"]")).click();
-    findElement(By.xpath("//span/a[contains(@class,'btValider')]")).click();
+    findElement(By.xpath("//span/a")).click();
     findElement(By.linkText("New Branch")).click();
     new Select(findElement(By.id("MyBranchForm:bankOnglet1:bank"))).selectByVisibleText("banque test 2");
     Thread.sleep(1000);
@@ -61,10 +61,10 @@ findElement(By.id("j_username")).sendKeys("usercenter");
     findElement(By.id("MyBranchForm:bankOnglet1:braIden")).sendKeys("agence test BNQ2");
     Thread.sleep(1000); findElement(By.id("MyBranchForm:bankOnglet1:branch")).clear();
     findElement(By.id("MyBranchForm:bankOnglet1:branch")).sendKeys("agence test BNQ2");
-    Thread.sleep(1000); findElement(By.name("MyBranchForm:bankOnglet1:j_id253")).clear();
-    findElement(By.name("MyBranchForm:bankOnglet1:j_id253")).sendKeys("abnq2");
+    Thread.sleep(1000); findElement(By.name("MyBranchForm:bankOnglet1:j_id258")).clear();
+    findElement(By.name("MyBranchForm:bankOnglet1:j_id258")).sendKeys("abnq2");
     findElement(By.cssSelector("img[alt=\"save\"]")).click();
-    findElement(By.xpath("//span/a[contains(@class,'btValider')]")).click();
+    findElement(By.xpath("//span/a")).click();
     findElement(By.linkText("New Branch")).click();
     new Select(findElement(By.id("MyBranchForm:bankOnglet1:bank"))).selectByVisibleText("banque test 3");
     Thread.sleep(1000);
@@ -72,10 +72,10 @@ findElement(By.id("j_username")).sendKeys("usercenter");
     findElement(By.id("MyBranchForm:bankOnglet1:braIden")).sendKeys("agence test BNQ3");
     Thread.sleep(1000); findElement(By.id("MyBranchForm:bankOnglet1:branch")).clear();
     findElement(By.id("MyBranchForm:bankOnglet1:branch")).sendKeys("agence test BNQ3");
-    Thread.sleep(1000); findElement(By.name("MyBranchForm:bankOnglet1:j_id253")).clear();
-    findElement(By.name("MyBranchForm:bankOnglet1:j_id253")).sendKeys("abnq3");
+    Thread.sleep(1000); findElement(By.name("MyBranchForm:bankOnglet1:j_id258")).clear();
+    findElement(By.name("MyBranchForm:bankOnglet1:j_id258")).sendKeys("abnq3");
     findElement(By.cssSelector("img[alt=\"save\"]")).click();
-    findElement(By.xpath("//span/a[contains(@class,'btValider')]")).click();
+    findElement(By.xpath("//span/a")).click();
     findElement(By.xpath("(//img[@alt='English'])[2]")).click();
   }
 

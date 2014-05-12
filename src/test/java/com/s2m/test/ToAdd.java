@@ -31,19 +31,23 @@ driver.manage().window().maximize() ;
 
   @Test
   public void testToAdd() throws Exception {
-    driver.get(baseUrl + "/selectsystem-view-tomcat-oracle/modules/issuer/fees/SSV8_ECR0029_RENEW_FEES.xhtml");
-    findElement(By.linkText("Renew Fees")).click();
-    new Select(findElement(By.id("ListeRenewFeesFrom:titleaaayyyy"))).selectByVisibleText("banque test 1");
+    driver.get(baseUrl + "/selectsystem-view-tomcat-oracle/login.xhtml");
+    Thread.sleep(1000); findElement(By.id("j_username")).clear();
+    findElement(By.id("j_username")).sendKeys("usercenter");
+    Thread.sleep(1000); findElement(By.id("j_password")).clear();
+    findElement(By.id("j_password")).sendKeys("pwd8888");
+    findElement(By.cssSelector("#login > img[alt=\"Frensh\"]")).click();
+    findElement(By.xpath("//span/a")).click();
+    findElement(By.id("form:table:1:sdksds")).click();
+    findElement(By.xpath("(//img[@alt='English'])[4]")).click();
+    findElement(By.linkText("New card program")).click();
+    new Select(findElement(By.id("ListeCardForm:title"))).selectByVisibleText("banque test 1");
     Thread.sleep(1000);
-    findElement(By.id("ListeRenewFeesFrom:hsqyoqpllll")).click();
-    Thread.sleep(1000); findElement(By.id("ListeRenewFeesFrom:searchResultsCardManagementFeesId:0:inputIdaaayyyy")).clear();
-    findElement(By.id("ListeRenewFeesFrom:searchResultsCardManagementFeesId:0:inputIdaaayyyy")).sendKeys("test1");
-    Thread.sleep(1000); findElement(By.id("ListeRenewFeesFrom:searchResultsCardManagementFeesId:0:inputLabeaaayyy")).clear();
-    findElement(By.id("ListeRenewFeesFrom:searchResultsCardManagementFeesId:0:inputLabeaaayyy")).sendKeys("test2");
-    Thread.sleep(1000); findElement(By.id("ListeRenewFeesFrom:searchResultsCardManagementFeesId:0:inputAmoulll")).clear();
-    findElement(By.id("ListeRenewFeesFrom:searchResultsCardManagementFeesId:0:inputAmoulll")).sendKeys("2200");
-    findElement(By.cssSelector("img[alt=\"Modify\"]")).click();
-    findElement(By.xpath("//div[3]/div[2]/div/div[2]/table/tbody/tr/td/div[2]/span/a")).click();
+    Thread.sleep(1000); findElement(By.id("ListeCardForm:idIdenValid")).clear();
+    findElement(By.id("ListeCardForm:idIdenValid")).sendKeys("nnnnn");
+    Thread.sleep(1000); findElement(By.id("ListeCardForm:laaaaaaaabe")).clear();
+    findElement(By.id("ListeCardForm:laaaaaaaabe")).sendKeys("nnnnn");
+    findElement(By.cssSelector("img[alt=\"save2\"]")).click();
   }
 
   @After

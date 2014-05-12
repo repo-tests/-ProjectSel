@@ -30,7 +30,7 @@ public class SSV8VALDEBTA0003IntegrationTests {
   }
   // ** enregistrement des risques pour les trois banques
 
-// @Test
+ @Test
   public void testSSV8VALDEBTA0003IntegrationTests() throws Exception {
 
 driver.get(baseUrl + "/selectsystem-view-tomcat-oracle/login.xhtml");

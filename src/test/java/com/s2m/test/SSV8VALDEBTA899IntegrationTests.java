@@ -26,11 +26,11 @@ public class SSV8VALDEBTA899IntegrationTests {
     baseUrl = "http://10.0.0.107:8080/";
     driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
     driver.manage().window().maximize();
-    recorder.startRecording(this.getClass().getName());
+    recorder.startRecording(this.getClass().getSimpleName());
   }
   // Tests de supression des bins
 
-  //@Test
+  @Test
   public void testSSV8VALDEBTA899IntegrationTests() throws Exception {
     driver.get(baseUrl + "/selectsystem-view-tomcat-oracle/login.xhtml");
     Thread.sleep(1000); findElement(By.id("j_username")).clear();

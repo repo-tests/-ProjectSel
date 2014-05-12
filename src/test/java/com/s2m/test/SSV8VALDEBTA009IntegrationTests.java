@@ -33,7 +33,7 @@ public class SSV8VALDEBTA009IntegrationTests {
 
   
   // ***** test de creation fonctionnel (juste)+ id oblige+ nom obligé
-//@Test
+@Test
   public void testSSV8VALDEBTA009aIntegrationTests() throws Exception {
     driver.get(baseUrl + "/selectsystem-view-tomcat-oracle/login.xhtml");
     Thread.sleep(1000); findElement(By.id("j_username")).clear();
@@ -87,7 +87,7 @@ public class SSV8VALDEBTA009IntegrationTests {
   
   //*** verification montant obligé+ peridicite ablige+
   
-//@Test
+@Test
   public void testSSV8VALDEBTA009bIntegrationTests() throws Exception {
     driver.get(baseUrl + "/selectsystem-view-tomcat-oracle/login.xhtml");
     Thread.sleep(1000); findElement(By.id("j_username")).clear();
@@ -144,7 +144,7 @@ public class SSV8VALDEBTA009IntegrationTests {
     findElement(By.xpath("(//img[@alt='English'])[2]")).click();
   }
 // **** verification: montant non alphabetiq + pas de ";" dans le mantant + valeur maximala u champ montant
- //@Test
+ @Test
   public void testSSV8VALDEBTA009cIntegrationTests() throws Exception {
     driver.get(baseUrl + "/selectsystem-view-tomcat-oracle/login.xhtml");
     Thread.sleep(1000); findElement(By.id("j_username")).clear();

@@ -28,8 +28,9 @@ driver.manage().window().maximize() ;
     driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
     recorder.startRecording(this.getClass().getSimpleName());
   }
-
-  @Test
+  
+  
+ @Test
   public void testSSV8VALDEBTA024IntegrationTests() throws Exception {
     driver.get(baseUrl + "/selectsystem-view-tomcat-oracle/login.xhtml");
     Thread.sleep(1000); findElement(By.id("j_username")).clear();
