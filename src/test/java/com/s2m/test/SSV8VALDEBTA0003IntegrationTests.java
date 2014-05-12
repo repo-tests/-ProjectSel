@@ -7,6 +7,7 @@ import static org.junit.Assert.*;
 import static org.hamcrest.CoreMatchers.*;
 import org.openqa.selenium.*;
 import org.openqa.selenium.support.ui.*;
+
 import com.google.common.base.Function;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.support.ui.Select;
@@ -39,7 +40,7 @@ findElement(By.id("j_username")).sendKeys("usercenter");
     Thread.sleep(1000); findElement(By.id("j_password")).clear();
     findElement(By.id("j_password")).sendKeys("pwd8888");
     findElement(By.cssSelector("#login > img[alt=\"Frensh\"]")).click();
-     findElement(By.xpath("//span/a[contains(@class,'btValider')]")).click();
+    optionalClick(By.xpath("//span/a[contains(@class,'btValider')]"));
     findElement(By.id("form:table:0:sdksds")).click();
     findElement(By.xpath("(//img[@alt='English'])[11]")).click();
     findElement(By.linkText("New Risk")).click();
@@ -230,6 +231,14 @@ findElement(By.id("j_username")).sendKeys("usercenter");
       (new WebDriverWait(driver, 30,1000)).until(ExpectedConditions.visibilityOfElementLocated(locator));
       return driver.findElement(locator);
   }
+  public  void optionalClick( final By locator) {
+	    (new WebDriverWait(driver, 15,500)).until(ExpectedConditions.presenceOfElementLocated(locator));
+	      (new WebDriverWait(driver, 15,500)).until(ExpectedConditions.visibilityOfElementLocated(locator));
+	      WebElement element=driver.findElement(locator);
+	      if (element.size() !== 0) element.click();
+	    
+}
+
 
   private boolean isElementPresent(By by) {
     try {
