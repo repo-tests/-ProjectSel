@@ -38,7 +38,7 @@ driver.manage().window().maximize() ;
     Thread.sleep(1000); findElement(By.id("j_password")).clear();
     findElement(By.id("j_password")).sendKeys("pwd8888");
     findElement(By.cssSelector("#login > img[alt=\"Frensh\"]")).click();
-    findElement(By.xpath("//span/a")).click();
+    optionalClick(By.xpath("//span/a"));
     findElement(By.id("form:table:1:sdksds")).click();
     findElement(By.xpath("(//img[@alt='English'])[4]")).click();
     findElement(By.linkText("Card program Wizard")).click();
@@ -99,8 +99,6 @@ driver.manage().window().maximize() ;
     Thread.sleep(1000);
     new Select(findElement(By.id("ListeCardForm:idPersonalizationFeesItems"))).selectByVisibleText("FrPer_011");
     Thread.sleep(1000);
-    new Select(findElement(By.id("ListeCardForm:idCardRenewFeesItems"))).selectByVisibleText("Fr_Ren_012");
-    Thread.sleep(1000);
     new Select(findElement(By.id("ListeCardForm:idCardRenewFeesItems"))).selectByVisibleText("Fr_Ren_011");
     Thread.sleep(1000);
     new Select(findElement(By.id("ListeCardForm:idChldMembershipFeesItems"))).selectByVisibleText("Fr_Mem_011");
@@ -130,6 +128,21 @@ driver.manage().window().maximize() ;
       if (element.isEnabled()==false )  ((JavascriptExecutor) driver).executeScript("arguments[0].disabled = false", element);
       return element;
   }
+  
+  public  void optionalClick( final By locator) {
+	  WebElement we=null;
+	  try {
+	      we = driver.findElement( locator );
+	      we.click();
+	    } catch ( StaleElementReferenceException ser ) {                        
+	      
+	    } catch ( NoSuchElementException nse ) {                        
+	    
+	    } catch ( Exception e ) {
+	      
+	    }
+	    
+}
 
   private boolean isElementPresent(By by) {
     try {

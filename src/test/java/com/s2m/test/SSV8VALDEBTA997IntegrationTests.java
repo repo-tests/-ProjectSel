@@ -25,8 +25,8 @@ public class SSV8VALDEBTA997IntegrationTests {
     recorder = new Recorder();
     baseUrl = "http://10.0.0.107:8080/";
     driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
-    driver.manage().window().maximize();
-    recorder.startRecording(this.getClass().getName());
+  
+    recorder.startRecording(this.getClass().getSimpleName());
   }
   // *** Supression des risques de banques
   @Test
@@ -37,7 +37,7 @@ public class SSV8VALDEBTA997IntegrationTests {
 	    Thread.sleep(1000); findElement(By.id("j_password")).clear();
 	    findElement(By.id("j_password")).sendKeys("pwd8888");
 	    findElement(By.cssSelector("#login > img[alt=\"Frensh\"]")).click();
-	    findElement(By.xpath("//span/a")).click();
+	    optionalClick(By.xpath("//span/a"));
 	    findElement(By.id("form:table:0:sdksds")).click();
 	    findElement(By.xpath("(//img[@alt='English'])[11]")).click();
 	    findElement(By.linkText("Managing Risk")).click();
@@ -101,6 +101,21 @@ public class SSV8VALDEBTA997IntegrationTests {
       if (element.isEnabled()==false )  ((JavascriptExecutor) driver).executeScript("arguments[0].disabled = false", element);
       return element;
   }
+  
+  public  void optionalClick( final By locator) {
+	  WebElement we=null;
+	  try {
+	      we = driver.findElement( locator );
+	      we.click();
+	    } catch ( StaleElementReferenceException ser ) {                        
+	      
+	    } catch ( NoSuchElementException nse ) {                        
+	    
+	    } catch ( Exception e ) {
+	      //staticlogger.info( e.getMessage() );
+	    }
+	    
+}
 
   private boolean isElementPresent(By by) {
     try {

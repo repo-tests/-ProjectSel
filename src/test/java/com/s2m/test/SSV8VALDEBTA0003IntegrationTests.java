@@ -31,7 +31,7 @@ public class SSV8VALDEBTA0003IntegrationTests {
   }
   // ** enregistrement des risques pour les trois banques
 
- @Test
+ //@Test
   public void testSSV8VALDEBTA0003IntegrationTests() throws Exception {
 
 driver.get(baseUrl + "/selectsystem-view-tomcat-oracle/login.xhtml");
@@ -232,10 +232,17 @@ findElement(By.id("j_username")).sendKeys("usercenter");
       return driver.findElement(locator);
   }
   public  void optionalClick( final By locator) {
-	    (new WebDriverWait(driver, 15,500)).until(ExpectedConditions.presenceOfElementLocated(locator));
-	      (new WebDriverWait(driver, 15,500)).until(ExpectedConditions.visibilityOfElementLocated(locator));
-	      WebElement element=driver.findElement(locator);
-	      if (element.size() !== 0) element.click();
+	  WebElement we=null;
+	  try {
+	      we = driver.findElement( locator );
+	      we.click();
+	    } catch ( StaleElementReferenceException ser ) {                        
+	      
+	    } catch ( NoSuchElementException nse ) {                        
+	    
+	    } catch ( Exception e ) {
+	      //staticlogger.info( e.getMessage() );
+	    }
 	    
 }
 

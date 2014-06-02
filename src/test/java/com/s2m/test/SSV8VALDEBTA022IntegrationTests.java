@@ -26,7 +26,7 @@ public class SSV8VALDEBTA022IntegrationTests {
     recorder = new Recorder();
     baseUrl = "http://10.0.0.107:8080/";
     driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
-    driver.manage().window().maximize() ;
+    driver.manage().window().maximize();
     recorder.startRecording(this.getClass().getName());
   }
 
@@ -37,7 +37,8 @@ public class SSV8VALDEBTA022IntegrationTests {
     findElement(By.id("j_username")).sendKeys("usercenter");
     Thread.sleep(1000); findElement(By.id("j_password")).clear();
     findElement(By.id("j_password")).sendKeys("pwd8888");
-    findElement(By.cssSelector("#login > img[alt=\"Frensh\"]")).click();    findElement(By.xpath("//span/a")).click();
+    findElement(By.cssSelector("#login > img[alt=\"Frensh\"]")).click(); 
+    optionalClick(By.xpath("//span/a"));
     findElement(By.id("form:table:1:sdksds")).click();
     findElement(By.xpath("(//img[@alt='English'])[4]")).click();
     findElement(By.linkText("Manage controls")).click();
@@ -73,7 +74,7 @@ public class SSV8VALDEBTA022IntegrationTests {
 	    Thread.sleep(1000); findElement(By.id("j_password")).clear();
 	    findElement(By.id("j_password")).sendKeys("pwd8888");
 	    findElement(By.cssSelector("#login > img[alt=\"Frensh\"]")).click();
-	    findElement(By.xpath("//span/a")).click();
+	    optionalClick(By.xpath("//span/a"));
 	    findElement(By.id("form:table:1:sdksds")).click();
 	    findElement(By.xpath("(//img[@alt='English'])[4]")).click();
     findElement(By.linkText("Manage controls")).click();
@@ -101,7 +102,7 @@ public class SSV8VALDEBTA022IntegrationTests {
 	    Thread.sleep(1000); findElement(By.id("j_password")).clear();
 	    findElement(By.id("j_password")).sendKeys("pwd8888");
 	    findElement(By.cssSelector("#login > img[alt=\"Frensh\"]")).click();
-	    findElement(By.xpath("//span/a")).click();
+	    optionalClick(By.xpath("//span/a"));
 	    findElement(By.id("form:table:1:sdksds")).click();
 	    findElement(By.xpath("(//img[@alt='English'])[4]")).click();
     findElement(By.linkText("Manage controls")).click();
@@ -135,9 +136,24 @@ public class SSV8VALDEBTA022IntegrationTests {
     (new WebDriverWait(driver, 30,1000)).until(ExpectedConditions.presenceOfElementLocated(locator));
       (new WebDriverWait(driver, 30,1000)).until(ExpectedConditions.visibilityOfElementLocated(locator));
       WebElement element=driver.findElement(locator);
-      if (element.isEnabled()==false )  ((JavascriptExecutor) driver).executeScript("arguments[0].disabled = false", element);
+      //if (element.isEnabled()==false )  ((JavascriptExecutor) driver).executeScript("arguments[0].disabled = false", element);
       return element;
   }
+  
+  public  void optionalClick( final By locator) {
+	  WebElement we=null;
+	  try {
+	      we = driver.findElement( locator );
+	      we.click();
+	    } catch ( StaleElementReferenceException ser ) {                        
+	      
+	    } catch ( NoSuchElementException nse ) {                        
+	    
+	    } catch ( Exception e ) {
+	      //staticlogger.info( e.getMessage() );
+	    }
+	    
+}
 
   private boolean isElementPresent(By by) {
     try {

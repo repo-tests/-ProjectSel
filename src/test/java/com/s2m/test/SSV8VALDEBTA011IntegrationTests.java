@@ -43,7 +43,7 @@ public class SSV8VALDEBTA011IntegrationTests {
     Thread.sleep(1000); findElement(By.id("j_password")).clear();
     findElement(By.id("j_password")).sendKeys("pwd8888");
     findElement(By.cssSelector("#login > img[alt=\"Frensh\"]")).click();
-    findElement(By.xpath("//span/a")).click();
+    optionalClick(By.xpath("//span/a"));
     findElement(By.id("form:table:1:sdksds")).click();
     findElement(By.xpath("(//img[@alt='English'])[4]")).click();
     findElement(By.linkText("Insurance Fees")).click();
@@ -95,7 +95,7 @@ public class SSV8VALDEBTA011IntegrationTests {
     Thread.sleep(1000); findElement(By.id("j_password")).clear();
     findElement(By.id("j_password")).sendKeys("pwd8888");
     findElement(By.cssSelector("#login > img[alt=\"Frensh\"]")).click();
-    findElement(By.xpath("//span/a")).click();
+    optionalClick(By.xpath("//span/a"));
     findElement(By.id("form:table:1:sdksds")).click();
     findElement(By.xpath("(//img[@alt='English'])[4]")).click();
     findElement(By.linkText("Insurance Fees")).click();
@@ -152,7 +152,7 @@ public class SSV8VALDEBTA011IntegrationTests {
     Thread.sleep(1000); findElement(By.id("j_password")).clear();
     findElement(By.id("j_password")).sendKeys("pwd8888");
     findElement(By.cssSelector("#login > img[alt=\"Frensh\"]")).click();
-    findElement(By.xpath("//span/a")).click();
+    optionalClick(By.xpath("//span/a"));
     findElement(By.id("form:table:1:sdksds")).click();
     findElement(By.xpath("(//img[@alt='English'])[4]")).click();
     findElement(By.linkText("Insurance Fees")).click();
@@ -220,6 +220,20 @@ public class SSV8VALDEBTA011IntegrationTests {
       return element;
   }
 
+  public  void optionalClick( final By locator) {
+	  WebElement we=null;
+	  try {
+	      we = driver.findElement( locator );
+	      we.click();
+	    } catch ( StaleElementReferenceException ser ) {                        
+	      
+	    } catch ( NoSuchElementException nse ) {                        
+	    
+	    } catch ( Exception e ) {
+	      //staticlogger.info( e.getMessage() );
+	    }
+	    
+}
   private boolean isElementPresent(By by) {
     try {
       driver.findElement(by);

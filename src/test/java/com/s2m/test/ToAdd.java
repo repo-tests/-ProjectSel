@@ -22,10 +22,10 @@ public class ToAdd {
   @Before
   public void setUp() throws Exception {
     driver = new FirefoxDriver();
-driver.manage().window().maximize() ;
     recorder = new Recorder();
     baseUrl = "http://10.0.0.107:8080/";
     driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+    driver.manage().window().maximize();
     recorder.startRecording(this.getClass().getSimpleName());
   }
 
@@ -36,18 +36,28 @@ driver.manage().window().maximize() ;
     findElement(By.id("j_username")).sendKeys("usercenter");
     Thread.sleep(1000); findElement(By.id("j_password")).clear();
     findElement(By.id("j_password")).sendKeys("pwd8888");
-    findElement(By.cssSelector("#login > img[alt=\"Frensh\"]")).click();
+    findElement(By.xpath("(//img[@alt='Frensh'])[2]")).click();
     findElement(By.xpath("//span/a")).click();
     findElement(By.id("form:table:1:sdksds")).click();
     findElement(By.xpath("(//img[@alt='English'])[4]")).click();
-    findElement(By.linkText("New card program")).click();
-    new Select(findElement(By.id("ListeCardForm:title"))).selectByVisibleText("banque test 1");
+    findElement(By.linkText("Manage Controls")).click();
+    new Select(findElement(By.id("ListeTransactionForm:titleBank1"))).selectByVisibleText("banque test 1");
     Thread.sleep(1000);
-    Thread.sleep(1000); findElement(By.id("ListeCardForm:idIdenValid")).clear();
-    findElement(By.id("ListeCardForm:idIdenValid")).sendKeys("nnnnn");
-    Thread.sleep(1000); findElement(By.id("ListeCardForm:laaaaaaaabe")).clear();
-    findElement(By.id("ListeCardForm:laaaaaaaabe")).sendKeys("nnnnn");
-    findElement(By.cssSelector("img[alt=\"save2\"]")).click();
+    findElement(By.xpath("//option[19]")).click();
+    findElement(By.xpath("//td/a/img")).click();
+    findElement(By.xpath("//td/a[3]/img")).click();
+    Thread.sleep(1000); findElement(By.id("ListeTransactionForm:iden")).clear();
+    findElement(By.id("ListeTransactionForm:iden")).sendKeys("cont1");
+    findElement(By.id("ListeTransactionForm:label")).click();
+    Thread.sleep(1000); findElement(By.id("ListeTransactionForm:label")).clear();
+    findElement(By.id("ListeTransactionForm:label")).sendKeys("labelCont1");
+    findElement(By.xpath("//img[@alt='save2']")).click();
+    findElement(By.id("ListeTransactionForm:j_id286_body")).click();
+    findElement(By.xpath("//div[2]/span/a")).click();
+    findElement(By.xpath("//td[3]/span/a/img")).click();
+    findElement(By.xpath("//td/div[3]/a")).click();
+    findElement(By.linkText("Issuer Space")).click();
+    findElement(By.xpath("(//img[@alt='English'])[2]")).click();
   }
 
   @After
@@ -64,9 +74,23 @@ driver.manage().window().maximize() ;
     (new WebDriverWait(driver, 30,1000)).until(ExpectedConditions.presenceOfElementLocated(locator));
       (new WebDriverWait(driver, 30,1000)).until(ExpectedConditions.visibilityOfElementLocated(locator));
       WebElement element=driver.findElement(locator);
-      if (element.isEnabled()==false )  ((JavascriptExecutor) driver).executeScript("arguments[0].disabled = false", element);
+     // if (element.isEnabled()==false )  ((JavascriptExecutor) driver).executeScript("arguments[0].disabled = false", element);
       return element;
   }
+
+  public  void optionalClick( final By locator) {
+    WebElement we=null;
+      try{
+      we = driver.findElement( locator );
+      we.click();
+      } catch ( StaleElementReferenceException ser ) {
+  
+      } catch ( NoSuchElementException nse ) {
+  
+      } catch ( Exception e ) {
+}
+
+}
 
   private boolean isElementPresent(By by) {
     try {

@@ -30,7 +30,7 @@ public class SSV8VALDEBTA900IntegrationTests {
   }
   // *** supression du programm debit
 
-  @Test
+ @Test
   public void testSSV8VALDEBTA900IntegrationTests() throws Exception {
     driver.get(baseUrl + "/selectsystem-view-tomcat-oracle/login.xhtml");
     Thread.sleep(1000); findElement(By.id("j_username")).clear();
@@ -38,7 +38,7 @@ public class SSV8VALDEBTA900IntegrationTests {
     Thread.sleep(1000); findElement(By.id("j_password")).clear();
     findElement(By.id("j_password")).sendKeys("pwd8888");
     findElement(By.cssSelector("#login > img[alt=\"Frensh\"]")).click();
-    findElement(By.xpath("//span/a")).click();
+    optionalClick(By.xpath("//span/a"));
     findElement(By.id("form:table:1:sdksds")).click();
     findElement(By.xpath("(//img[@alt='English'])[4]")).click();
     findElement(By.linkText("Issuer Space")).click();
@@ -88,6 +88,21 @@ public class SSV8VALDEBTA900IntegrationTests {
       if (element.isEnabled()==false )  ((JavascriptExecutor) driver).executeScript("arguments[0].disabled = false", element);
       return element;
   }
+  
+  public  void optionalClick( final By locator) {
+	  WebElement we=null;
+	  try {
+	      we = driver.findElement( locator );
+	      we.click();
+	    } catch ( StaleElementReferenceException ser ) {                        
+	      
+	    } catch ( NoSuchElementException nse ) {                        
+	    
+	    } catch ( Exception e ) {
+	      //staticlogger.info( e.getMessage() );
+	    }
+	    
+}
 
   private boolean isElementPresent(By by) {
     try {

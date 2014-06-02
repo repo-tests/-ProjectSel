@@ -36,7 +36,7 @@ public class SSV8VALDEBTA896IntegrationTests {
     Thread.sleep(1000); findElement(By.id("j_password")).clear();
     findElement(By.id("j_password")).sendKeys("pwd8888");
     findElement(By.cssSelector("#login > img[alt=\"Frensh\"]")).click();
-    findElement(By.xpath("//span/a")).click();
+    optionalClick(By.xpath("//span/a"));
     findElement(By.id("form:table:1:sdksds")).click();
     findElement(By.xpath("(//img[@alt='English'])[4]")).click();
     findElement(By.linkText("Membership Fees")).click();
@@ -61,7 +61,7 @@ public class SSV8VALDEBTA896IntegrationTests {
 	    Thread.sleep(1000); findElement(By.id("j_password")).clear();
 	    findElement(By.id("j_password")).sendKeys("pwd8888");
 	    findElement(By.cssSelector("#login > img[alt=\"Frensh\"]")).click();
-	    findElement(By.xpath("//span/a")).click();
+	    optionalClick(By.xpath("//span/a"));
 	    findElement(By.id("form:table:1:sdksds")).click();
 	    findElement(By.xpath("(//img[@alt='English'])[4]")).click();
 	    findElement(By.linkText("Membership Fees")).click();
@@ -89,7 +89,7 @@ public class SSV8VALDEBTA896IntegrationTests {
 	    Thread.sleep(1000); findElement(By.id("j_password")).clear();
 	    findElement(By.id("j_password")).sendKeys("pwd8888");
 	    findElement(By.cssSelector("#login > img[alt=\"Frensh\"]")).click();
-	    findElement(By.xpath("//span/a")).click();
+	    optionalClick(By.xpath("//span/a"));
 	    findElement(By.id("form:table:1:sdksds")).click();
 	    findElement(By.xpath("(//img[@alt='English'])[4]")).click();
 	    findElement(By.linkText("Membership Fees")).click();
@@ -108,7 +108,7 @@ public class SSV8VALDEBTA896IntegrationTests {
 	  findElement(By.xpath("(//img[@alt='English'])[2]")).click();
   }
   
-  //@Test
+  @Test
   public void testSSV8VALDEBTA896dIntegrationTests() throws Exception {
 	  
 	  driver.get(baseUrl + "/selectsystem-view-tomcat-oracle/login.xhtml");
@@ -117,7 +117,7 @@ public class SSV8VALDEBTA896IntegrationTests {
 	    Thread.sleep(1000); findElement(By.id("j_password")).clear();
 	    findElement(By.id("j_password")).sendKeys("pwd8888");
 	    findElement(By.cssSelector("#login > img[alt=\"Frensh\"]")).click();
-	    findElement(By.xpath("//span/a")).click();
+	    optionalClick(By.xpath("//span/a"));
 	    findElement(By.id("form:table:1:sdksds")).click();
 	    findElement(By.xpath("(//img[@alt='English'])[4]")).click();
 	    findElement(By.linkText("Personalization Fees")).click();
@@ -135,7 +135,7 @@ public class SSV8VALDEBTA896IntegrationTests {
 	    findElement(By.xpath("//div[3]/div[2]/div/div[2]/table/tbody/tr/td/div[2]/span/a")).click();
 	  findElement(By.xpath("(//img[@alt='English'])[2]")).click();
   }
- //@Test
+ @Test
   public void testSSV8VALDEBTA896eIntegrationTests() throws Exception {
 	  
 	  driver.get(baseUrl + "/selectsystem-view-tomcat-oracle/login.xhtml");
@@ -144,7 +144,7 @@ public class SSV8VALDEBTA896IntegrationTests {
 	    Thread.sleep(1000); findElement(By.id("j_password")).clear();
 	    findElement(By.id("j_password")).sendKeys("pwd8888");
 	    findElement(By.cssSelector("#login > img[alt=\"Frensh\"]")).click();
-	    findElement(By.xpath("//span/a")).click();
+	    optionalClick(By.xpath("//span/a"));
 	    findElement(By.id("form:table:1:sdksds")).click();
 	    findElement(By.xpath("(//img[@alt='English'])[4]")).click();
 	    findElement(By.linkText("Personalization Fees")).click();
@@ -162,7 +162,7 @@ public class SSV8VALDEBTA896IntegrationTests {
 	    findElement(By.xpath("//div[3]/div[2]/div/div[2]/table/tbody/tr/td/div[2]/span/a")).click();
 	  findElement(By.xpath("(//img[@alt='English'])[2]")).click();
   }
- //@Test
+ @Test
   public void testSSV8VALDEBTA896fIntegrationTests() throws Exception {
 	  
 	  driver.get(baseUrl + "/selectsystem-view-tomcat-oracle/login.xhtml");
@@ -171,7 +171,7 @@ public class SSV8VALDEBTA896IntegrationTests {
 	    Thread.sleep(1000); findElement(By.id("j_password")).clear();
 	    findElement(By.id("j_password")).sendKeys("pwd8888");
 	    findElement(By.cssSelector("#login > img[alt=\"Frensh\"]")).click();
-	    findElement(By.xpath("//span/a")).click();
+	    optionalClick(By.xpath("//span/a"));
 	    findElement(By.id("form:table:1:sdksds")).click();
 	    findElement(By.xpath("(//img[@alt='English'])[4]")).click();
 	    findElement(By.linkText("Personalization Fees")).click();
@@ -199,7 +199,7 @@ public class SSV8VALDEBTA896IntegrationTests {
 	    Thread.sleep(1000); findElement(By.id("j_password")).clear();
 	    findElement(By.id("j_password")).sendKeys("pwd8888");
 	    findElement(By.cssSelector("#login > img[alt=\"Frensh\"]")).click();
-	    findElement(By.xpath("//span/a")).click();
+	    optionalClick(By.xpath("//span/a"));
 	    findElement(By.id("form:table:1:sdksds")).click();
 	    findElement(By.xpath("(//img[@alt='English'])[4]")).click();
 	    findElement(By.linkText("Insurance Fees")).click();
@@ -226,7 +226,7 @@ public class SSV8VALDEBTA896IntegrationTests {
 	    Thread.sleep(1000); findElement(By.id("j_password")).clear();
 	    findElement(By.id("j_password")).sendKeys("pwd8888");
 	    findElement(By.cssSelector("#login > img[alt=\"Frensh\"]")).click();
-	    findElement(By.xpath("//span/a")).click();
+	    optionalClick(By.xpath("//span/a"));
 	    findElement(By.id("form:table:1:sdksds")).click();
 	    findElement(By.xpath("(//img[@alt='English'])[4]")).click();
 	    findElement(By.linkText("Insurance Fees")).click();
@@ -253,7 +253,7 @@ public class SSV8VALDEBTA896IntegrationTests {
 	    Thread.sleep(1000); findElement(By.id("j_password")).clear();
 	    findElement(By.id("j_password")).sendKeys("pwd8888");
 	    findElement(By.cssSelector("#login > img[alt=\"Frensh\"]")).click();
-	    findElement(By.xpath("//span/a")).click();
+	    optionalClick(By.xpath("//span/a"));
 	    findElement(By.id("form:table:1:sdksds")).click();
 	    findElement(By.xpath("(//img[@alt='English'])[4]")).click();
 	    findElement(By.linkText("Insurance Fees")).click();
@@ -281,7 +281,7 @@ public class SSV8VALDEBTA896IntegrationTests {
 	    Thread.sleep(1000); findElement(By.id("j_password")).clear();
 	    findElement(By.id("j_password")).sendKeys("pwd8888");
 	    findElement(By.cssSelector("#login > img[alt=\"Frensh\"]")).click();
-	    findElement(By.xpath("//span/a")).click();
+	    optionalClick(By.xpath("//span/a"));
 	    findElement(By.id("form:table:1:sdksds")).click();
 	    findElement(By.xpath("(//img[@alt='English'])[4]")).click();
 	    findElement(By.linkText("Express Delivery Fees")).click();
@@ -308,7 +308,7 @@ public class SSV8VALDEBTA896IntegrationTests {
 	    Thread.sleep(1000); findElement(By.id("j_password")).clear();
 	    findElement(By.id("j_password")).sendKeys("pwd8888");
 	    findElement(By.cssSelector("#login > img[alt=\"Frensh\"]")).click();
-	    findElement(By.xpath("//span/a")).click();
+	    optionalClick(By.xpath("//span/a"));
 	    findElement(By.id("form:table:1:sdksds")).click();
 	    findElement(By.xpath("(//img[@alt='English'])[4]")).click();
 	    findElement(By.linkText("Express Delivery Fees")).click();
@@ -334,7 +334,7 @@ public class SSV8VALDEBTA896IntegrationTests {
 	    Thread.sleep(1000); findElement(By.id("j_password")).clear();
 	    findElement(By.id("j_password")).sendKeys("pwd8888");
 	    findElement(By.cssSelector("#login > img[alt=\"Frensh\"]")).click();
-	    findElement(By.xpath("//span/a")).click();
+	    optionalClick(By.xpath("//span/a"));
 	    findElement(By.id("form:table:1:sdksds")).click();
 	    findElement(By.xpath("(//img[@alt='English'])[4]")).click();
 	    findElement(By.linkText("Express Delivery Fees")).click();
@@ -368,6 +368,20 @@ public class SSV8VALDEBTA896IntegrationTests {
       if (element.isEnabled()==false )  ((JavascriptExecutor) driver).executeScript("arguments[0].disabled = false", element);
       return element;
   }
+  public  void optionalClick( final By locator) {
+	  WebElement we=null;
+	  try {
+	      we = driver.findElement( locator );
+	      we.click();
+	    } catch ( StaleElementReferenceException ser ) {                        
+	      
+	    } catch ( NoSuchElementException nse ) {                        
+	    
+	    } catch ( Exception e ) {
+	      //staticlogger.info( e.getMessage() );
+	    }
+	    
+}
 
   private boolean isElementPresent(By by) {
     try {

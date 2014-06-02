@@ -37,7 +37,7 @@ public class SSV8VALDEBTA0001IntegrationTests {
     Thread.sleep(1000); findElement(By.id("j_password")).clear();
     findElement(By.id("j_password")).sendKeys("pwd8888");
     findElement(By.cssSelector("#login > img[alt=\"Frensh\"]")).click();  
-    optionalClick(By.xpath("//span/a[contains(@class,'btValider')]"));
+    optionalClick(By.xpath("//span/a"));
     findElement(By.id("form:table:0:sdksds")).click();
     findElement(By.xpath("(//img[@alt='English'])[8]")).click();
     findElement(By.linkText("New Bank")).click();
@@ -118,14 +118,21 @@ public class SSV8VALDEBTA0001IntegrationTests {
     (new WebDriverWait(driver, 30,1000)).until(ExpectedConditions.presenceOfElementLocated(locator));
       (new WebDriverWait(driver, 30,1000)).until(ExpectedConditions.visibilityOfElementLocated(locator));
       return driver.findElement(locator);
-      
-      public  void optionalClick( final By locator) {
-    	    (new WebDriverWait(driver, 15,500)).until(ExpectedConditions.presenceOfElementLocated(locator));
-    	      (new WebDriverWait(driver, 15,500)).until(ExpectedConditions.visibilityOfElementLocated(locator));
-    	      WebElement element=driver.findElement(locator);
-    	      if (element.size() !== 0) element.click();
-    	    
   }
+  public  void optionalClick( final By locator) {
+	  WebElement we=null;
+	  try {
+	      we = driver.findElement( locator );
+	      we.click();
+	    } catch ( StaleElementReferenceException ser ) {                        
+	      
+	    } catch ( NoSuchElementException nse ) {                        
+	    
+	    } catch ( Exception e ) {
+	      //staticlogger.info( e.getMessage() );
+	    }
+	    
+}
 
   private boolean isElementPresent(By by) {
     try {

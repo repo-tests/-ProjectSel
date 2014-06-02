@@ -41,7 +41,7 @@ public class SSV8VALDEBTA998IntegrationTests {
     Thread.sleep(1000); findElement(By.id("j_password")).clear();
     findElement(By.id("j_password")).sendKeys("pwd8888");
     findElement(By.cssSelector("#login > img[alt=\"Frensh\"]")).click();
-    findElement(By.xpath("//span/a[contains(@class,'btValider')]")).click();
+    optionalClick(By.xpath("//span/a"));
     findElement(By.id("form:table:0:sdksds")).click();
     findElement(By.xpath("(//img[@alt='English'])[8]")).click();
     findElement(By.linkText("Managing Branch")).click();
@@ -54,7 +54,7 @@ public class SSV8VALDEBTA998IntegrationTests {
     findElement(By.xpath("//td/div[3]/a")).click();
     findElement(By.xpath("(//img[@alt='English'])[2]")).click();
   }
-  @Test
+ @Test
  public void testSSV8VALDEBTA998bIntegrationTests() throws Exception {
    driver.get(baseUrl + "/selectsystem-view-tomcat-oracle/login.xhtml");
    Thread.sleep(1000); findElement(By.id("j_username")).clear();
@@ -62,7 +62,7 @@ public class SSV8VALDEBTA998IntegrationTests {
    Thread.sleep(1000); findElement(By.id("j_password")).clear();
    findElement(By.id("j_password")).sendKeys("pwd8888");
    findElement(By.cssSelector("#login > img[alt=\"Frensh\"]")).click();
-   findElement(By.xpath("//span/a[contains(@class,'btValider')]")).click();
+   optionalClick(By.xpath("//span/a"));
    findElement(By.id("form:table:0:sdksds")).click();
    findElement(By.xpath("(//img[@alt='English'])[8]")).click();
    findElement(By.linkText("Managing Branch")).click();
@@ -84,8 +84,8 @@ public void testSSV8VALDEBTA998cIntegrationTests() throws Exception {
   Thread.sleep(1000); findElement(By.id("j_password")).clear();
   findElement(By.id("j_password")).sendKeys("pwd8888");
   findElement(By.cssSelector("#login > img[alt=\"Frensh\"]")).click();
+  optionalClick(By.xpath("//span/a"));
   findElement(By.id("form:table:0:sdksds")).click();
-  findElement(By.xpath("//span/a[contains(@class,'btValider')]")).click();
   findElement(By.xpath("(//img[@alt='English'])[8]")).click();
   findElement(By.linkText("Managing Branch")).click();
   new Select(findElement(By.id("SearchBranchForm:bank"))).selectByVisibleText("banque test 3");
@@ -115,6 +115,21 @@ private  WebElement findElement( final By locator) {
             return driver.findElement(locator);
         }
 
+
+public  void optionalClick( final By locator) {
+	  WebElement we=null;
+	  try {
+	      we = driver.findElement( locator );
+	      we.click();
+	    } catch ( StaleElementReferenceException ser ) {                        
+	      
+	    } catch ( NoSuchElementException nse ) {                        
+	    
+	    } catch ( Exception e ) {
+	      //staticlogger.info( e.getMessage() );
+	    }
+	    
+}
   private boolean isElementPresent(By by) {
     try {
       driver.findElement(by);
